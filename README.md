@@ -1,2 +1,3 @@
-# SAUTTAT-web-page
-Web page of SAUTTAT community at Sakarya University of Turkiye
+# EMR2023
+
+Geliştirme ortamını başlatmak için: ``php -S localhost:8000``
