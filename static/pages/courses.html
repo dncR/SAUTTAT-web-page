@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Courses | EMR 2023</title>
+  <link rel="icon" type="image/png" href="/public/img/emr.ico">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
+  <link rel="stylesheet" href="/static/assets/css/custom_style.css">
+</head>
+<body>
+  <div data-include="/static/components/header.html"></div>
+
+  <section class="py-5">
+    <div class="container">
+      <h1 class="fw-bold mb-4">Courses</h1>
+      <p class="text-muted">The courses will be given on the first day (May 8, 2023) of the EMR Conference. They will open when ten or more participants are enrolled. Each course is limited to a maximum of fifteen participants.</p>
+
+      <div class="accordion" id="coursesAccordion">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="courseOneHeader">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#courseOne" aria-expanded="true" aria-controls="courseOne">
+              Course 1: Introduction to explainable machine learning with examples in healthcare
+            </button>
+          </h2>
+          <div id="courseOne" class="accordion-collapse collapse show" aria-labelledby="courseOneHeader" data-bs-parent="#coursesAccordion">
+            <div class="accordion-body">
+              <p>The workshop introduces explainable AI (XAI) methods to build predictive models and extract knowledge, combining theory with hands-on examples such as mortality prediction for COVID or heart disease classification. It follows material from <a href="https://ema.drwhy.ai/">Explanatory Model Analysis</a> using R and the DALEX library.</p>
+              <p>The sessions span exploratory data analysis, model building (decision trees, random forests, hyperparameter tuning), local explanations (SHAP, break-down, LIME), and global explanations (permutation importance, partial dependence).</p>
+              <p><strong>Instructor:</strong> Przemyslaw Biecek</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="courseTwoHeader">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#courseTwo" aria-expanded="false" aria-controls="courseTwo">
+              Course 2: Removing unwanted variation from large-scale RNA sequencing data with PRPS
+            </button>
+          </h2>
+          <div id="courseTwo" class="accordion-collapse collapse" aria-labelledby="courseTwoHeader" data-bs-parent="#coursesAccordion">
+            <div class="accordion-body">
+              <p>This course focuses on techniques to mitigate unwanted variation in large-scale RNA sequencing data using PRPS, combining methodology discussion with practical guidance for bioinformatics workflows.</p>
+              <p><strong>Instructors:</strong> Ramyar Molania and Marie Trussart</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="courseThreeHeader">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#courseThree" aria-expanded="false" aria-controls="courseThree">
+              Course 3: How to use cloud technologies for reliable and responsible Data Science projects?
+            </button>
+          </h2>
+          <div id="courseThree" class="accordion-collapse collapse" aria-labelledby="courseThreeHeader" data-bs-parent="#coursesAccordion">
+            <div class="accordion-body">
+              <p>An applied walkthrough of cloud-native tooling and best practices for reliable, responsible data science projects, covering deployment patterns, governance, and collaboration workflows.</p>
+              <p><strong>Instructors:</strong> Erdal Coşgun, Vincent Carey, and Deniz İlhan Topçu</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div data-include="/static/components/footer.html"></div>
+
+  <script>
+    window.STATIC_BASE = '/static';
+  </script>
+  <script src="/static/assets/js/custom_scripts.js" defer></script>
+</body>
+</html>
