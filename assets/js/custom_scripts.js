@@ -1,5 +1,6 @@
 // Configuration: adjust if the site is served from a different base path.
-const STATIC_BASE = window.STATIC_BASE ?? '/';
+const defaultBase = () => (window.location.pathname.includes('/pages/') ? '..' : '.');
+const STATIC_BASE = window.STATIC_BASE ?? defaultBase();
 
 const resolveIncludePath = (path) => {
   if (!path) return null;
@@ -33,6 +34,7 @@ const ensureBootstrapBundle = () => {
 
 const injectIncludes = async () => {
   const targets = Array.from(document.querySelectorAll('[data-include]'));
+  const basePrefix = () => `${STATIC_BASE.replace(/\/$/, '')}/`;
   await Promise.all(
     targets.map(async (el) => {
       const includePath = resolveIncludePath(el.getAttribute('data-include'));
@@ -40,7 +42,8 @@ const injectIncludes = async () => {
       try {
         const res = await fetch(includePath);
         if (!res.ok) throw new Error(`Failed to load include: ${includePath}`);
-        const html = await res.text();
+        const raw = await res.text();
+        const html = raw.replace(/\{\{\s*BASE\s*\}\}/g, basePrefix());
         el.innerHTML = html;
       } catch (err) {
         console.error(err);
@@ -77,10 +80,9 @@ const normalizeNavLinks = () => {
   document.querySelectorAll('[data-nav-match]').forEach((link) => {
     const href = link.getAttribute('href') || '';
     if (href.startsWith('http')) return;
-    if (href.startsWith(base)) return;
-    if (href.startsWith('/')) {
-      link.setAttribute('href', `${base}${href}`);
-    }
+    if (/^(\.\/|\.\.\/)/.test(href)) return;
+    const cleaned = href.replace(/^\/+/, '');
+    link.setAttribute('href', `${base}/${cleaned}`);
   });
   const brand = document.querySelector('[data-brand-home]');
   if (brand) {
