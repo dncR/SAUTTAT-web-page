@@ -1,6 +1,7 @@
 // Configuration: adjust if the site is served from a different base path.
 const defaultBase = () => (window.location.pathname.includes('/pages/') ? '..' : '.');
-const STATIC_BASE = window.STATIC_BASE ?? defaultBase();
+window.STATIC_BASE = window.STATIC_BASE ?? defaultBase();
+const STATIC_BASE = window.STATIC_BASE;
 
 const resolveIncludePath = (path) => {
   if (!path) return null;
@@ -106,6 +107,14 @@ const initSharedUI = async () => {
   initBootstrapHelpers();
 };
 
-document.addEventListener('DOMContentLoaded', () => {
-  initSharedUI();
+const showAnnouncementModal = () => {
+  const modalEl = document.getElementById('announcementModal');
+  if (!modalEl || !window.bootstrap) return;
+  const modal = new bootstrap.Modal(modalEl);
+  modal.show();
+};
+
+document.addEventListener('DOMContentLoaded', async () => {
+  await initSharedUI();
+  showAnnouncementModal();
 });
