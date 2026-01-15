@@ -3,6 +3,8 @@
   --emr-accent: #a8d8ee;
   --emr-dark: #1a1a1a;
   --emr-muted: #6c757d;
+  --hero-height-desktop: 60vh;
+  --hero-height-mobile: 40vh;
 }
 
 body {
@@ -34,6 +36,26 @@ a:hover {
 }
 
 /* Hero + sections */
+.hero-banner {
+  min-height: var(--hero-height-mobile);
+}
+
+.hero-banner .hero-overlay {
+  min-height: inherit;
+  display: flex;
+  align-items: center;
+}
+
+@media (min-width: 992px) {
+  .hero-banner {
+    min-height: var(--hero-height-desktop);
+  }
+
+  .hero-banner .hero-overlay {
+    min-height: var(--hero-height-desktop);
+  }
+}
+
 .section-light {
   background: #f8f9fa;
 }
@@ -111,6 +133,7 @@ a:hover {
   color: #fff;
   background-color: #269900;
 }
+
 /* Utility helpers */
 .text-justify {
   text-align: justify;
