@@ -45,7 +45,9 @@ const injectIncludes = async () => {
         if (!res.ok) throw new Error(`Failed to load include: ${includePath}`);
         const raw = await res.text();
         const html = raw.replace(/\{\{\s*BASE\s*\}\}/g, basePrefix());
-        el.innerHTML = html;
+        const template = document.createElement('template');
+        template.innerHTML = html.trim();
+        el.replaceWith(template.content);
       } catch (err) {
         console.error(err);
       }
@@ -99,9 +101,103 @@ const initBootstrapHelpers = () => {
   });
 };
 
+const initScrollingHeader = () => {
+  const header = document.querySelector('header.sticky-top');
+  if (!header || header.dataset.scrollFadeInit === 'true') return;
+  header.dataset.scrollFadeInit = 'true';
+
+  const nav = header.querySelector('nav');
+  const solid = 'rgba(255, 255, 255, 1)';
+  const translucent = 'rgba(255, 255, 255, 0.5)';
+  let timeoutId = null;
+  let lastScrollTime = 0;
+  let isHovering = false;
+  let lockSolid = false;
+  let hasScrolled = false;
+  let allowScrollFade = false;
+
+  const enableScrollFade = () => {
+    allowScrollFade = true;
+  };
+
+  const applyBackground = (color) => {
+    header.style.backgroundColor = color;
+    if (nav) {
+      nav.style.backgroundColor = color;
+    }
+  };
+
+  header.style.transition = 'background-color 250ms ease';
+  if (nav) {
+    nav.style.transition = 'background-color 250ms ease';
+  }
+  applyBackground(solid);
+
+  const scheduleSolid = () => {
+    if (timeoutId) {
+      clearTimeout(timeoutId);
+    }
+    timeoutId = setTimeout(() => {
+      if (!isHovering) {
+        applyBackground(solid);
+      }
+    }, 1500);
+  };
+
+  window.addEventListener(
+    'scroll',
+    () => {
+      if (!allowScrollFade) {
+        return;
+      }
+      if (!hasScrolled) {
+        hasScrolled = true;
+        if (window.scrollY === 0) {
+          return;
+        }
+      }
+      lockSolid = false;
+      lastScrollTime = Date.now();
+      applyBackground(translucent);
+      scheduleSolid();
+    },
+    { passive: true }
+  );
+
+  window.addEventListener('wheel', enableScrollFade, { passive: true });
+  window.addEventListener('touchstart', enableScrollFade, { passive: true });
+  window.addEventListener('keydown', enableScrollFade);
+  window.addEventListener('pointerdown', enableScrollFade);
+  window.addEventListener('mousedown', enableScrollFade);
+
+  header.addEventListener('pointerenter', () => {
+    isHovering = true;
+    lockSolid = true;
+    if (timeoutId) {
+      clearTimeout(timeoutId);
+    }
+    applyBackground(solid);
+  });
+
+  header.addEventListener('pointerleave', () => {
+    isHovering = false;
+    if (lockSolid) {
+      applyBackground(solid);
+      return;
+    }
+    if (Date.now() - lastScrollTime < 1500) {
+      applyBackground(translucent);
+      scheduleSolid();
+    } else {
+      applyBackground(solid);
+    }
+  });
+};
+
 const initSharedUI = async () => {
   await ensureBootstrapBundle();
   await injectIncludes();
+  initScrollingHeader();
   normalizeNavLinks();
   highlightNav();
   initBootstrapHelpers();

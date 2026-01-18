@@ -22,17 +22,58 @@ a:hover {
 }
 
 /* Navbar */
+header.sticky-top {
+  position: sticky;
+  top: 0;
+  z-index: 1030;
+  background-color: #fff;
+}
+
+header.sticky-top .navbar {
+  background-color: inherit;
+}
+
 .navbar .nav-link {
   font-weight: 600;
 }
 
-.navbar .nav-link.active {
+.navbar .nav-link:hover,
+.navbar .nav-link:focus {
+  color: var(--emr-primary);
+  text-decoration: none;
+  background-color: rgba(30, 135, 240, 0.12);
+  border-radius: 0.4rem;
+}
+
+.navbar .nav-link.active,
+.navbar .nav-link.active:hover {
   color: var(--emr-primary) !important;
+  text-decoration: none;
+  background-color: rgba(30, 135, 240, 0.12);
+  border-radius: 0.4rem;
 }
 
 .navbar .dropdown-menu {
   border-radius: 0.5rem;
   box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.08);
+}
+
+.navbar .dropdown-item:hover,
+.navbar .dropdown-item:focus {
+  color: var(--emr-primary);
+  text-decoration: none;
+  background-color: rgba(30, 135, 240, 0.12);
+  border-radius: 0.4rem;
+}
+
+@media (min-width: 992px) {
+  .navbar .dropdown:hover>.dropdown-menu {
+    display: block;
+  }
+
+  .navbar .dropdown:hover>.dropdown-toggle {
+    color: var(--emr-primary);
+  }
 }
 
 /* Hero + sections */
