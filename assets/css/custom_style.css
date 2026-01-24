@@ -187,3 +187,7 @@ header.sticky-top .navbar {
 .bg-accent {
   background: var(--emr-accent);
 }
+
+.ml-10 {
+  margin-left: 10rem;
+}
