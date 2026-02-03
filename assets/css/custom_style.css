@@ -5,6 +5,33 @@
   --emr-muted: #6c757d;
   --hero-height-desktop: 60vh;
   --hero-height-mobile: 40vh;
+  --blue-1: #0024B3;
+  --blue-2: #0033CC;
+  --blue-3: #0040E6;
+  --blue-4: #004DFF;
+  --blue-5: #0D40FF;
+  --blue-6: #1A4DFF;
+  --blue-7: #3366FF;
+  --blue-8: #4D80FF;
+  --blue-9: #6699FF;
+  --blue-10: #80B3FF;
+  --blue-11: #CCE5FF;
+  --blue-12: #E6F2FF;
+  --logo-blue: #233b77;
+  --orange: #EF7F1A;
+  --bg-hover-global: var(--orange);
+  --color-carousel-active: var(--bg-hover-global);
+  --color-carousel-inactive: var(--blue-11);
+  --color-navbar-active: var(--logo-blue);
+}
+
+/* icon colors */
+.icon-blue {
+  color: var(--blue-7);
+}
+
+.icon-orange {
+  color: var(--orange);
 }
 
 body {
