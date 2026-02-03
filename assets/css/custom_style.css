@@ -110,6 +110,60 @@ header.sticky-top .navbar {
   border: 1px solid #e9ecef;
 }
 
+.main-content {
+  width: 100%;
+  margin: 0 auto;
+}
+
+@media (min-width: 992px) {
+  .main-content {
+    padding-left: 5% !important;
+    padding-right: 5% !important;
+  }
+}
+
+/* Submission guidelines */
+.submission-deadline {
+  border: 1px solid #e9ecef;
+  border-radius: 0.75rem;
+  padding: 0.85rem 1.2rem;
+  background: #fff;
+  min-width: 170px;
+  text-align: center;
+  box-shadow: 0 0.5rem 1.25rem rgba(0, 0, 0, 0.06);
+}
+
+.submission-callout {
+  border-left: 4px solid var(--emr-primary);
+  border-top: 1px solid #e9ecef;
+  border-bottom: 1px solid #e9ecef;
+  border-right: 1px solid #e9ecef;
+  background: #f8fbff;
+  padding: 1rem 1.25rem;
+  border-radius: 0.75rem;
+}
+
+.guideline-card {
+  border: 1px solid #e9ecef;
+  border-radius: 0.9rem;
+  padding: 1.5rem 1.75rem;
+  background: #fff;
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.06);
+}
+
+.guideline-list {
+  margin-bottom: 0;
+  padding-left: 1.25rem;
+}
+
+.guideline-list li {
+  margin-bottom: 0.65rem;
+}
+
+.guideline-list li:last-child {
+  margin-bottom: 0;
+}
+
 /* Logos */
 .organizer-logo {
   max-height: 140px;
@@ -188,6 +242,14 @@ header.sticky-top .navbar {
   background: var(--emr-accent);
 }
 
-.ml-10 {
-  margin-left: 10rem;
+.pl-10 {
+  padding-left: 20px !important;
+}
+
+.conference-title-banner {
+  font-size: 2rem;
+}
+
+.conference-subtitle-banner {
+  font-size: 1.5rem;
 }
