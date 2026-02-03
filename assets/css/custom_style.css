@@ -102,6 +102,50 @@ header.sticky-top .navbar {
   margin-left: 0.5rem;
 }
 
+/* Back to top */
+.back-to-top {
+  position: fixed;
+  right: 1.25rem;
+  bottom: 1.25rem;
+  z-index: 1040;
+  width: 44px;
+  height: 44px;
+  border: none;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--logo-blue);
+  color: #fff;
+  box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.18);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(10px);
+  transition: opacity 200ms ease, transform 200ms ease, background-color 200ms ease;
+}
+
+.back-to-top.is-visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.back-to-top:hover,
+.back-to-top:focus {
+  background: var(--orange);
+  text-decoration: none;
+}
+
+.back-to-top:focus {
+  outline: 2px solid rgba(239, 127, 26, 0.5);
+  outline-offset: 3px;
+}
+
+.back-to-top i {
+  font-size: 1rem;
+  line-height: 1;
+}
+
 .navbar .nav-link {
   font-weight: 600;
 }

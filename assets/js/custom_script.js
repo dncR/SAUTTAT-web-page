@@ -234,10 +234,31 @@ const initScrollingHeader = () => {
   });
 };
 
+const initBackToTop = () => {
+  const button = document.getElementById('backToTop');
+  if (!button || button.dataset.backToTopInit === 'true') return;
+  button.dataset.backToTopInit = 'true';
+
+  const showAfter = 300;
+  const updateVisibility = () => {
+    const shouldShow = window.scrollY > showAfter;
+    button.classList.toggle('is-visible', shouldShow);
+    button.setAttribute('aria-hidden', shouldShow ? 'false' : 'true');
+  };
+
+  button.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  window.addEventListener('scroll', updateVisibility, { passive: true });
+  updateVisibility();
+};
+
 const initSharedUI = async () => {
   await ensureBootstrapBundle();
   await injectIncludes();
   initScrollingHeader();
+  initBackToTop();
   initNavbarHoverDropdowns();
   normalizeNavLinks();
   highlightNav();
