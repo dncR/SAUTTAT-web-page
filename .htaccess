@@ -9,8 +9,8 @@
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteRule ^(.*)/$ /$1 [L,R=301]
 
-    ErrorDocument 404 /pages/404.html
-    ErrorDocument 500 /pages/500.html
+    ErrorDocument 404 /gelecegintibbikongresi2026/pages/404.html
+    ErrorDocument 500 /gelecegintibbikongresi2026/pages/500.html
 
     # Handle Authorization Header
     RewriteCond %{HTTP:Authorization} .
