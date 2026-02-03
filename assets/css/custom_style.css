@@ -60,6 +60,48 @@ header.sticky-top .navbar {
   background-color: inherit;
 }
 
+/* Topbar */
+.topbar {
+  background: var(--logo-blue);
+  color: #fff;
+  font-size: 0.9rem;
+}
+
+.topbar a {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.topbar a:hover,
+.topbar a:focus {
+  color: #fff;
+  text-decoration: none;
+}
+
+.topbar .form-control {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.25);
+  color: #fff;
+}
+
+.topbar .form-control::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.topbar .btn {
+  border-color: rgba(255, 255, 255, 0.35);
+}
+
+.hover-global:hover,
+.hover-global:focus {
+  background-color: var(--bg-hover-global);
+  border-color: var(--bg-hover-global);
+  color: #fff;
+}
+
+.topbar .social a {
+  margin-left: 0.5rem;
+}
+
 .navbar .nav-link {
   font-weight: 600;
 }
