@@ -111,6 +111,7 @@ header.sticky-top .navbar {
   width: 44px;
   height: 44px;
   border: none;
+  /* Yarı yuvarlak köşeler. Circle için değeri arttırmak gerekir (örn. 999px). */
   border-radius: 10px;
   display: inline-flex;
   align-items: center;
