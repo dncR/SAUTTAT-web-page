@@ -111,7 +111,7 @@ header.sticky-top .navbar {
   width: 44px;
   height: 44px;
   border: none;
-  border-radius: 999px;
+  border-radius: 10px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
