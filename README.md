@@ -1,4 +1,4 @@
-# EMR2023
+# SAUTTAT Web Sayfası
 
 Yerel bilgisayarda HTTP sunucusunu ve geliştirme ortamını başlatmak için proje kök dizininde aşağıdaki komutu terminalden çalıştırınız.
 
