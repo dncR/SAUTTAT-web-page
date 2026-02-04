@@ -1,5 +1,5 @@
-// Configuration: adjust if the site is served from a different base path.
-const defaultBase = () => (window.location.pathname.includes('/pages/') ? '..' : '.');
+// Base is handled via <base href="...">. Keep STATIC_BASE local and simple.
+const defaultBase = () => '.';
 window.STATIC_BASE = window.STATIC_BASE ?? defaultBase();
 const STATIC_BASE = window.STATIC_BASE;
 
