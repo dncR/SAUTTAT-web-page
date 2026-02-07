@@ -379,3 +379,193 @@ header.sticky-top .navbar {
 .conference-subtitle-banner {
   font-size: 1.5rem;
 }
+
+/* Sponsorship page */
+.sponsorship-page {
+  --platinum: #d9dde5;
+  --platinum-dark: #6f7888;
+  --gold: #f0c65c;
+  --gold-dark: #8e6508;
+  --silver: #d7dee8;
+  --silver-dark: #4f5f75;
+  --bronze: #c57f4a;
+  --bronze-dark: #804721;
+  --ink: #1a426a;
+  --ink-soft: #e8f1fb;
+}
+
+.sponsorship-page .sponsor-card {
+  border-radius: 16px;
+  border: 1px solid #e7ebf0;
+  background: #fff;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+  overflow: hidden;
+  height: 100%;
+  transition: transform 0.2s ease;
+}
+
+.sponsorship-page .sponsor-card:hover {
+  transform: translateY(-10px);
+}
+
+.sponsorship-page .sponsor-card-header {
+  padding: 1rem 1.25rem;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+
+.sponsorship-page .sponsor-card-body {
+  padding: 1.25rem;
+}
+
+.sponsorship-page .tier-platinum .sponsor-card-header {
+  background: linear-gradient(135deg, #eef1f6, var(--platinum));
+  color: #293241;
+}
+
+.sponsorship-page .tier-platinum .price {
+  color: var(--platinum-dark);
+}
+
+.sponsorship-page .tier-gold .sponsor-card-header {
+  background: linear-gradient(135deg, #fff6d8, var(--gold));
+  color: #4f3900;
+}
+
+.sponsorship-page .tier-gold .price {
+  color: var(--gold-dark);
+}
+
+.sponsorship-page .tier-silver .sponsor-card-header {
+  background: linear-gradient(135deg, #f2f5f9, var(--silver));
+  color: #2b3b4e;
+}
+
+.sponsorship-page .tier-silver .price {
+  color: var(--silver-dark);
+}
+
+.sponsorship-page .tier-bronze .sponsor-card-header {
+  background: linear-gradient(135deg, #f6e8dd, #e6b690);
+  color: #4b2c18;
+}
+
+.sponsorship-page .tier-bronze .price {
+  color: var(--bronze-dark);
+}
+
+.sponsorship-page .tier-special .sponsor-card-header {
+  background: linear-gradient(135deg, #f0f6ff, #d9e9ff);
+  color: var(--ink);
+}
+
+.sponsorship-page .tier-special .price {
+  color: var(--ink);
+}
+
+.sponsorship-page .sponsor-card ul {
+  margin: 0;
+  padding-left: 1.1rem;
+}
+
+.sponsorship-page .sponsor-card li+li {
+  margin-top: 0.45rem;
+}
+
+/* Conference about page */
+.conference-about-page {
+  background: linear-gradient(180deg, #f3f8ff 0%, #ffffff 58%);
+}
+
+.conference-about-page .about-hero {
+  background: linear-gradient(rgba(10, 46, 109, 0.74), rgba(26, 79, 166, 0.74)), url("../img/conference/conference_sauttat_banner.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #fff;
+  box-shadow: 0 16px 36px rgba(35, 88, 184, 0.28);
+}
+
+.conference-about-page .about-kicker {
+  display: inline-block;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.35rem 0.65rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.2);
+  margin-bottom: 0.75rem;
+}
+
+.conference-about-page .about-title {
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+.conference-about-page .about-lead {
+  font-size: 1.05rem;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.conference-about-page .about-theme-card {
+  border-radius: 1rem;
+  padding: 1.25rem;
+  background: rgba(255, 255, 255, 0.16);
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  backdrop-filter: blur(2px);
+}
+
+.conference-about-page .theme-label {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  opacity: 0.85;
+}
+
+.conference-about-page .theme-title {
+  font-size: 1.35rem;
+  font-weight: 700;
+}
+
+.conference-about-page .theme-text {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.conference-about-page .about-card,
+.conference-about-page .about-focus-card {
+  background: #fff;
+  border: 1px solid #e6eef8;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 12px 28px rgba(15, 60, 138, 0.08);
+}
+
+.conference-about-page .about-card-title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #123875;
+}
+
+.conference-about-page .about-card-subtitle {
+  font-size: 1rem;
+  color: #2d66b2;
+  font-weight: 600;
+}
+
+.conference-about-page .about-card p,
+.conference-about-page .about-focus-card p {
+  color: #2c3952;
+  line-height: 1.72;
+}
+
+.conference-about-page .about-focus-card {
+  background: linear-gradient(180deg, #ffffff 0%, #f7fbff 100%);
+}
+
+@media (max-width: 991.98px) {
+  .conference-about-page .about-card,
+  .conference-about-page .about-focus-card {
+    padding: 1.25rem;
+  }
+}
