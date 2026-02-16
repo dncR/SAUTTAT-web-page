@@ -98,9 +98,25 @@
 
   const normalizeCategory = (category) => String(category ?? '').trim().toLocaleLowerCase('tr-TR');
 
+  const normalizeSearchText = (value) => String(value ?? '').toLocaleLowerCase('tr-TR').trim();
+
   const filterByCategory = (items, category) => {
     const key = normalizeCategory(category);
     return items.filter((item) => normalizeCategory(item.category) === key);
+  };
+
+  const filterBySearch = (items, query) => {
+    const key = normalizeSearchText(query);
+    if (!key) return items;
+    return items.filter((item) => {
+      const haystack = normalizeSearchText([
+        item.title,
+        item.coordinator,
+        item.educator,
+        item.description,
+      ].join(' '));
+      return haystack.includes(key);
+    });
   };
 
   const buildMetaBadges = (item) => {
@@ -113,14 +129,14 @@
       badges.push(`<span class="badge ${categoryClass}">${escapeHtml(item.category)}</span>`);
     }
     if (item.dateLabel) {
-      badges.push(`<span class="badge text-bg-primary-subtle text-primary-emphasis">${escapeHtml(item.dateLabel)}</span>`);
+      badges.push(`<span class="ms-auto text-muted scriptsize">Son güncelleme: ${escapeHtml(item.dateLabel)}</span>`);
     }
     return badges.join(' ');
   };
 
   const renderList = (container, items) => {
     if (!items.length) {
-      container.innerHTML = `<div class="${EMPTY_ALERT_CLASS}" role="alert">Henüz atölye bilgisi eklenmedi.</div>`;
+      container.innerHTML = `<div class="${EMPTY_ALERT_CLASS}" role="alert">Aradığınız kriterler ile uyuşan bir atölye bulunamadı...</div>`;
       return;
     }
 
@@ -132,7 +148,7 @@
             <article class="atolye-card h-100">
               <img class="atolye-card-image" src="${escapeHtml(image)}" alt="${escapeHtml(item.title)}">
               <div class="atolye-card-body">
-                <div class="d-flex flex-wrap gap-2 mb-2">${buildMetaBadges(item)}</div>
+                <div class="d-flex align-items-center gap-2 mb-2">${buildMetaBadges(item)}</div>
                 <h2 class="h5 fw-bold mb-2">${escapeHtml(item.title || 'Başlıksız Atölye')}</h2>
                 <p class="text-muted small mb-2"><strong>Koordinatör:</strong> ${escapeHtml(item.coordinator || '-')}</p>
                 <p class="text-muted small mb-3"><strong>Eğitmen:</strong> ${escapeHtml(item.educator || '-')}</p>
@@ -190,10 +206,12 @@
       activeCategory: DEFAULT_CATEGORY,
       currentPage: 1,
       items,
+      searchQuery: '',
     };
 
     const render = () => {
-      const filteredItems = sortByDateAsc(filterByCategory(state.items, state.activeCategory));
+      const filteredByCategory = filterByCategory(state.items, state.activeCategory);
+      const filteredItems = sortByDateAsc(filterBySearch(filteredByCategory, state.searchQuery));
       const totalPages = Math.max(1, Math.ceil(filteredItems.length / PAGE_SIZE));
       if (state.currentPage > totalPages) state.currentPage = totalPages;
       const start = (state.currentPage - 1) * PAGE_SIZE;
@@ -212,6 +230,15 @@
         render();
       });
     });
+
+    const searchInput = document.getElementById('atolyeSearchInput');
+    if (searchInput instanceof HTMLInputElement) {
+      searchInput.addEventListener('input', () => {
+        state.searchQuery = searchInput.value;
+        state.currentPage = 1;
+        render();
+      });
+    }
 
     if (paginationContainer) {
       paginationContainer.addEventListener('click', (event) => {
@@ -254,7 +281,7 @@
             <img class="atolye-detail-image" src="${escapeHtml(image)}" alt="${escapeHtml(item.title)}">
           </div>
           <div class="col-lg-7 atolye-detail-content">
-            <div class="d-flex flex-wrap gap-2 mb-2">${buildMetaBadges(item)}</div>
+            <div class="d-flex align-items-center gap-2 mb-2">${buildMetaBadges(item)}</div>
             <h1 class="h2 fw-bold mb-3">${escapeHtml(item.title || 'Atölye')}</h1>
             <ul class="list-unstyled text-muted mb-3">
               <li><strong>Koordinatör:</strong> ${escapeHtml(item.coordinator || '-')}</li>

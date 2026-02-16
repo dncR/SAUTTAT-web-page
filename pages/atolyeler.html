@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <base href="/gelecegintibbikongresi2026/">
+  <base href="/">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -39,10 +39,14 @@
           <p class="mb-0">Kongre boyunca düzenlenecek etkinlik ve atölyelere buradan ulaşabilirsiniz.</p>
         </div>
       </div>
-      <div class="atolyeler-controls d-flex align-items-center mb-4">
+      <div class="atolyeler-controls d-flex align-items-center gap-3 mb-4 flex-wrap">
         <div class="btn-group" role="group" aria-label="Atölye kategorileri">
           <button type="button" class="btn btn-outline-primary active" data-category-btn="Sosyal">Sosyal</button>
           <button type="button" class="btn btn-outline-primary" data-category-btn="Bilimsel">Bilimsel</button>
+        </div>
+        <div class="ms-auto atolyeler-search-wrap">
+          <label class="visually-hidden" for="atolyeSearchInput">Atölye ara</label>
+          <input id="atolyeSearchInput" type="search" class="form-control" style="border-color: #9ec5fe;" placeholder="Atölye ara..." autocomplete="off" aria-label="Seçili kategoride atölye ara">
         </div>
       </div>
       <div id="atolyelerList" class="row g-4"></div>
