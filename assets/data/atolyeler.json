@@ -1,0 +1,339 @@
+{
+  "items": [
+    {
+      "slug_id": "a2026-02-16_kilin_ruhu",
+      "date": "2026-02-16",
+      "title": "Kilin Ruhu",
+      "coordinator": "Rumeysa SAĞLAR",
+      "educator": "Yasemin ALPER",
+      "description": "Kilin Ruhu, katılımcıların temel seramik tekniklerini kullanarak kil ve hayal gücüyle özgün objeler ürettiği bir atölyedir. Etkinliğin temel amacı, yoğun ders temposu arasında bir mola vererek kupa, tabak veya figür gibi kalıcı eserler tasarlamaktır. Hiçbir ön deneyim gerektirmeyen bu atölye, eğitmen desteğiyle herkesin kolayca katılabileceği, yaratıcılığın ve el becerisinin ön planda olduğu bir ortam sunar.",
+      "category": "Sosyal",
+      "slug": "kilin_ruhu",
+      "image": "assets/img/atolye/kilin_ruhu.jpg"
+    },
+    {
+      "slug_id": "a2026-02-16_tokat_tahta_baski",
+      "date": "2026-02-16",
+      "title": "Tokat Tahta Baskı Atölyesi",
+      "coordinator": "Rana Tüzer",
+      "educator": "Ayşe Uğurlu Birinci",
+      "description": "Tokat Tahta Baskı Atölyesi, Anadolu'nun köklü el sanatlarından birini günümüze taşıyor. Tokat'ın kültürel motiflerinden ilham alan özgün desenler, atölye kapsamında geleneksel tahta baskı tekniğiyle uygulanacak. Katılımcılarımız, bu tekniği deneyimlerken aynı zamanda Tokat'ın kültürünü yansıtan, kongremizden kalıcı bir hatıra ile ayrılacaklar. Üretmenin ve birlikte deneyimlemenin keyfini yaşamak isteyen herkesi, kültürle iç içe bu özel atölyeye davet ediyoruz.",
+      "category": "Sosyal",
+      "slug": "tokat_tahta_baski",
+      "image": "assets/img/atolye/tokat_tahta_baski.jpg"
+    },
+    {
+      "slug_id": "a2026-02-16_mum_atolyesi",
+      "date": "2026-02-16",
+      "title": "Mum Atölyesi",
+      "coordinator": "Damla Güner",
+      "educator": "Şerife Demir",
+      "description": "Bir fitil, biraz mum ve hayal gücü... Bu atölye; renklerin, aromatik kokuların ve kişisel dokunuşların bir araya gelerek her katılımcıya özgü bir ışığa dönüştüğü yaratıcı bir alandır. Mumlar ham hâlinden başlayarak renk ve koku seçimleriyle yavaş yavaş şekillenir, her dokunuşla kendine özgü bir karakter kazanır. Küçük dokunuşlarla ortaya çıkan her mum, yalnızca dekoratif bir obje değil; yaydığı koku ve enerjiyle bulunduğu ortama ruh katan, katılımcıların emeğini ve hayal gücünü yansıtan kalıcı bir parça hâline gelir.",
+      "category": "Sosyal",
+      "slug": "mum_atolyesi",
+      "image": "assets/img/atolye/mum_atolyesi.jpg"
+    },
+    {
+      "slug_id": "a2026-02-16_ebru_atolyesi",
+      "date": "2026-02-16",
+      "title": "Suya İşlenen Sanat: Ebru Atölyesi",
+      "coordinator": "Zeynep Arslan",
+      "educator": "Ayten Karaman",
+      "description": "Su ve renklerin buluştuğu ebru sanatını yakından tanıyacağımız, deneyim gerektirmeyen bu atölyede temel teknikleri öğrenip kendi özgün çalışmanızı oluşturacaksınız. Renklerle sakin ve keyifli bir yolculuğa davetlisiniz.",
+      "category": "Sosyal",
+      "slug": "ebru_atolyesi",
+      "image": "assets/img/atolye/ebru_sanati.jpg"
+    },
+    {
+      "slug_id": "a2026-02-16_okculuk_atolyesi",
+      "date": "2026-02-16",
+      "title": "Tam İsabet: Okçuluk Atölyesi",
+      "coordinator": "Hamza Yiğit Erdoğan",
+      "educator": "Özcan Ediz",
+      "description": "Katılımcılara geleneksel okçuluğun temel prensiplerini tanıtmayı amaçlayan uygulamalı bir deneyim sunar. Atölye boyunca doğru duruş, nefes kontrolü, hedef alma ve atış teknikleri uzman eğitmen eşliğinde aktarılacaktır. Fiziksel denge ile zihinsel odaklanmayı bir araya getiren okçuluk, katılımcılara hem sportif hem de farkındalık kazandıran keyifli bir deneyim sunar. Önceden deneyim gerektirmeyen bu atölye, herkesin katılımına açıktır.",
+      "category": "Sosyal",
+      "slug": "okculuk_atolyesi",
+      "image": "assets/img/atolye/okculuk.jpg"
+    },
+    {
+      "slug_id": "a2026-02-16_bez_canta_boyama",
+      "date": "2026-02-16",
+      "title": "Kendi Çantanı Tasarla: Bez Çanta Boyama Atölyesi",
+      "coordinator": "Esra Sevim",
+      "educator": "Nur Bahar Temel",
+      "description": "Bez Çanta Boyama Atölyesi, katılımcıların yaratıcı yönlerini keşfederken sürdürülebilir yaşam farkındalığı kazanmalarını amaçlayan bir etkinliktir. Atölye süresince katılımcılar kendi bez çantalarını boyayarak keyifli vakit geçirecektir.",
+      "category": "Sosyal",
+      "slug": "bez_canta_boyama",
+      "image": "assets/img/atolye/canta_boyama.jpg"
+    },
+    {
+      "slug_id": "a2026-02-16_ahsap_saksi_boyama",
+      "date": "2026-02-16",
+      "title": "Bir Nefes Renk: Ahşap Saksı Boyama",
+      "coordinator": "Şevval Yaya",
+      "educator": "Müberra Kocabıyık",
+      "description": "6. Geleceğin Tıbbı Kongresi'nin ardından, yoğun bilimsel oturumların stresini geride bırakmak için renklerle buluşuyoruz. Ahşap saksı boyama atölyemizde yaratıcılığınızı özgür bırakacak, keyifli ve dinlendirici bir sosyal etkinlikte bir araya geleceğiz.",
+      "category": "Sosyal",
+      "slug": "ahsap_saksi_boyama",
+      "image": "assets/img/atolye/ahsap_saksi_boyama.jpg"
+    },
+    {
+      "slug_id": "a2026-02-16_vitray_atolyesi",
+      "date": "2026-02-16",
+      "title": "Camın Ruhu: Vitray Atölyesi",
+      "coordinator": "Elif Arslan",
+      "educator": "Aylin Ekmekçioğlu",
+      "description": "Vitray, renkli camların ışıkla buluşarak sanata dönüştüğü, mekâna estetik ve ruh katan özel bir el sanatıdır. Vitray sadece bir süsleme değil; sabır, el becerisi ve yaratıcılık gerektiren bir sanattır. Her eser el yapımı olduğu için tektir ve kişiye özeldir. Hem sanatsal bir hobi hem de öğrenildiğinde gelir elde edilebilecek bir zanaat olma özelliği taşır.",
+      "category": "Sosyal",
+      "slug": "vitray_atolyesi",
+      "image": "assets/img/atolye/vitray.jpg"
+    },
+    {
+      "slug_id": "a2026-02-16_hipnoz_atolyesi",
+      "date": "2026-02-16",
+      "title": "Hipnoz Atölyesi",
+      "coordinator": "Orhan Kerem Arslan",
+      "educator": "Prof. Dr. Ahmet Bülent Yazıcı",
+      "description": "Zihnin gücünü keşfetmeye hazır mısın? Bilinçaltının sınırsız potansiyeline doğru derin bir yolculuğa çıkmaya davetlisiniz. Hipnoz Atölyesi, zihnin nasıl çalıştığını anlamak, içsel blokajları çözmek ve gerçek dönüşümü başlatmak isteyen herkes için tasarlandı. Bu atölyede hipnozun sadece bir teknik değil; farkındalık, dönüşüm ve içsel güçlenme aracı olduğunu deneyimleyeceksin. Korkular, alışkanlıklar, inanç kalıpları ve duygusal yüklerle çalışarak zihninle iş birliği yapmayı öğreneceksin.",
+      "category": "Sosyal",
+      "slug": "hipnoz_atolyesi",
+      "image": "assets/img/atolye/hipnoz.jpg"
+    },
+    {
+      "slug_id": "a2026-02-16_makrome_anahtarlik",
+      "date": "2026-02-16",
+      "title": "Makrome Anahtarlık Atölyesi",
+      "coordinator": "Asel Demirkıran",
+      "educator": "Burak Kınalıoğlu",
+      "description": "Makrome Anahtarlık Yapımı Workshopu, temel makrome düğümlerini öğrenerek el emeğiyle özgün bir anahtarlık tasarlamak isteyenler için hazırlanmış keyifli bir atölyedir. Workshop süresince kullanılan malzemeler ve temel teknikler adım adım anlatılır; katılımcılar kendi anahtarlıklarını yaparak etkinliği tamamlar. Deneyim gerektirmeyen bu çalışma, hem rahatlatıcı hem de yaratıcı bir üretim süreci sunar.",
+      "category": "Sosyal",
+      "slug": "makrome_anahtarlik",
+      "image": "assets/img/atolye/anahtarlik.jpg"
+    },
+    {
+      "slug_id": "a2026-02-16_fotografcilik_isikla_boyama",
+      "date": "2026-02-16",
+      "title": "Fotoğrafçılık ve Işıkla Boyama Atölyesi",
+      "coordinator": "Mustafa Demirel",
+      "educator": "Reha Akar",
+      "description": "Fotoğrafın nasıl çekildiğinin, fotoğraf makinesinin gözümüz ile olan benzerliğinin ve ışığa dair bilgileri tartışacağımız; üstüne ışıkla boyama sanatı ile daha da keyifli hâle getireceğimiz bu atölyemiz ile hayatımızdaki sorumluluklarımız ve derslerimize ufak bir mola vererek eğlenmeyi hedeflemekteyiz.",
+      "category": "Sosyal",
+      "slug": "fotografcilik_isikla_boyama",
+      "image": "assets/img/atolye/fotograf_isikla_boyama.jpg"
+    },
+    {
+      "slug_id": "a2026-02-16_nefes_atolyesi",
+      "date": "2026-02-16",
+      "title": "Nefes Atölyesi",
+      "coordinator": "Ayşe Rüveyda Kesici",
+      "educator": "",
+      "description": "Nefes, beden ve zihin arasındaki en güçlü köprüdür. Bu atölyede günlük hayatta fark etmeden yanlış kullandığımız nefes alışkanlıklarını fark edecek, doğru ve bilinçli nefes teknikleriyle bedenin doğal dengesini yeniden hatırlamasına alan açacağız. Atölye boyunca nefesin fizyoloji ve sinir sistemi üzerindeki etkilerini, stres, kaygı ve zihinsel yorgunlukla nefes aracılığıyla nasıl çalışılabileceğini, anda kalmayı ve bedensel farkındalığı artıran nefes pratiklerini deneyimleyeceğiz. Her seviyeye uygundur, herhangi bir deneyim gerektirmez. Amaç; nefesi 'yapmak' değil, nefesin kendini yapmasına izin vermeyi öğrenmektir. Bedenini dinlemek, zihnini sakinleştirmek ve kendinle daha derin bir temas kurmak isteyen herkes davetlidir.",
+      "category": "Sosyal",
+      "slug": "nefes_atolyesi",
+      "image": "assets/img/atolye/nefes_atolyesi.jpg"
+    },
+    {
+      "slug_id": "a2026-02-16_cupcake_susleme",
+      "date": "2026-02-16",
+      "title": "Cupcake Süsleme Atölyesi",
+      "coordinator": "Azranur Betül Bulut",
+      "educator": "Hülya Hanım Keleş",
+      "description": "Kelimelerin yerini bu kez renkler, dokular ve tatlı formlar alıyor. Bu atölyede akademik yoğunluğa kısa bir mola veriyor; kremalar, spatulalar ve cupcake'ler aracılığıyla yaratıcılığımızla buluşuyoruz. Hiçbir mutfak ya da süsleme deneyimi gerektirmeyen bu süreçte, mükemmeli değil anı, sonucu değil keyfi önemsiyoruz. Yaratmanın, yavaşlamanın ve kendi tasarımını ortaya koymanın iyileştirici tadına birlikte varıyoruz.",
+      "category": "Sosyal",
+      "slug": "cupcake_susleme",
+      "image": "assets/img/atolye/cupcake_susleme.jpg"
+    },
+    {
+      "slug_id": "a2026-02-16_renklerin_dili",
+      "date": "2026-02-16",
+      "title": "Renklerin Dili: Sanatla Terapi Atölyesi",
+      "coordinator": "Tuğba Kapusuz",
+      "educator": "Dr. Süeda Kelebek",
+      "description": "Kelimelerin yetersiz kaldığı yerde renkler ve formlar konuşmaya başlar. Bu atölyede, akademik yoğunluğa kısa bir ara veriyor; fırça darbeleri ve dokular aracılığıyla içsel dünyamızı keşfe çıkıyoruz. Hiçbir sanatsal yetenek gerektirmeyen bu deneyimde, sadece 'anda' kalmanın ve yaratmanın iyileştirici gücüne odaklanacağız.",
+      "category": "Sosyal",
+      "slug": "renklerin_dili",
+      "image": "assets/img/atolye/renklerin_dili.jpg"
+    },
+    {
+      "slug_id": "a2026-02-16_oryantring_atolyesi",
+      "date": "2026-02-16",
+      "title": "Oryantiring Atölyesi",
+      "coordinator": "",
+      "educator": "",
+      "description": "Doğayla iç içe, hem fiziksel hem zihinsel becerilerinizi geliştireceğiniz keyifli bir deneyime hazır mısınız? Oryantiring sporunun temel prensiplerini öğrenmek, harita ve pusula kullanımını deneyimlemek ve takım çalışmasıyla parkur heyecanını yaşamak üzere düzenlediğimiz Oryantiring Atölyesi'ne sizleri davet ediyoruz.",
+      "category": "Sosyal",
+      "slug": "oryantring_atolyesi",
+      "image": "assets/img/atolye/oryantring.jpg"
+    },
+    {
+      "slug_id": "a2026-02-16_step_aerobik_atolyesi",
+      "date": "2026-02-16",
+      "title": "Step Aerobik Atölyesi",
+      "coordinator": "",
+      "educator": "",
+      "description": "Ritmi hissetmeye, enerjini yükseltmeye ve birlikte ter atmaya hazır mısın? Müzik eşliğinde eğlenceli koreografilerle hem kardiyonu artıracak hem de keyifli vakit geçireceğiz. Hareket, motivasyon ve bol kahkaha seni bekliyor!",
+      "category": "Sosyal",
+      "slug": "step_aerobik_atolyesi",
+      "image": "assets/img/atolye/step_aerobik.jpg"
+    },
+    {
+      "slug_id": "a2026-02-16_psikodrama_atolyesi",
+      "date": "2026-02-16",
+      "title": "Psikodrama Atölyesi",
+      "coordinator": "",
+      "educator": "Yusuf Dökmen",
+      "description": "Kendinizi daha yakından tanımaya, duygularınızı güvenli bir alanda ifade etmeye ve hayatınızdaki rolleri keşfetmeye hazır mısınız? Psikodrama Atölyemizde; içsel farkındalık, rol çalışmaları, duygularla temas, grup dinamiği ve paylaşım deneyimleyeceğiz. Sahne sizin, hikâye sizin... Birlikte keşfetmek için sizi aramızda görmekten mutluluk duyarız.",
+      "category": "Sosyal",
+      "slug": "psikodrama_atolyesi",
+      "image": "assets/img/atolye/psikodrama.jpg"
+    },
+    {
+      "slug_id": "a2026-02-16_laparoskopik_dry_lab",
+      "date": "2026-02-16",
+      "title": "Cerrahın Oyun Alanı: Laparoskopik Dry Lab Deneyimi",
+      "coordinator": [
+        "Ahmet Körmen",
+        "Damlanur Yılmaz"
+      ],
+      "educator": [
+        "Doç. Dr. Enis Dikicier",
+        "Uzm. Dr. Erhan Eröz"
+      ],
+      "description": "Bu atölye, laparoskopik cerrahinin temel prensiplerini uygulamalı ve eğlenceli bir ortamda deneyimlemek isteyen katılımcılar için tasarlanmıştır.",
+      "category": "Bilimsel",
+      "slug": "laparoskopik_dry_lab",
+      "image": "assets/img/atolye/laparoskopik.jpg"
+    },
+    {
+      "slug_id": "a2026-02-16_akupunktur",
+      "date": "2026-02-16",
+      "title": "Noktaların Gücü: Akupunktur",
+      "coordinator": [
+        "Seher Karaağaç",
+        "Nilay Gölbaşı"
+      ],
+      "educator": "Dr. Sevil Güçlü",
+      "description": "Akupunkturun temel teorisini, noktaların lokalizasyonunu ve iğneleme prensiplerini öğreneceğimiz; geleneksel bilgiyi modern bakış açısıyla birleştireceğimiz bir deneyim sunar.",
+      "category": "Bilimsel",
+      "slug": "akupunktur",
+      "image": "assets/img/atolye/akupunktur.jpg"
+    },
+    {
+      "slug_id": "a2026-02-16_dogum_simulasyonu",
+      "date": "2026-02-16",
+      "title": "Yaşamla İlk Temas: Doğum Simülasyonu",
+      "coordinator": "Ahsen Zümra Çelik",
+      "educator": "Doç. Dr. Hilal Uslu Yuvacı",
+      "description": "Bu atölye, doğum sürecini teoriden pratiğe, güvenli bir simülasyon ortamında deneyimlemek isteyen katılımcılar için tasarlanmıştır.",
+      "category": "Bilimsel",
+      "slug": "dogum_simulasyonu",
+      "image": "assets/img/atolye/dogum_simulasyonu.jpg"
+    },
+    {
+      "slug_id": "a2026-02-16_beyaz_perdede_tip",
+      "date": "2026-02-16",
+      "title": "Beyaz Perdede Tıp",
+      "coordinator": [
+        "Görkem Özgen",
+        "Ayşe Rana Yılmaz"
+      ],
+      "educator": "",
+      "description": "Film ve dizilerdeki sahne kesitlerinden vaka analizi yapacağımız ve tedavileri üzerine konuşacağımız eğlenceli ve interaktif bir atölye tasarlanmıştır.",
+      "category": "Bilimsel",
+      "slug": "beyaz_perdede_tip",
+      "image": "assets/img/atolye/beyaz_perdede_tip.jpg"
+    },
+    {
+      "slug_id": "a2026-02-16_bonecraft_alci_atel",
+      "date": "2026-02-16",
+      "title": "BoneCraft: Alçı Atel Atölyesi",
+      "coordinator": [
+        "Mehmet Eren Tekin",
+        "Ahmet Bora"
+      ],
+      "educator": "Doç. Dr. Ali Koç",
+      "description": "Bu atölye, tıp fakültesi öğrencilerine alçı uygulamalarının temel prensiplerini teoriden pratiğe taşıyarak öğretmeyi amaçlayan tamamen uygulamalı bir deneyim sunar. Klinik hayatta sık karşılaşılan ekstremite yaralanmalarında doğru alçı uygulamasının önemi, bu workshopta birebir deneyimlenerek pekiştirilir.",
+      "category": "Bilimsel",
+      "slug": "bonecraft_alci_atel",
+      "image": "assets/img/atolye/bonecraft.jpg"
+    },
+    {
+      "slug_id": "a2026-02-16_temel_yasam_destegi",
+      "date": "2026-02-16",
+      "title": "Kalbin Ritmini Sen Belirle: Temel Yaşam Desteği",
+      "coordinator": [
+        "Kanan Ahmedli",
+        "Asude Turan"
+      ],
+      "educator": "Ahmet Rıdvan Doğan",
+      "description": "Bu atölyede, ani kardiyak arrest ve solunum durması gibi hayatı tehdit eden acil durumlarda ilk dakikaların ne kadar kritik olduğu, güncel Temel Yaşam Desteği algoritmaları eşliğinde ele alınacaktır. Katılımcılar, doğru ve etkili müdahaleyi uygulamalı olarak öğrenme imkânı bulacaktır.",
+      "category": "Bilimsel",
+      "slug": "temel_yasam_destegi",
+      "image": "assets/img/atolye/temel_yasam_destegi.jpg"
+    },
+    {
+      "slug_id": "a2026-02-16_estetik_sutur",
+      "date": "2026-02-16",
+      "title": "İz Bırakmayan Sanat: Estetik Sütur Atölyesi",
+      "coordinator": "Ebrar Gür",
+      "educator": "Uzm. Dr. Emre Berkay Zeyrek",
+      "description": "Bu atölyede, yara onarımının yalnızca kapatma değil; fonksiyonel ve estetik iyileşme süreci olduğu yaklaşımıyla estetik sütur teknikleri ele alınacaktır. Katılımcılar, minimal skar hedefiyle kullanılan modern sütur yöntemlerini teorik ve pratik yönleriyle öğrenme fırsatı bulacaktır.",
+      "category": "Bilimsel",
+      "slug": "estetik_sutur",
+      "image": "assets/img/atolye/estetik_sutur.png"
+    },
+    {
+      "slug_id": "a2026-02-16_adli_vakalar",
+      "date": "2026-02-16",
+      "title": "Tıbbın Gölgesinde Adli Vakalar",
+      "coordinator": [
+        "Meryem Çimen",
+        "Gamze Koç"
+      ],
+      "educator": [
+        "Prof. Dr. Mehmet Emin Büyükokuroğlu",
+        "Uzm. Dr. Enes Emre Öztürk"
+      ],
+      "description": "Bu atölyede, tıp pratiğinin yalnızca tanı ve tedaviden ibaret olmadığı; hukuk, etik ve sorumluluk boyutlarıyla da ele alınması gerektiği adli vakalar üzerinden incelenecektir. Katılımcılar, günlük klinik uygulamada karşılaşılabilecek adli nitelikli durumları tanımayı ve doğru yaklaşımı öğrenmeyi hedefleyecek.",
+      "category": "Bilimsel",
+      "slug": "adli_vakalar",
+      "image": "assets/img/atolye/adli_vakalar.jpg"
+    },
+    {
+      "slug_id": "a2026-02-16_tip_ogrencileri_yarisiyor",
+      "date": "2026-02-16",
+      "title": "Tıp Öğrencileri Yarışıyor: 100 Kişiye Sorduk",
+      "coordinator": [
+        "Ceyda Sevim",
+        "Rümeysa Önen"
+      ],
+      "educator": "",
+      "description": "100 kişiye sorduğumuz tıbbi soruların en popüler 5 cevabının tahmin edilmesiyle oynanan eğlenceli bir oyun. Sonucunda minik ödüllerimiz sizleri bekliyor.",
+      "category": "Bilimsel",
+      "slug": "tip_ogrencileri_yarisiyor",
+      "image": "assets/img/atolye/tip_ogrencileri_yarisiyor.jpg"
+    },
+    {
+      "slug_id": "a2026-02-16_likit_biyopsi",
+      "date": "2026-02-16",
+      "title": "Kandan Gelen Tanı: Likit Biyopsi",
+      "coordinator": "Hümeyra Agit",
+      "educator": "Arş. Gr. Hacer Ağar",
+      "description": "Bu atölyede, klasik doku biyopsisinin ötesine geçen likit biyopsi yaklaşımını teorik ve pratik yönleriyle ele alıyoruz. Katılımcılar, periferik kandan elde edilen biyobelirteçlerin tanı, tedavi takibi ve prognoz değerlendirmesindeki rolünü öğrenirken, güncel onkoloji pratiğinde likit biyopsinin neden giderek daha fazla tercih edildiğini yakından deneyimleme fırsatı bulacak.",
+      "category": "Bilimsel",
+      "slug": "likit_biyopsi",
+      "image": "assets/img/atolye/likit_biyopsi.jpg"
+    },
+    {
+      "slug_id": "a2026-02-16_acil_vakalar",
+      "date": "2026-02-16",
+      "title": "Acil Vakalar: Değerlendir ve Yönet",
+      "coordinator": "Sawsen Selmani",
+      "educator": "",
+      "description": "Katılımcılar, sık karşılaşılan acil vakaların hızlı değerlendirilmesi ve ilk yaklaşım prensiplerini vaka üzerinden öğreneceklerdir. Atölyede ABC yaklaşımı, temel yaşam desteği, travma değerlendirmesi, anafilaksi yönetimi ve kardiyak aciller gibi temel başlıklar işlenecektir.",
+      "category": "Bilimsel",
+      "slug": "acil_vakalar",
+      "image": "assets/img/atolye/acil_vakalar.jpg"
+    }
+  ]
+}
