@@ -249,11 +249,11 @@
 
     container.innerHTML = `
       <article class="atolye-detail-card">
-        <div class="row g-4 align-items-start">
-          <div class="col-lg-5">
+        <div class="row align-items-start">
+          <div class="col-lg-5 atolye-detail-media">
             <img class="atolye-detail-image" src="${escapeHtml(image)}" alt="${escapeHtml(item.title)}">
           </div>
-          <div class="col-lg-7">
+          <div class="col-lg-7 atolye-detail-content">
             <div class="d-flex flex-wrap gap-2 mb-2">${buildMetaBadges(item)}</div>
             <h1 class="h2 fw-bold mb-3">${escapeHtml(item.title || 'Atölye')}</h1>
             <ul class="list-unstyled text-muted mb-3">

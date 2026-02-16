@@ -582,6 +582,25 @@ header.sticky-top .navbar {
   background: linear-gradient(135deg, #113b7a 0%, #2a66b8 100%);
   color: #fff;
   box-shadow: 0 12px 30px rgba(17, 59, 122, 0.26);
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.atolyeler-page .atolyeler-hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.3;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 420'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23ffffff' stop-opacity='.46'/%3E%3Cstop offset='1' stop-color='%23d7e9ff' stop-opacity='.14'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cg fill='none' stroke='url(%23g)' stroke-width='2'%3E%3Cpath d='M50 310h340l96-88h164l116-104h384'/%3E%3Cpath d='M0 352h286l120-118h208l94-82h492'/%3E%3Cpath d='M60 138h220l88 74h176l104 94h474'/%3E%3C/g%3E%3Cg fill='%23ffffff'%3E%3Ccircle cx='164' cy='310' r='8' fill-opacity='.55'/%3E%3Ccircle cx='360' cy='308' r='10' fill-opacity='.35'/%3E%3Ccircle cx='486' cy='220' r='11' fill-opacity='.5'/%3E%3Ccircle cx='764' cy='118' r='12' fill-opacity='.4'/%3E%3Ccircle cx='910' cy='118' r='8' fill-opacity='.6'/%3E%3Ccircle cx='1038' cy='316' r='13' fill-opacity='.28'/%3E%3Ccircle cx='1094' cy='318' r='7' fill-opacity='.55'/%3E%3C/g%3E%3Cg stroke='%23ffffff' stroke-opacity='.32' stroke-width='2' fill='none'%3E%3Ccircle cx='944' cy='212' r='72'/%3E%3Ccircle cx='944' cy='212' r='32'/%3E%3Ccircle cx='252' cy='120' r='52'/%3E%3C/g%3E%3C/svg%3E");
+  background-size: cover;
+  background-position: center;
+}
+
+.atolyeler-page .atolyeler-hero-content {
+  position: relative;
+  z-index: 1;
 }
 
 .atolyeler-page .atolye-card {
@@ -624,13 +643,24 @@ header.sticky-top .navbar {
   border: 1px solid #e6eef8;
   border-radius: 1rem;
   background: linear-gradient(180deg, #ffffff 0%, #f9fcff 100%);
-  padding: 1.25rem;
+  overflow: hidden;
   box-shadow: 0 12px 28px rgba(15, 60, 138, 0.08);
+}
+
+.atolyeler-page .atolye-detail-media,
+.atolyeler-page .atolye-detail-content {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.atolyeler-page .atolye-detail-content {
+  padding: 1.25rem;
 }
 
 .atolyeler-page .atolye-detail-image {
   width: 100%;
-  border-radius: 0.75rem;
+  display: block;
+  border-radius: 0;
   object-fit: cover;
   max-height: 420px;
 }
