@@ -25,6 +25,23 @@
   --color-navbar-active: var(--logo-blue);
 }
 
+/* Font sizes */
+.tiny {
+  font-size: 0.75rem;
+}
+
+.scriptsize {
+  font-size: 0.8rem;
+}
+
+.small {
+  font-size: 0.875rem;
+}
+
+.medium {
+  font-size: 1rem;
+}
+
 /* icon colors */
 .icon-blue {
   color: var(--blue-7);
@@ -564,6 +581,7 @@ header.sticky-top .navbar {
 }
 
 @media (max-width: 991.98px) {
+
   .conference-about-page .about-card,
   .conference-about-page .about-focus-card {
     padding: 1.25rem;
@@ -603,12 +621,22 @@ header.sticky-top .navbar {
   z-index: 1;
 }
 
+.atolyeler-page .atolyeler-search-wrap {
+  width: 100%;
+  max-width: 320px;
+}
+
 .atolyeler-page .atolye-card {
   border: 1px solid #e6eef8;
   border-radius: 1rem;
   overflow: hidden;
   background: #fff;
   box-shadow: 0 8px 20px rgba(18, 56, 117, 0.08);
+  transition: transform 0.25s ease;
+}
+
+.atolyeler-page .atolye-card:hover {
+  transform: translateY(-10px);
 }
 
 .atolyeler-page .atolye-card-image {
@@ -666,6 +694,10 @@ header.sticky-top .navbar {
 }
 
 @media (max-width: 991.98px) {
+  .atolyeler-page .atolyeler-search-wrap {
+    max-width: 100%;
+  }
+
   .atolyeler-page .atolye-card-image {
     height: 200px;
   }
