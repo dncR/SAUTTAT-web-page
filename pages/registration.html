@@ -22,8 +22,7 @@
 
 
   <link rel="icon" type="image/png" href="assets/img/favicon.ico">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
   <link rel="stylesheet" href="assets/css/custom_style.css">
 </head>
@@ -33,123 +32,69 @@
   <div data-include="components/header.html"></div>
 
   <section class="py-5">
-    <div data-include="components/content-placeholder.html"></div>
-
-    <div class="container d-none">
-      <h1 class="fw-bold mb-4">Conference Registration</h1>
-      <p class="text-muted">Registrations are open and available via the online platform. <strong>The previously
-          available registration form is repealed.</strong> However, if you have already registered using the
-        registration form (by sending an e-mail to the organization secretary), you do not have to register via the
-        online form. Participants who want to register after <strong>March 13, 2023,</strong> should continue with the
-        online registration.</p>
-      <p><a class="fw-bold" href="https://emr2023.digiconkayit.com/#/">Click here to continue registration page</a></p>
-
-      <p class="text-muted mt-4">Registration fees in € (EURO) per person including VAT.</p>
-
-      <div class="table-responsive">
-        <table class="table table-striped align-middle">
-          <thead class="table-light">
-            <tr>
-              <th></th>
-              <th>Early bird (*)</th>
-              <th>Late Registration</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><strong>EMR/IBS Member</strong></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td class="ps-4">Regular</td>
-              <td>350</td>
-              <td>500</td>
-            </tr>
-            <tr>
-              <td class="ps-4">Student</td>
-              <td>150</td>
-              <td>200</td>
-            </tr>
-            <tr>
-              <td class="ps-4">Accompanying person **</td>
-              <td>175</td>
-              <td>200</td>
-            </tr>
-            <tr>
-              <td><strong>Non-member</strong></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td class="ps-4">Regular</td>
-              <td>450</td>
-              <td>600</td>
-            </tr>
-            <tr>
-              <td class="ps-4">Student</td>
-              <td>200</td>
-              <td>250</td>
-            </tr>
-            <tr>
-              <td class="ps-4">Accompanying person **</td>
-              <td>225</td>
-              <td>250</td>
-            </tr>
-            <tr>
-              <td>Pre-conference Courses</td>
-              <td>50</td>
-              <td>75</td>
-            </tr>
-            <tr>
-              <td>Gala Dinner (9 May 2023)</td>
-              <td>85</td>
-              <td>105</td>
-            </tr>
-            <tr>
-              <td><strong>Social Trip (10 May 2023)</strong></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td class="ps-4"><strong>Option (A), 13:00 – 18:00</strong>: Ephesus &amp; Mary's House &amp; Sirince
-                Village</td>
-              <td>40</td>
-              <td>50</td>
-            </tr>
-            <tr>
-              <td class="ps-4"><strong>Option (B), 13:00 – 21:00</strong>: Ephesus &amp; Mary's House &amp; Sirince
-                Village &amp; Dinner at Lucien Arkas Vineyards</td>
-              <td>95</td>
-              <td>115</td>
-            </tr>
-            <tr>
-              <td><strong>Donation***</strong></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td class="ps-4">Donate Student Registration</td>
-              <td>200</td>
-              <td>250</td>
-            </tr>
-            <tr>
-              <td class="ps-4">Donate Pre-conference Courses</td>
-              <td>50</td>
-              <td>75</td>
-            </tr>
-          </tbody>
-        </table>
+    <div class="container registration-page main-content">
+      <div class="registration-hero p-4 p-lg-5 mb-4 rounded-4">
+        <div class="registration-hero-bg" aria-hidden="true"></div>
+        <div class="registration-hero-content d-flex flex-column flex-lg-row align-items-start align-items-lg-center justify-content-between gap-3">
+          <div class="registration-hero-text">
+            <h1 class="fw-bold mb-2">Kayıt ve Başvuru</h1>
+            <p class="mb-0">3. Uluslararası Katılımlı 6. Ulusal Geleceğin Tıbbı Kongresi</p>
+          </div>
+          <div class="registration-date-badge">
+            <span class="text-uppercase small fw-semibold">Kongre Tarihi</span>
+            <div class="fs-5 fw-bold">8-10 Mayıs 2026</div>
+          </div>
+        </div>
       </div>
 
-      <div class="mt-3 text-muted">
-        <p class="mb-1">Registration fee includes mini-symposium, attendance to all coffee breaks, lunches, presentation
-          certificate, conference book, bag and name tag</p>
-        <p class="mb-1">(*) Early bird registrations applies before <strong>March 31, 2023</strong>.</p>
-        <p class="mb-1">(**) Accompanying person fee included Welcome cocktail, lunch, and coffee breaks.</p>
-        <p class="mb-0">(***) You have an opportunity to donate a <strong>Registration</strong> and/or
-          <strong>Pre-conference course</strong> to a student who does not have any financial support for conference
-          participation. This donation is <strong>OPTIONAL</strong>.</p>
+      <div class="registration-intro mb-4">
+        <p class="mb-3">SAÜTTAT olarak, 2014 yılından bu yana bilimin dönüştürücü gücüne inanarak sürdürdüğümüz yolculuğumuzda beklenen an geldi; kongre kapılarımızı aralıyoruz. <strong>8-9-10 Mayıs 2026</strong> tarihlerinde Sakarya’da, tıbbın yarınını birlikte inşa etmek için buluşuyoruz.</p>
+        <p class="mb-0">Bu yıl <strong>“Kişiselleştirilmiş Tıp”</strong> ana temasıyla; genetikten onkolojiye, yapay zekâdan cerrahiye uzanan geniş bir yelpazede disiplinler arası bir köprü kuruyoruz. Ulusal ve uluslararası otoritelerin katılımıyla, her hastanın biricikliğine odaklanan bu yeni nesil yaklaşımı hep birlikte keşfedeceğiz.</p>
+      </div>
+
+      <div class="row g-4 mb-4">
+        <div class="col-12 col-lg-6">
+          <div class="registration-card h-100">
+            <h2 class="section-title mb-3">Akademik ve Sosyal Program</h2>
+            <p class="mb-2">Akademik programımızı teoriyi pratiğe dönüştüren interaktif atölyelerle harmanlıyoruz.</p>
+            <ul class="registration-list">
+              <li><strong>Sapanca Gölü</strong> manzarasında Gala Yemeği</li>
+              <li><strong>Melen Çayı</strong>nda enerji dolu Rafting etkinliği</li>
+              <li>Mesleki ağların güçlendiği doğa ile iç içe kongre deneyimi</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-12 col-lg-6">
+          <div class="registration-card h-100">
+            <h2 class="section-title mb-3">Sahne Senin</h2>
+            <p class="mb-2">Araştırmalarınla yer alabileceğin bu prestijli platformda, jüri değerlendirmesi sonucu dereceye giren sunumlar ödüllendirilecektir.</p>
+            <p class="mb-0">Kongremizin bildiri gönderim formu açılmıştır. Genel katılımcı kayıtları ise <strong>20 Şubat 2026 Cuma</strong> günü başlayacaktır.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-12 col-lg-6">
+          <div class="registration-card h-100">
+            <h2 class="section-title mb-3">Başvuru ve Kayıt</h2>
+            <div class="d-grid gap-3">
+              <a class="btn btn-primary registration-btn" href="https://docs.google.com/forms/d/e/1FAIpQLSc5ggEeQ0JETjcNtYR1NVn2hgrnWTxqKkLVqrDQ3FRYWs4CdA/viewform" target="_blank" rel="noopener noreferrer">
+                <i class="fas fa-file-circle-check me-2" aria-hidden="true"></i>Bildiri Gönderim Formu (Açıldı)
+              </a>
+              <a class="btn btn-outline-primary registration-btn" href="https://docs.google.com/forms/d/e/1FAIpQLSd1JuyuZGrq_9aIHq5RKGAdlzwf-qUu7c3sVwu1WroZwxaR_w/viewform?usp=header" target="_blank" rel="noopener noreferrer">
+                <i class="fas fa-user-check me-2" aria-hidden="true"></i>Genel Katılımcı Kayıt Formu (20 Şubat Cuma Açılıyor)
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-6">
+          <div class="registration-contact h-100">
+            <h2 class="section-title mb-2">İletişim</h2>
+            <p class="mb-2">Merak ettiğiniz her şey için bizimle e-posta üzerinden iletişime geçebilirsiniz:</p>
+            <p class="mb-3"><a href="mailto:sauttatkongre@gmail.com"><i class="fas fa-envelope me-2" aria-hidden="true"></i>sauttatkongre@gmail.com</a></p>
+            <p class="mb-0 fw-semibold">SAÜTTAT Kongre Organizasyon Ekibi</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
