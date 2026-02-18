@@ -254,6 +254,31 @@ header.sticky-top .navbar {
 }
 
 /* Submission guidelines */
+.submit-abstract-page .submission-hero {
+  background: linear-gradient(135deg, #113b7a 0%, #2a66b8 100%);
+  color: #fff;
+  box-shadow: 0 12px 30px rgba(17, 59, 122, 0.26);
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.submit-abstract-page .submission-hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.3;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 420'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23ffffff' stop-opacity='.46'/%3E%3Cstop offset='1' stop-color='%23d7e9ff' stop-opacity='.14'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cg fill='none' stroke='url(%23g)' stroke-width='2'%3E%3Cpath d='M50 310h340l96-88h164l116-104h384'/%3E%3Cpath d='M0 352h286l120-118h208l94-82h492'/%3E%3Cpath d='M60 138h220l88 74h176l104 94h474'/%3E%3C/g%3E%3Cg fill='%23ffffff'%3E%3Ccircle cx='164' cy='310' r='8' fill-opacity='.55'/%3E%3Ccircle cx='360' cy='308' r='10' fill-opacity='.35'/%3E%3Ccircle cx='486' cy='220' r='11' fill-opacity='.5'/%3E%3Ccircle cx='764' cy='118' r='12' fill-opacity='.4'/%3E%3Ccircle cx='910' cy='118' r='8' fill-opacity='.6'/%3E%3Ccircle cx='1038' cy='316' r='13' fill-opacity='.28'/%3E%3Ccircle cx='1094' cy='318' r='7' fill-opacity='.55'/%3E%3C/g%3E%3Cg stroke='%23ffffff' stroke-opacity='.32' stroke-width='2' fill='none'%3E%3Ccircle cx='944' cy='212' r='72'/%3E%3Ccircle cx='944' cy='212' r='32'/%3E%3Ccircle cx='252' cy='120' r='52'/%3E%3C/g%3E%3C/svg%3E");
+  background-size: cover;
+  background-position: center;
+}
+
+.submit-abstract-page .submission-hero-content {
+  position: relative;
+  z-index: 1;
+}
+
 .submission-deadline {
   border: 1px solid #e9ecef;
   border-radius: 0.75rem;
@@ -262,6 +287,18 @@ header.sticky-top .navbar {
   min-width: 170px;
   text-align: center;
   box-shadow: 0 0.5rem 1.25rem rgba(0, 0, 0, 0.06);
+}
+
+.submit-abstract-page .submission-deadline {
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  background: rgba(255, 255, 255, 0.16);
+  color: #fff;
+  box-shadow: none;
+  backdrop-filter: blur(2px);
+}
+
+.submit-abstract-page .submission-deadline .small {
+  color: rgba(255, 255, 255, 0.85) !important;
 }
 
 .submission-callout {
@@ -317,6 +354,108 @@ header.sticky-top .navbar {
 
 .text-justify {
   text-align: justify;
+}
+
+/* Registration page */
+.registration-page {
+  border-radius: 1.2rem;
+}
+
+.registration-page .registration-hero {
+  background: linear-gradient(135deg, #113b7a 0%, #2a66b8 100%);
+  color: #fff;
+  box-shadow: 0 12px 30px rgba(17, 59, 122, 0.26);
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.registration-page .registration-hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.3;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 420'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23ffffff' stop-opacity='.46'/%3E%3Cstop offset='1' stop-color='%23d7e9ff' stop-opacity='.14'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cg fill='none' stroke='url(%23g)' stroke-width='2'%3E%3Cpath d='M50 310h340l96-88h164l116-104h384'/%3E%3Cpath d='M0 352h286l120-118h208l94-82h492'/%3E%3Cpath d='M60 138h220l88 74h176l104 94h474'/%3E%3C/g%3E%3Cg fill='%23ffffff'%3E%3Ccircle cx='164' cy='310' r='8' fill-opacity='.55'/%3E%3Ccircle cx='360' cy='308' r='10' fill-opacity='.35'/%3E%3Ccircle cx='486' cy='220' r='11' fill-opacity='.5'/%3E%3Ccircle cx='764' cy='118' r='12' fill-opacity='.4'/%3E%3Ccircle cx='910' cy='118' r='8' fill-opacity='.6'/%3E%3Ccircle cx='1038' cy='316' r='13' fill-opacity='.28'/%3E%3Ccircle cx='1094' cy='318' r='7' fill-opacity='.55'/%3E%3C/g%3E%3Cg stroke='%23ffffff' stroke-opacity='.32' stroke-width='2' fill='none'%3E%3Ccircle cx='944' cy='212' r='72'/%3E%3Ccircle cx='944' cy='212' r='32'/%3E%3Ccircle cx='252' cy='120' r='52'/%3E%3C/g%3E%3C/svg%3E");
+  background-size: cover;
+  background-position: center;
+}
+
+.registration-page .registration-hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.registration-page .registration-hero-text p {
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.registration-page .registration-date-badge {
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: 0.75rem;
+  padding: 0.85rem 1.1rem;
+  background: rgba(255, 255, 255, 0.16);
+  color: #fff;
+  backdrop-filter: blur(2px);
+  text-align: center;
+  min-width: 190px;
+}
+
+.registration-page .registration-date-badge .small {
+  color: rgba(255, 255, 255, 0.85) !important;
+}
+
+.registration-page .registration-intro {
+  border: 1px solid #d9e6f8;
+  border-left: 4px solid #2a66b8;
+  border-radius: 0.9rem;
+  background: linear-gradient(180deg, #f7fbff 0%, #eef5ff 100%);
+  padding: 1.2rem 1.35rem;
+  box-shadow: 0 8px 20px rgba(17, 59, 122, 0.08);
+}
+
+.registration-page .registration-card {
+  border: 1px solid #dfe9f8;
+  border-radius: 0.95rem;
+  padding: 1.4rem 1.5rem;
+  background: linear-gradient(180deg, #ffffff 0%, #f9fcff 100%);
+  box-shadow: 0 10px 26px rgba(16, 65, 146, 0.08);
+}
+
+.registration-page .registration-contact {
+  border: 1px solid #c8daf5;
+  border-radius: 0.95rem;
+  padding: 1.4rem 1.5rem;
+  background: #fff;
+  box-shadow: 0 10px 24px rgba(21, 74, 160, 0.1);
+}
+
+.registration-page .registration-list {
+  margin-bottom: 0;
+  padding-left: 1.2rem;
+}
+
+.registration-page .registration-list li {
+  margin-bottom: 0.5rem;
+}
+
+.registration-page .registration-list li:last-child {
+  margin-bottom: 0;
+}
+
+.registration-page .registration-btn {
+  text-align: left;
+  font-weight: 600;
+}
+
+@media (max-width: 991.98px) {
+  .registration-page {
+    padding: 0.85rem;
+  }
+
+  .registration-page .registration-date-badge {
+    min-width: 100%;
+  }
 }
 
 .card-border-muted {
