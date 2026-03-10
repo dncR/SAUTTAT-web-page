@@ -2,6 +2,7 @@
   "items": [
     {
       "slug_id": "a2026-02-16_kilin_ruhu",
+      "status": "open",
       "date": "2026-02-16",
       "title": "Kilin Ruhu",
       "coordinator": "Rumeysa SAĞLAR",
@@ -13,6 +14,7 @@
     },
     {
       "slug_id": "a2026-02-16_tokat_tahta_baski",
+      "status": "open",
       "date": "2026-02-16",
       "title": "Tokat Tahta Baskı Atölyesi",
       "coordinator": "Rana Tüzer",
@@ -24,6 +26,7 @@
     },
     {
       "slug_id": "a2026-02-16_mum_atolyesi",
+      "status": "open",
       "date": "2026-02-16",
       "title": "Mum Atölyesi",
       "coordinator": "Damla Güner",
@@ -35,6 +38,7 @@
     },
     {
       "slug_id": "a2026-02-16_ebru_atolyesi",
+      "status": "open",
       "date": "2026-02-16",
       "title": "Suya İşlenen Sanat: Ebru Atölyesi",
       "coordinator": "Zeynep Arslan",
@@ -46,6 +50,7 @@
     },
     {
       "slug_id": "a2026-02-16_okculuk_atolyesi",
+      "status": "open",
       "date": "2026-02-16",
       "title": "Tam İsabet: Okçuluk Atölyesi",
       "coordinator": "Hamza Yiğit Erdoğan",
@@ -57,6 +62,7 @@
     },
     {
       "slug_id": "a2026-02-16_bez_canta_boyama",
+      "status": "open",
       "date": "2026-02-16",
       "title": "Kendi Çantanı Tasarla: Bez Çanta Boyama Atölyesi",
       "coordinator": "Esra Sevim",
@@ -68,6 +74,7 @@
     },
     {
       "slug_id": "a2026-02-16_ahsap_saksi_boyama",
+      "status": "open",
       "date": "2026-02-16",
       "title": "Bir Nefes Renk: Ahşap Saksı Boyama",
       "coordinator": "Şevval Yaya",
@@ -79,6 +86,7 @@
     },
     {
       "slug_id": "a2026-02-16_vitray_atolyesi",
+      "status": "open",
       "date": "2026-02-16",
       "title": "Camın Ruhu: Vitray Atölyesi",
       "coordinator": "Elif Arslan",
@@ -90,6 +98,7 @@
     },
     {
       "slug_id": "a2026-02-16_hipnoz_atolyesi",
+      "status": "open",
       "date": "2026-02-16",
       "title": "Hipnoz Atölyesi",
       "coordinator": "Orhan Kerem Arslan",
@@ -101,6 +110,7 @@
     },
     {
       "slug_id": "a2026-02-16_makrome_anahtarlik",
+      "status": "open",
       "date": "2026-02-16",
       "title": "Makrome Anahtarlık Atölyesi",
       "coordinator": "Asel Demirkıran",
@@ -112,6 +122,7 @@
     },
     {
       "slug_id": "a2026-02-16_fotografcilik_isikla_boyama",
+      "status": "open",
       "date": "2026-02-16",
       "title": "Fotoğrafçılık ve Işıkla Boyama Atölyesi",
       "coordinator": "Mustafa Demirel",
@@ -123,6 +134,7 @@
     },
     {
       "slug_id": "a2026-02-16_nefes_atolyesi",
+      "status": "open",
       "date": "2026-02-16",
       "title": "Nefes Atölyesi",
       "coordinator": "Ayşe Rüveyda Kesici",
@@ -134,6 +146,7 @@
     },
     {
       "slug_id": "a2026-02-16_cupcake_susleme",
+      "status": "open",
       "date": "2026-02-16",
       "title": "Cupcake Süsleme Atölyesi",
       "coordinator": "Azranur Betül Bulut",
@@ -145,6 +158,7 @@
     },
     {
       "slug_id": "a2026-02-16_renklerin_dili",
+      "status": "open",
       "date": "2026-02-16",
       "title": "Renklerin Dili: Sanatla Terapi Atölyesi",
       "coordinator": "Tuğba Kapusuz",
@@ -156,6 +170,7 @@
     },
     {
       "slug_id": "a2026-02-16_oryantring_atolyesi",
+      "status": "open",
       "date": "2026-02-16",
       "title": "Oryantiring Atölyesi",
       "coordinator": "",
@@ -167,6 +182,7 @@
     },
     {
       "slug_id": "a2026-02-16_step_aerobik_atolyesi",
+      "status": "closed",
       "date": "2026-02-16",
       "title": "Step Aerobik Atölyesi",
       "coordinator": "",
@@ -178,6 +194,7 @@
     },
     {
       "slug_id": "a2026-02-16_psikodrama_atolyesi",
+      "status": "closed",
       "date": "2026-02-16",
       "title": "Psikodrama Atölyesi",
       "coordinator": "",
@@ -189,6 +206,7 @@
     },
     {
       "slug_id": "a2026-02-16_laparoskopik_dry_lab",
+      "status": "open",
       "date": "2026-02-16",
       "title": "Cerrahın Oyun Alanı: Laparoskopik Dry Lab Deneyimi",
       "coordinator": [
@@ -206,6 +224,7 @@
     },
     {
       "slug_id": "a2026-02-16_akupunktur",
+      "status": "open",
       "date": "2026-02-16",
       "title": "Noktaların Gücü: Akupunktur",
       "coordinator": [
@@ -220,6 +239,7 @@
     },
     {
       "slug_id": "a2026-02-16_dogum_simulasyonu",
+      "status": "open",
       "date": "2026-02-16",
       "title": "Yaşamla İlk Temas: Doğum Simülasyonu",
       "coordinator": "Ahsen Zümra Çelik",
@@ -231,6 +251,7 @@
     },
     {
       "slug_id": "a2026-02-16_beyaz_perdede_tip",
+      "status": "open",
       "date": "2026-02-16",
       "title": "Beyaz Perdede Tıp",
       "coordinator": [
@@ -245,6 +266,7 @@
     },
     {
       "slug_id": "a2026-02-16_bonecraft_alci_atel",
+      "status": "open",
       "date": "2026-02-16",
       "title": "BoneCraft: Alçı Atel Atölyesi",
       "coordinator": [
@@ -259,6 +281,7 @@
     },
     {
       "slug_id": "a2026-02-16_temel_yasam_destegi",
+      "status": "open",
       "date": "2026-02-16",
       "title": "Kalbin Ritmini Sen Belirle: Temel Yaşam Desteği",
       "coordinator": [
@@ -273,6 +296,7 @@
     },
     {
       "slug_id": "a2026-02-16_estetik_sutur",
+      "status": "open",
       "date": "2026-02-16",
       "title": "İz Bırakmayan Sanat: Estetik Sütur Atölyesi",
       "coordinator": "Ebrar Gür",
@@ -284,6 +308,7 @@
     },
     {
       "slug_id": "a2026-02-16_adli_vakalar",
+      "status": "open",
       "date": "2026-02-16",
       "title": "Tıbbın Gölgesinde Adli Vakalar",
       "coordinator": [
@@ -291,8 +316,7 @@
         "Gamze Koç"
       ],
       "educator": [
-        "Prof. Dr. Mehmet Emin Büyükokuroğlu",
-        "Uzm. Dr. Enes Emre Öztürk"
+        "Prof. Dr. Mehmet Emin Büyükokuroğlu"
       ],
       "description": "Bu atölyede, tıp pratiğinin yalnızca tanı ve tedaviden ibaret olmadığı; hukuk, etik ve sorumluluk boyutlarıyla da ele alınması gerektiği adli vakalar üzerinden incelenecektir. Katılımcılar, günlük klinik uygulamada karşılaşılabilecek adli nitelikli durumları tanımayı ve doğru yaklaşımı öğrenmeyi hedefleyecek.",
       "category": "Bilimsel",
@@ -301,6 +325,7 @@
     },
     {
       "slug_id": "a2026-02-16_tip_ogrencileri_yarisiyor",
+      "status": "open",
       "date": "2026-02-16",
       "title": "Tıp Öğrencileri Yarışıyor: 100 Kişiye Sorduk",
       "coordinator": [
@@ -315,6 +340,7 @@
     },
     {
       "slug_id": "a2026-02-16_likit_biyopsi",
+      "status": "open",
       "date": "2026-02-16",
       "title": "Kandan Gelen Tanı: Likit Biyopsi",
       "coordinator": "Hümeyra Agit",
@@ -326,10 +352,11 @@
     },
     {
       "slug_id": "a2026-02-16_acil_vakalar",
+      "status": "open",
       "date": "2026-02-16",
       "title": "Acil Vakalar: Değerlendir ve Yönet",
       "coordinator": "Sawsen Selmani",
-      "educator": "",
+      "educator": "Assist. Dr. Zeynep Damla Durmuş",
       "description": "Katılımcılar, sık karşılaşılan acil vakaların hızlı değerlendirilmesi ve ilk yaklaşım prensiplerini vaka üzerinden öğreneceklerdir. Atölyede ABC yaklaşımı, temel yaşam desteği, travma değerlendirmesi, anafilaksi yönetimi ve kardiyak aciller gibi temel başlıklar işlenecektir.",
       "category": "Bilimsel",
       "slug": "acil_vakalar",

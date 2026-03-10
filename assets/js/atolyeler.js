@@ -6,6 +6,7 @@
   const EMPTY_ALERT_CLASS = 'alert alert-warning';
   const PAGE_SIZE = 6;
   const DEFAULT_CATEGORY = 'Sosyal';
+  const HIDDEN_STATUSES = new Set(['closed', 'hidden', 'inactive', 'draft']);
 
   const escapeHtml = (value) =>
     String(value ?? '')
@@ -67,6 +68,7 @@
     return {
       slug,
       slugId: item.slug_id ? String(item.slug_id).trim() : '',
+      status: String(item.status ?? 'open').trim().toLocaleLowerCase('tr-TR'),
       title,
       date,
       dateLabel: formatDate(date),
@@ -87,6 +89,8 @@
     if (raw && typeof raw === 'object') return [normalizeItem(raw)];
     return [];
   };
+
+  const isItemVisible = (item) => !HIDDEN_STATUSES.has(String(item.status ?? 'open').trim().toLocaleLowerCase('tr-TR'));
 
   const sortByDateAsc = (items) =>
     [...items].sort((a, b) => {
@@ -205,7 +209,7 @@
     const state = {
       activeCategory: DEFAULT_CATEGORY,
       currentPage: 1,
-      items,
+      items: items.filter(isItemVisible),
       searchQuery: '',
     };
 
@@ -260,8 +264,8 @@
   };
 
   const renderDetail = (container, item) => {
-    if (!item) {
-      container.innerHTML = `<div class="${EMPTY_ALERT_CLASS}" role="alert">Aradığınız atölye bulunamadı.</div>`;
+    if (!item || !isItemVisible(item)) {
+      container.innerHTML = `<div class="${EMPTY_ALERT_CLASS}" role="alert">Aradığınız atölye şu anda yayında değil.</div>`;
       return;
     }
 
