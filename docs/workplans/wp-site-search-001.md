@@ -1,9 +1,13 @@
 # Workplan: Site Geneli Arama
 
 Workplan ID: WP-SEARCH-001
+
 Status: active
+
 Scope: search, site, frontend, javascript, ux, content
+
 Owner: team
+
 Last updated: 2026-03-14
 
 ## Amac
