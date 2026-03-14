@@ -1,0 +1,180 @@
+/* SAUTTAT page: conference-topics */
+.conference-topics-page {
+  background:
+    radial-gradient(circle at 8% 10%, rgba(77, 128, 255, 0.14), transparent 42%),
+    radial-gradient(circle at 94% 2%, rgba(239, 127, 26, 0.12), transparent 35%),
+    linear-gradient(180deg, #f3f8ff 0%, #ffffff 58%);
+}
+
+.conference-topics-page .topics-hero {
+  background: linear-gradient(rgba(11, 44, 101, 0.84), rgba(18, 61, 133, 0.84)), url("../../img/conference/conference_sauttat_banner.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #fff;
+  box-shadow: 0 16px 36px rgba(16, 62, 138, 0.3);
+}
+
+.conference-topics-page .topics-kicker {
+  display: inline-block;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.35rem 0.65rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.2);
+  margin-bottom: 0.75rem;
+}
+
+.conference-topics-page .topics-title {
+  font-size: clamp(2rem, 5vw, 3.1rem);
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+.conference-topics-page .topics-lead {
+  font-size: 1.06rem;
+  color: rgba(255, 255, 255, 0.92);
+  max-width: 56ch;
+}
+
+.conference-topics-page .topics-highlight-card {
+  border-radius: 1rem;
+  padding: 1.25rem;
+  background: rgba(255, 255, 255, 0.17);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(2px);
+}
+
+.conference-topics-page .topics-highlight-label {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  opacity: 0.86;
+}
+
+.conference-topics-page .topics-highlight-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.conference-topics-page .topics-highlight-text {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.conference-topics-page .topic-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 1rem;
+  background: #fff;
+  border: 1px solid #e5eefb;
+  box-shadow: 0 12px 28px rgba(15, 60, 138, 0.09);
+  padding: 1.25rem;
+  transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+}
+
+.conference-topics-page .topic-card:hover,
+.conference-topics-page .topic-card:focus-within {
+  transform: translateY(-4px);
+  border-color: rgba(38, 89, 178, 0.4);
+  box-shadow: 0 18px 30px rgba(17, 59, 122, 0.16);
+}
+
+.conference-topics-page .topic-icon {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 0.85rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.9rem;
+  color: #fff;
+  background: linear-gradient(135deg, #1e4ea2 0%, #2f74df 100%);
+  box-shadow: 0 8px 18px rgba(29, 83, 172, 0.28);
+}
+
+.conference-topics-page .topic-icon i {
+  font-size: 1.15rem;
+}
+
+.conference-topics-page .topic-title {
+  margin: 0;
+  color: #113770;
+  font-size: 1.08rem;
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+.conference-topics-page .topic-description {
+  margin: 2rem 0 0;
+  padding-bottom: 0.45rem;
+  color: #3a4862;
+  font-size: 0.94rem;
+  line-height: 1.65;
+}
+
+.conference-topics-page .topic-sources {
+  margin: auto 0 0;
+  padding-top: 0.75rem;
+  border-top: 1px dashed #d7e3f5;
+  color: #1d4fa1;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.conference-topics-page .topics-reference-cta {
+  margin-top: 2rem;
+  padding: 1rem 1.1rem;
+  border: 1px solid #d9e5f7;
+  border-radius: 0.9rem;
+  background: linear-gradient(180deg, #f8fbff 0%, #f1f6fd 100%);
+  color: #24487c;
+}
+
+.conference-topics-page .topics-reference-cta .btn {
+  border-width: 2px;
+  font-weight: 600;
+}
+
+#topicSourcesModal .modal-content {
+  border: 0;
+  border-radius: 1rem;
+  box-shadow: 0 18px 38px rgba(17, 59, 122, 0.24);
+}
+
+#topicSourcesModal .modal-header {
+  border-bottom: 1px solid #e6edf9;
+}
+
+#topicSourcesModal .modal-body {
+  background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+}
+
+#topicSourcesModal .topic-source-list {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+#topicSourcesModal .topic-source-list li {
+  margin-bottom: 0.65rem;
+  color: #2c3d59;
+  line-height: 1.5;
+}
+
+#topicSourcesModal .topic-source-list a {
+  color: #1d4fa1;
+}
+
+#topicSourcesModal .topic-source-list a:hover,
+#topicSourcesModal .topic-source-list a:focus {
+  color: #0e3575;
+  text-decoration: underline;
+}
+
+@media (max-width: 767.98px) {
+  .conference-topics-page .topic-card {
+    padding: 1.1rem;
+  }
+}
