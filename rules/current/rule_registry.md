@@ -14,6 +14,7 @@ Status: active
 | CR-007 | `rules/current/core_rules.md` | core | active | strict | team | 2026-03-14 | changelog zorunlulugu |
 | CR-008 | `rules/current/core_rules.md` | core | active | strict | team | 2026-03-14 | strict celiskide explicit onay kapisi |
 | CR-009 | `rules/current/core_rules.md` | core | active | strict | team | 2026-03-14 | page-specific js yalniz ilgili sayfada yuklenir |
+| CR-010 | `rules/current/core_rules.md` | core | active | strict | team | 2026-03-14 | global_styles + pages css katmanli giris modeli |
 | OP-001 | `rules/current/operational_rules.md` | operational | active | flexible | team | 2026-03-14 | session baslangic okuma sirasi |
 | OP-002 | `rules/current/operational_rules.md` | operational | active | flexible | team | 2026-03-14 | kod oncesi Kural Ozeti |
 | OP-003 | `rules/current/operational_rules.md` | operational | active | flexible | team | 2026-03-14 | manuel degisiklikte delta ozeti |
@@ -26,3 +27,5 @@ Status: active
 | OP-010 | `rules/current/operational_rules.md` | operational | active | flexible | team | 2026-03-14 | registry + changelog birlikte guncelleme |
 | OP-011 | `rules/current/operational_rules.md` | operational | active | flexible | team | 2026-03-14 | global_scripts + html page-script cagri modeli |
 | OP-012 | `rules/current/operational_rules.md` | operational | active | flexible | team | 2026-03-14 | page-script waitForSharedUI guard zorunlulugu |
+| OP-013 | `rules/current/operational_rules.md` | operational | active | flexible | team | 2026-03-14 | css katman secimi + build-css.sh cikti standardi |
+| OP-014 | `rules/current/operational_rules.md` | operational | active | flexible | team | 2026-03-14 | layer degisirse css-build-if-layers-changed.sh ile otomatik rebuild |

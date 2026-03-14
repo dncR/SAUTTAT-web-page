@@ -1,0 +1,105 @@
+/* SAUTTAT utilities */
+/* Font sizes */
+.tiny {
+  font-size: 0.75rem;
+}
+
+.scriptsize {
+  font-size: 0.8rem;
+}
+
+.small {
+  font-size: 0.875rem;
+}
+
+.medium {
+  font-size: 1rem;
+}
+
+/* icon colors */
+.icon-blue {
+  color: var(--blue-7);
+}
+
+.icon-orange {
+  color: var(--orange);
+}
+
+/* Content helpers */
+.container-title {
+  font-weight: 700;
+  background-color: var(--emr-accent);
+  padding: 8px 10px;
+  font-size: 1.05rem;
+  border-radius: 4px;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+.card-border-muted {
+  border: 1px solid #e9ecef;
+}
+
+.bg-accent {
+  background: var(--emr-accent);
+}
+
+.table-striped>tbody>tr:nth-of-type(odd)>* {
+  --bs-table-accent-bg: #f8fbff;
+}
+
+.carousel .btn.btn-outline-secondary.btn-sm {
+  border-radius: 999px;
+  padding-inline: 0.9rem;
+}
+
+.carousel-item img {
+  object-fit: cover;
+}
+
+.accordion-button:not(.collapsed) {
+  color: var(--emr-primary);
+  background-color: rgba(30, 135, 240, 0.08);
+}
+
+.badge-room-balo {
+  color: #fff;
+  background-color: #002db3;
+}
+
+.badge-room-namik {
+  color: #fff;
+  background-color: #e65c00;
+}
+
+.badge-room-acelya {
+  color: #fff;
+  background-color: #269900;
+}
+
+.pl-10 {
+  padding-left: 10px !important;
+}
+
+.pl-20 {
+  padding-left: 20px !important;
+}
+
+.pr-10 {
+  padding-right: 10px !important;
+}
+
+.pr-20 {
+  padding-right: 20px !important;
+}
+
+.conference-title-banner {
+  font-size: 2rem;
+}
+
+.conference-subtitle-banner {
+  font-size: 1.5rem;
+}
+

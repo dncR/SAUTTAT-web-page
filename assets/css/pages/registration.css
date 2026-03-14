@@ -1,0 +1,55 @@
+/* SAUTTAT page: registration */
+/* Registration page */
+.registration-page {
+  border-radius: 1.2rem;
+}
+
+.registration-page .registration-intro {
+  border: 1px solid #d9e6f8;
+  border-left: 4px solid #2a66b8;
+  border-radius: 0.9rem;
+  background: linear-gradient(180deg, #f7fbff 0%, #eef5ff 100%);
+  padding: 1.2rem 1.35rem;
+  box-shadow: 0 8px 20px rgba(17, 59, 122, 0.08);
+}
+
+.registration-page .registration-card {
+  border: 1px solid #dfe9f8;
+  border-radius: 0.95rem;
+  padding: 1.4rem 1.5rem;
+  background: linear-gradient(180deg, #ffffff 0%, #f9fcff 100%);
+  box-shadow: 0 10px 26px rgba(16, 65, 146, 0.08);
+}
+
+.registration-page .registration-contact {
+  border: 1px solid #c8daf5;
+  border-radius: 0.95rem;
+  padding: 1.4rem 1.5rem;
+  background: #fff;
+  box-shadow: 0 10px 24px rgba(21, 74, 160, 0.1);
+}
+
+.registration-page .registration-list {
+  margin-bottom: 0;
+  padding-left: 1.2rem;
+}
+
+.registration-page .registration-list li {
+  margin-bottom: 0.5rem;
+}
+
+.registration-page .registration-list li:last-child {
+  margin-bottom: 0;
+}
+
+.registration-page .registration-btn {
+  text-align: left;
+  font-weight: 600;
+}
+
+@media (max-width: 991.98px) {
+  .registration-page {
+    padding: 0.85rem;
+  }
+}
+

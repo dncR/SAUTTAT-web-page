@@ -19,6 +19,8 @@ Bu kurallar proje ihtiyacina gore guncellenebilir.
 | OP-010 | Kural degisikliklerinde `rules/current/rule_registry.md` ve `rules/current/rules_changelog.md` birlikte guncellenir. | active | flexible | team | 2026-03-14 |
 | OP-011 | Yeni JS ozelligi eklenirken once kapsami belirlenir: global ise `assets/js/global_scripts.js` icine eklenir, sayfa-ozel ise `assets/js/pages/` altinda dosyalanir ve ilgili HTML dosyasinda `global_scripts.js` sonrasinda ayri `<script>` etiketi ile cagrilir. | active | flexible | team | 2026-03-14 |
 | OP-012 | Sayfa-ozel scriptler, calismaya baslamadan once `window.SAUTTAT.waitForSharedUI` guard'i ile global init tamamlanmasini bekler; guard yoksa fail-safe log ile cikis yapar. | active | flexible | team | 2026-03-14 |
+| OP-013 | CSS degisikligi yapilirken once ilgili katman belirlenir (`layers/*` veya `pages/*`); `global_styles.css` tek cikti dosyasi `./scripts/build-css.sh` ile yeniden uretilir ve sayfa-ozel css baglantilari korunur. | active | flexible | team | 2026-03-14 |
+| OP-014 | `assets/css/layers/*.css` altinda degisiklik varsa agent `./scripts/css-build-if-layers-changed.sh` calistirarak `global_styles.css` dosyasini otomatik rebuild eder. | active | flexible | team | 2026-03-14 |
 
 ## Degisim Is Akisi
 

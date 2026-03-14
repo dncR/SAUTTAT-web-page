@@ -16,6 +16,7 @@ Bu kurallar daha stabil yapidadir ve acik onay olmadan degistirilmemelidir.
 | CR-007 | Kural dosyasi degisiklikleri `rules/current/rules_changelog.md` dosyasina islenir. | active | strict | team | 2026-03-14 |
 | CR-008 | Bir kullanici talebi strict kuralla celisirse agent uygulamadan once riski bildirir ve explicit onay ister. | active | strict | team | 2026-03-14 |
 | CR-009 | Performans icin page-specific davranislar `assets/js/pages/*.js` altinda tutulur ve yalniz ilgili HTML sayfasinda ikinci script etiketi olarak cagrilir; tum sayfalara gereksiz JS bind edilmez. | active | strict | team | 2026-03-14 |
+| CR-010 | CSS mimarisi katmanli yapida korunur: tum sayfalarda `assets/css/global_styles.css` giris dosyasi, sayfa-ozel stillerde `assets/css/pages/*.css` kullanilir. | active | strict | team | 2026-03-14 |
 
 ## Notlar
 

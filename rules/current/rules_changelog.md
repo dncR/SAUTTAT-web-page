@@ -33,3 +33,11 @@ Bu dosyada anlamli kural degisiklikleri izlenir.
 - Degisti: `assets/js/pages/home.js` ve `assets/js/pages/atolyeler.js` dosyalarina `waitForSharedUI` script-order guard eklendi.
 - Eklendi: operasyonel seviyede script-order ve guard standardi (`OP-012`).
 - Degisti: kalite kapisi maddesi script yukleme sirasi kontrolunu acikca icerecek sekilde guncellendi (`OP-007`).
+- Eklendi: katmanli CSS yapisi kuruldu (`assets/css/layers/*`, `assets/css/pages/*`, `assets/css/global_styles.css`).
+- Degisti: tum HTML sayfalari `assets/css/custom_style.css` yerine `assets/css/global_styles.css` kullanacak sekilde guncellendi.
+- Eklendi: sayfa-ozel CSS baglantilari (`home`, `conference-about`, `atolyeler`, `registration`, `sponsorship`, `committee`, `awards`).
+- Eklendi: CSS mimarisi icin yeni kural kayitlari (`CR-010`, `OP-013`).
+- Degisti: `global_styles.css` performans icin `@import` modeli yerine katmanlardan uretilen tek cikti dosyasi olarak duzenlendi.
+- Eklendi: `scripts/build-css.sh` ile global CSS cikti uretimi standardize edildi.
+- Eklendi: `scripts/css-build-if-layers-changed.sh` ile layer degisikligi algilaninca global css rebuild otomasyonu.
+- Eklendi: otomatik CSS rebuild kurali (`OP-014`).

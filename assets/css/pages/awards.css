@@ -1,0 +1,81 @@
+/* SAUTTAT page: awards */
+/* Awards page */
+.awards-page {
+  background:
+    radial-gradient(1200px 420px at 90% 0%, rgba(35, 59, 119, 0.08), transparent 70%),
+    radial-gradient(900px 500px at 0% 24%, rgba(239, 127, 26, 0.08), transparent 68%),
+    #f8fafd;
+}
+
+.awards-title {
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  font-weight: 800;
+}
+
+.awards-subtitle {
+  max-width: 60ch;
+}
+
+.awards-block {
+  background: #fff;
+  border-radius: 1.2rem;
+  box-shadow: 0 20px 40px rgba(12, 24, 44, 0.08);
+  padding: 1.5rem;
+}
+
+.awards-intro {
+  color: #4a5568;
+}
+
+.award-track {
+  border: 1px solid #e2e8f4;
+  border-radius: 1rem;
+  padding: 1.1rem;
+  background: linear-gradient(180deg, #fff 0%, #f8fbff 100%);
+}
+
+.awards-page .award-card {
+  border: 1px solid #e6e9ef;
+  border-radius: 1rem;
+  background: #fff;
+  box-shadow: 0 10px 25px rgba(12, 24, 44, 0.06);
+}
+
+.award-card-img {
+  width: 88px;
+  height: 88px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 0.75rem;
+  border: 1px solid #e3e9f5;
+  background: #f8f8f8;
+  flex-shrink: 0;
+}
+
+.award-amount {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #1f2c49;
+  margin: 0;
+}
+
+.award-label {
+  margin: 0.2rem 0 0;
+  color: #5a6475;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 575.98px) {
+  .awards-block {
+    padding: 1.1rem;
+  }
+
+  .award-card-img {
+    width: 72px;
+    height: 72px;
+  }
+
+  .award-amount {
+    font-size: 1.2rem;
+  }
+}
