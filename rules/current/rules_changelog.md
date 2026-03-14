@@ -1,0 +1,35 @@
+# Kural Degisiklik Gunlugu
+
+Bu dosyada anlamli kural degisiklikleri izlenir.
+
+## Current Canonical Paths
+
+- `AGENTS.md`
+- `rules/project_rules_entrypoint.md`
+- `rules/current/core_rules.md`
+- `rules/current/operational_rules.md`
+- `rules/current/rule_registry.md`
+- `rules/current/rules_changelog.md`
+- `rules/session_handoff.md`
+- `docs/workplans/*` (`Status: active` + `Scope` eslesmesi oldugunda)
+
+## 2026-03-14
+
+- Degisti: SAUTTAT kural sistemi `rules/01-06` duz yapisindan katmanli yapıya gecirildi.
+- Eklendi: `rules/current/` altinda `core_rules.md` ve `operational_rules.md`.
+- Eklendi: `rules/current/rule_registry.md`, `rules/current/rules_changelog.md`, `rules/current/rule_template.md`.
+- Eklendi: `rules/project_rules_entrypoint.md`, `rules/README.md`, `rules/session_handoff.md`.
+- Eklendi: onceki duz yapiyi saklamak icin `rules/archive/project_rules_legacy_2026-03-14.md`.
+- Degisti: `AGENTS.md` session-baslangic protokolu + kural onceligi modeli ile guncellendi.
+- Kaldirildi: `rules/01-project-map.md`, `rules/02-page-shell-and-components.md`, `rules/03-content-lifecycle.md`, `rules/04-path-and-base-management.md`, `rules/05-data-driven-pages.md`, `rules/06-quality-gates.md` (icerik archive snapshot'a tasindi).
+- Degisti: `assets/js/custom_script.js` dosyasi loader yapisina cekildi; global davranislar `assets/js/core/shared-ui.js` dosyasina tasindi.
+- Eklendi: index sayfasi ozel davranislari icin `assets/js/pages/home.js`.
+- Eklendi: performans odakli JS kapsami kurallari (`CR-009`, `OP-011`) ve registry kayitlari.
+- Degisti: loader yaklasimi kaldirildi; tum ortak davranislar `assets/js/global_scripts.js` altinda tekillestirildi.
+- Degisti: dosya adlandirma standardi icin `custom_script.js` kaldirildi, yerine `global_scripts.js` kullanima alindi.
+- Degisti: sayfa-ozel script cagrisi loader haritasi yerine HTML seviyesinde acik tanim modeline cekildi (ornek: `index.html` -> `assets/js/pages/home.js`, `atolyeler.html` -> `assets/js/pages/atolyeler.js`).
+- Degisti: atolye script yolu `assets/js/atolyeler.js` konumundan `assets/js/pages/atolyeler.js` konumuna tasindi.
+- Degisti: `assets/js/global_scripts.js` IIFE + namespace izolasyonu ile sertlestirildi; global kapsamda yalniz `window.SAUTTAT` API'si birakildi.
+- Degisti: `assets/js/pages/home.js` ve `assets/js/pages/atolyeler.js` dosyalarina `waitForSharedUI` script-order guard eklendi.
+- Eklendi: operasyonel seviyede script-order ve guard standardi (`OP-012`).
+- Degisti: kalite kapisi maddesi script yukleme sirasi kontrolunu acikca icerecek sekilde guncellendi (`OP-007`).

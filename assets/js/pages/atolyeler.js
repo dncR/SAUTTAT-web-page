@@ -355,5 +355,29 @@
     }
   };
 
-  document.addEventListener('DOMContentLoaded', initAtolyelerPages);
+  const runAtolyelerPage = async () => {
+    try {
+      const waitForSharedUI = window.SAUTTAT?.waitForSharedUI;
+      if (typeof waitForSharedUI !== 'function') {
+        console.error('global_scripts.js must load before assets/js/pages/atolyeler.js');
+        return;
+      }
+      await waitForSharedUI();
+      await initAtolyelerPages();
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
+  if (document.readyState === 'loading') {
+    document.addEventListener(
+      'DOMContentLoaded',
+      () => {
+        void runAtolyelerPage();
+      },
+      { once: true }
+    );
+  } else {
+    void runAtolyelerPage();
+  }
 })();
