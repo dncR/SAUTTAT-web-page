@@ -22,55 +22,83 @@
 
 
   <link rel="icon" type="image/png" href="assets/img/favicon.ico">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
   <link rel="stylesheet" href="assets/css/global_styles.css">
+  <link rel="stylesheet" href="assets/css/pages/program-short.css">
 </head>
 
 <body>
   <div data-include="components/topbar.html"></div>
   <div data-include="components/header.html"></div>
 
-  <section class="py-5">
-    <div data-include="components/content-placeholder.html"></div>
-
-    <div class="container d-none">
-      <h1 class="fw-bold mb-4">Conference Programme at a Glance</h1>
-
-      <div class="mb-4">
-        <h4 class="fw-semibold mb-2">&gt; Day 1: May 8, 2023 (Monday)</h4>
-        <ul class="ms-3">
-          <li>Pre-conference Courses</li>
-          <li>Honorary Mini Symposium</li>
-          <li>Opening Cocktail</li>
-        </ul>
+  <section class="program-short-page py-5">
+    <div class="container main-content">
+      <div class="program-short-hero hero-shell rounded-4 p-4 p-lg-5 mb-4">
+        <div class="program-short-hero-bg hero-shell-bg" aria-hidden="true"></div>
+        <div class="program-short-hero-content hero-shell-content">
+          <div class="row align-items-center g-4">
+            <div class="col-lg-8">
+              <span class="program-kicker">SAUTTAT 2026</span>
+              <h1 class="program-title mb-3">Kısa Program Akışı</h1>
+              <p class="program-lead mb-0">Kongrenin üç güne yayılan ana oturumlarını ve öne çıkan içeriklerini aşağıda bulabilirsiniz.</p>
+            </div>
+            <div class="col-lg-4">
+              <div class="program-highlight-card h-100">
+                <p class="program-highlight-label mb-1">Etkinlik Özeti</p>
+                <h2 class="program-highlight-title mb-2">3 Günlük Program</h2>
+                <p class="program-highlight-text mb-0">Bilimsel oturumlar, sunumlar, atölyeler ve sosyal etkinlikler</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div class="mb-4">
-        <h4 class="fw-semibold mb-2">&gt; Day 2: May 9, 2023 (Tuesday)</h4>
-        <ul class="ms-3">
-          <li>Opening Session</li>
-          <li>Conference Sessions (full day)</li>
-          <li>EMR Business Meeting</li>
-          <li>Gala Dinner</li>
-        </ul>
-      </div>
+      <div class="program-timeline">
+        <article class="program-day">
+          <div class="day-header">
+            <span class="day-chip">1. Gün</span>
+            <h2 class="day-title mb-1">8 Mayıs, Cuma</h2>
+          </div>
+          <ul class="program-list list-unstyled mb-0">
+            <li><i class="fa-solid fa-right-long" aria-hidden="true"></i><span>Giriş ve Kayıt</span></li>
+            <li><i class="fa-solid fa-right-long" aria-hidden="true"></i><span>Açılış ve Protokol</span></li>
+            <li><i class="fa-solid fa-right-long" aria-hidden="true"></i><span>Robotik Naklin Pioneri: 2015'te Açılan Yol ve Bugün</span></li>
+            <li><i class="fa-solid fa-right-long" aria-hidden="true"></i><span>Genomu Konuşan Tıp: Hücreden Veriye, Veriden Hastaya</span></li>
+            <li><i class="fa-solid fa-right-long" aria-hidden="true"></i><span>Kanser 360°: Bütüncül ve Kişiye Özel Bakış</span></li>
+            <li><i class="fa-solid fa-right-long" aria-hidden="true"></i><span>Tıbbın Gelecek Senaryosu: Kişiselleştirme, Teknoloji ve Cesur Fikirler</span></li>
+            <li><i class="fa-solid fa-right-long" aria-hidden="true"></i><span>Bir Hekimin Triadı: Sanat, Bilim, Nöroşirürji</span></li>
+            <li><i class="fa-solid fa-right-long" aria-hidden="true"></i><span>&quot;Beni Hatırlayınız&quot; - Gençliğin Yolu</span></li>
+            <li><i class="fa-solid fa-right-long" aria-hidden="true"></i><span><a href="pages/atolyeler.html">Atölyeler</a></span></li>
+          </ul>
+        </article>
 
-      <div class="mb-4">
-        <h4 class="fw-semibold mb-2">&gt; Day 3: May 10, 2023 (Wednesday)</h4>
-        <ul class="ms-3">
-          <li>Conference Sessions (half day)</li>
-          <li><a href="pages/program-social.html">Social Program</a></li>
-        </ul>
-      </div>
+        <article class="program-day">
+          <div class="day-header">
+            <span class="day-chip">2. Gün</span>
+            <h2 class="day-title mb-1">9 Mayıs, Cumartesi</h2>
+          </div>
+          <ul class="program-list list-unstyled mb-0">
+            <li><i class="fa-solid fa-right-long" aria-hidden="true"></i><span>Sözlü Sunum ve Poster Sunumu</span></li>
+            <li><i class="fa-solid fa-right-long" aria-hidden="true"></i><span>Konferans Oturumu</span></li>
+            <li><i class="fa-solid fa-right-long" aria-hidden="true"></i><span>Cerrahi 4.0: Doğru Hasta, Doğru Zaman, Doğru İzlem</span></li>
+            <li><i class="fa-solid fa-right-long" aria-hidden="true"></i><span>Kişiselleştirilmiş Rotada 3T Pusulası: Tanı – Tedavi – Takip</span></li>
+            <li><i class="fa-solid fa-right-long" aria-hidden="true"></i><span>Küresel Kaosun Genetiği: Kişiselleştirilemeyen Küresel Sorunlar</span></li>
+            <li><i class="fa-solid fa-right-long" aria-hidden="true"></i><span>Türk Tıp Tarihinin En Genç Profesörü</span></li>
+            <li><i class="fa-solid fa-right-long" aria-hidden="true"></i><span>Kapanış</span></li>
+            <li><i class="fa-solid fa-right-long" aria-hidden="true"></i><span>Gala Yemeği</span></li>
+          </ul>
+        </article>
 
-      <div>
-        <h4 class="fw-semibold mb-2">&gt; Day 4: May 11, 2023 (Thursday)</h4>
-        <ul class="ms-3">
-          <li>Conference Sessions (full day)</li>
-          <li>Closing Session</li>
-        </ul>
+        <article class="program-day">
+          <div class="day-header">
+            <span class="day-chip">3. Gün</span>
+            <h2 class="day-title mb-1">10 Mayıs, Pazar</h2>
+          </div>
+          <ul class="program-list list-unstyled mb-0">
+            <li><i class="fa-solid fa-right-long" aria-hidden="true"></i><span>Rafting Programı</span></li>
+          </ul>
+        </article>
       </div>
     </div>
   </section>

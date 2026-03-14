@@ -1,0 +1,148 @@
+/* SAUTTAT page: program-short */
+.program-short-page {
+  background:
+    radial-gradient(circle at 8% 6%, rgba(77, 128, 255, 0.14), transparent 40%),
+    radial-gradient(circle at 92% 10%, rgba(239, 127, 26, 0.12), transparent 34%),
+    linear-gradient(180deg, #f4f8ff 0%, #ffffff 56%);
+}
+
+.program-short-page .program-kicker {
+  display: inline-block;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.35rem 0.65rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.2);
+  margin-bottom: 0.75rem;
+}
+
+.program-short-page .program-title {
+  font-size: clamp(2rem, 5vw, 3.1rem);
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+.program-short-page .program-lead {
+  font-size: 1.05rem;
+  color: rgba(255, 255, 255, 0.92);
+  max-width: 56ch;
+}
+
+.program-short-page .program-highlight-card {
+  border-radius: 1rem;
+  padding: 1.25rem;
+  background: rgba(255, 255, 255, 0.17);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(2px);
+}
+
+.program-short-page .program-highlight-label {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  opacity: 0.86;
+}
+
+.program-short-page .program-highlight-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.program-short-page .program-highlight-text {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.program-short-page .program-timeline {
+  position: relative;
+  display: grid;
+  gap: 1.2rem;
+}
+
+.program-short-page .program-day {
+  position: relative;
+  background: #fff;
+  border: 1px solid #e5eefb;
+  border-radius: 1rem;
+  box-shadow: 0 12px 28px rgba(15, 60, 138, 0.09);
+  padding: 1.25rem;
+}
+
+.program-short-page .day-header {
+  margin-bottom: 0.85rem;
+}
+
+.program-short-page .day-chip {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #1a4a97;
+  background: #e8f0ff;
+  border: 1px solid #cbdcf8;
+  border-radius: 999px;
+  padding: 0.28rem 0.7rem;
+  margin-bottom: 0.6rem;
+}
+
+.program-short-page .day-title {
+  margin: 0;
+  font-size: 1.24rem;
+  color: #113770;
+  font-weight: 700;
+}
+
+.program-short-page .program-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  color: #2f405f;
+  line-height: 1.55;
+}
+
+.program-short-page .program-list li+li {
+  margin-top: 0.58rem;
+}
+
+.program-short-page .program-list i {
+  color: #1d5bc0;
+  margin-top: 0.28rem;
+  font-size: 0.85rem;
+}
+
+.program-short-page .program-list a {
+  font-weight: 600;
+}
+
+@media (min-width: 768px) {
+  .program-short-page .program-day {
+    padding: 1.45rem 1.5rem 1.45rem 3.8rem;
+  }
+
+  .program-short-page .program-day::before {
+    content: "";
+    position: absolute;
+    left: 1.45rem;
+    top: 1.6rem;
+    width: 0.9rem;
+    height: 0.9rem;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #1e4ea2 0%, #2f74df 100%);
+    box-shadow: 0 0 0 6px #edf3ff;
+  }
+
+  .program-short-page .program-timeline::before {
+    content: "";
+    position: absolute;
+    left: 1.88rem;
+    top: 0.8rem;
+    bottom: 0.8rem;
+    width: 2px;
+    background: linear-gradient(180deg, #b3cdf5 0%, #dce9ff 100%);
+  }
+}
+
+@media (max-width: 767.98px) {
+  .program-short-page .program-day {
+    padding: 1.1rem;
+  }
+}
