@@ -1,0 +1,139 @@
+/* SAUTTAT page: gala-dinner */
+.gala-dinner-page {
+  background:
+    radial-gradient(circle at 10% 8%, rgba(216, 151, 58, 0.18), transparent 40%),
+    radial-gradient(circle at 88% 16%, rgba(27, 73, 137, 0.14), transparent 35%),
+    linear-gradient(180deg, #fff8ef 0%, #ffffff 58%);
+}
+
+.gala-dinner-page .gala-kicker {
+  display: inline-block;
+  font-size: 0.82rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.24);
+  margin-bottom: 0.75rem;
+}
+
+.gala-dinner-page .gala-title {
+  font-size: clamp(1.9rem, 4.8vw, 3rem);
+  font-weight: 800;
+  line-height: 1.08;
+}
+
+.gala-dinner-page .gala-lead {
+  max-width: 60ch;
+  color: rgba(255, 255, 255, 0.93);
+  font-size: 1.05rem;
+}
+
+.gala-dinner-page .gala-highlight-card {
+  border-radius: 1rem;
+  padding: 1.2rem;
+  background: rgba(255, 255, 255, 0.17);
+  border: 1px solid rgba(255, 255, 255, 0.32);
+  backdrop-filter: blur(2px);
+}
+
+.gala-dinner-page .gala-highlight-label {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.8rem;
+  opacity: 0.85;
+}
+
+.gala-dinner-page .gala-highlight-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.gala-dinner-page .gala-highlight-text {
+  color: rgba(255, 255, 255, 0.91);
+}
+
+.gala-dinner-page .gala-card {
+  border: 1px solid #eedfca;
+  border-radius: 1.2rem;
+  background: #fff;
+  padding: 1.4rem;
+  box-shadow: 0 16px 35px rgba(82, 59, 24, 0.1);
+}
+
+.gala-dinner-page .gala-card p {
+  color: #3e4254;
+  line-height: 1.72;
+}
+
+.gala-dinner-page .gala-program-card {
+  background: linear-gradient(180deg, #fff 0%, #fffaf2 100%);
+}
+
+.gala-dinner-page .gala-program-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 0.85rem 0;
+  border-bottom: 1px dashed #eadfce;
+}
+
+.gala-dinner-page .gala-program-list li:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+.gala-dinner-page .gala-program-list i {
+  width: 1.6rem;
+  text-align: center;
+  color: #a36714;
+  margin-top: 0.1rem;
+}
+
+.gala-dinner-page .gala-program-label {
+  display: block;
+  font-size: 0.82rem;
+  color: #6c6f7f;
+  margin-bottom: 0.08rem;
+}
+
+.gala-dinner-page .gala-program-list strong {
+  color: #3f2f1f;
+  font-weight: 700;
+}
+
+.gala-dinner-page .gala-carousel {
+  border-radius: 1rem;
+  overflow: hidden;
+  border: 1px solid #e8dbc5;
+  box-shadow: 0 14px 32px rgba(86, 61, 28, 0.12);
+}
+
+.gala-dinner-page .gala-carousel .carousel-indicators {
+  margin-bottom: 0.7rem;
+}
+
+.gala-dinner-page .gala-carousel .carousel-indicators [data-bs-target] {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  border-top: 0;
+  border-bottom: 0;
+}
+
+.gala-dinner-page .gala-carousel-image {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  object-position: center;
+}
+
+@media (max-width: 767.98px) {
+  .gala-dinner-page .gala-card {
+    padding: 1.1rem;
+  }
+
+  .gala-dinner-page .gala-carousel-image {
+    aspect-ratio: 4 / 3;
+  }
+}
