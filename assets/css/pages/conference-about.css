@@ -1,7 +1,7 @@
 /* SAUTTAT page: conference-about */
 /* Conference about page */
 .conference-about-page {
-  background: linear-gradient(180deg, #f3f8ff 0%, #ffffff 58%);
+  background: var(--page-bg-standard);
 }
 
 .conference-about-page .about-hero {

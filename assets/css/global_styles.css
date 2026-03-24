@@ -27,14 +27,29 @@
   --color-carousel-active: var(--bg-hover-global);
   --color-carousel-inactive: var(--blue-11);
   --color-navbar-active: var(--logo-blue);
+  --page-bg-soft: #f6f7f9;
+  --page-bg-standard:
+    radial-gradient(circle at 12% 8%, rgba(39, 119, 199, 0.16), transparent 38%),
+    radial-gradient(circle at 88% 12%, rgba(41, 178, 137, 0.14), transparent 34%),
+    linear-gradient(180deg, #f3f9ff 0%, #ffffff 56%);
 }
-
 
 /* SAUTTAT base */
 body {
   font-family: "Helvetica Neue", Arial, sans-serif;
   color: var(--emr-dark);
+  background: var(--page-bg-standard);
   background-color: #fff;
+}
+
+body.page-bg-plain {
+  background: #fff;
+  background-color: #fff;
+}
+
+body.page-bg-soft {
+  background: var(--page-bg-soft);
+  background-color: var(--page-bg-soft);
 }
 
 a {
@@ -44,7 +59,6 @@ a {
 a:hover {
   text-decoration: underline;
 }
-
 
 /* SAUTTAT components */
 /* Navbar */
@@ -226,6 +240,12 @@ header.sticky-top .navbar {
 .main-content {
   width: 100%;
   margin: 0 auto;
+}
+
+.content-placeholder-surface {
+  background: #fff;
+  border: 1px solid #edf1f6;
+  border-radius: 1rem;
 }
 
 @media (min-width: 992px) {

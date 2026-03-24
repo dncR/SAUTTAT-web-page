@@ -1,6 +1,6 @@
 # Kural Envanteri
 
-Last updated: 2026-03-14
+Last updated: 2026-03-25
 Status: active
 
 | Rule ID | Source File | Category | Status | Change Policy | Owner | Last Review | Notes |
@@ -29,3 +29,4 @@ Status: active
 | OP-012 | `rules/current/operational_rules.md` | operational | active | flexible | team | 2026-03-14 | page-script waitForSharedUI guard zorunlulugu |
 | OP-013 | `rules/current/operational_rules.md` | operational | active | flexible | team | 2026-03-14 | css katman secimi + build-css.sh cikti standardi |
 | OP-014 | `rules/current/operational_rules.md` | operational | active | flexible | team | 2026-03-14 | layer degisirse css-build-if-layers-changed.sh ile otomatik rebuild |
+| OP-015 | `rules/current/operational_rules.md` | operational | active | flexible | team | 2026-03-25 | ortak arka plan gradyani token standardi + 404/500 ve placeholder-kullanan sayfalarda beyaz body istisnasi |

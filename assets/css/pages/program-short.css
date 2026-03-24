@@ -1,9 +1,6 @@
 /* SAUTTAT page: program-short */
 .program-short-page {
-  background:
-    radial-gradient(circle at 8% 6%, rgba(77, 128, 255, 0.14), transparent 40%),
-    radial-gradient(circle at 92% 10%, rgba(239, 127, 26, 0.12), transparent 34%),
-    linear-gradient(180deg, #f4f8ff 0%, #ffffff 56%);
+  background: var(--page-bg-standard);
 }
 
 .program-short-page .program-kicker {

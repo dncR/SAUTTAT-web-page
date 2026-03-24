@@ -13,6 +13,17 @@ Bu dosyada anlamli kural degisiklikleri izlenir.
 - `rules/session_handoff.md`
 - `docs/workplans/*` (`Status: active` + `Scope` eslesmesi oldugunda)
 
+## 2026-03-25
+
+- Degisti: tum sayfalarda ortak arka plan gradyani standardi token tabanli modele cekildi (`--page-bg-standard`).
+- Degisti: `assets/css/layers/base.css` icinde `body` arka plani `--page-bg-standard` kullanacak sekilde guncellendi.
+- Degisti: sayfa-ozel ust wrapper arka planlari ortak token ile hizalandi (`program-short`, `program-social`, `gala-dinner`, `conference-about`, `conference-topics`, `committee`, `awards`).
+- Eklendi: operasyonel kural `OP-015` (tum HTML sayfalarinda standart arka plan gradyani tek kaynaktan kullanilir).
+- Degisti: `OP-015` icin istisna tanimlandi; `404`, `500` ve `content-placeholder` yuzeylerinde `--page-bg-soft` kullanimi eklendi.
+- Degisti: `404` ve `500` sayfalari beyaz arka plana geri alindi; `OP-015` istisnasi yalniz `content-placeholder` icin birakildi.
+- Degisti: `OP-015` istisnasi guncellendi; `404`, `500` ve `content-placeholder` include kullanan tum sayfalarda `body.page-bg-plain` ile beyaz arka plan standardi tanimlandi.
+- Degisti: `content-placeholder` yuzeyi acik gri yerine beyaz arka plan kullanacak sekilde guncellendi.
+
 ## 2026-03-14
 
 - Degisti: SAUTTAT kural sistemi `rules/01-06` duz yapisindan katmanli yapıya gecirildi.

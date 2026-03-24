@@ -2,7 +2,18 @@
 body {
   font-family: "Helvetica Neue", Arial, sans-serif;
   color: var(--emr-dark);
+  background: var(--page-bg-standard);
   background-color: #fff;
+}
+
+body.page-bg-plain {
+  background: #fff;
+  background-color: #fff;
+}
+
+body.page-bg-soft {
+  background: var(--page-bg-soft);
+  background-color: var(--page-bg-soft);
 }
 
 a {
@@ -12,4 +23,3 @@ a {
 a:hover {
   text-decoration: underline;
 }
-

@@ -1,9 +1,6 @@
 /* SAUTTAT page: gala-dinner */
 .gala-dinner-page {
-  background:
-    radial-gradient(circle at 10% 8%, rgba(216, 151, 58, 0.18), transparent 40%),
-    radial-gradient(circle at 88% 16%, rgba(27, 73, 137, 0.14), transparent 35%),
-    linear-gradient(180deg, #fff8ef 0%, #ffffff 58%);
+  background: var(--page-bg-standard);
 }
 
 .gala-dinner-page .gala-kicker {

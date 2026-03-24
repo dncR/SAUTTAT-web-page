@@ -1,6 +1,6 @@
 # Operasyonel Kurallar (Flexible)
 
-Last updated: 2026-03-14
+Last updated: 2026-03-25
 Status: active
 
 Bu kurallar proje ihtiyacina gore guncellenebilir.
@@ -21,6 +21,7 @@ Bu kurallar proje ihtiyacina gore guncellenebilir.
 | OP-012 | Sayfa-ozel scriptler, calismaya baslamadan once `window.SAUTTAT.waitForSharedUI` guard'i ile global init tamamlanmasini bekler; guard yoksa fail-safe log ile cikis yapar. | active | flexible | team | 2026-03-14 |
 | OP-013 | CSS degisikligi yapilirken once ilgili katman belirlenir (`layers/*` veya `pages/*`); `global_styles.css` tek cikti dosyasi `./scripts/build-css.sh` ile yeniden uretilir ve sayfa-ozel css baglantilari korunur. | active | flexible | team | 2026-03-14 |
 | OP-014 | `assets/css/layers/*.css` altinda degisiklik varsa agent `./scripts/css-build-if-layers-changed.sh` calistirarak `global_styles.css` dosyasini otomatik rebuild eder. | active | flexible | team | 2026-03-14 |
+| OP-015 | Tum HTML sayfalarda standart arka plan gradyani tek kaynaktan kullanilir: `assets/css/layers/tokens.css` icindeki `--page-bg-standard`. Sayfa-ozel ust seviye wrapper arka planlari bu token ile ayni tutulur; farkli gradyan tanimlari kullanilmaz. Istisna: `pages/404.html`, `pages/500.html` ve `data-include=\"components/content-placeholder.html\"` kullanan sayfalar `body.page-bg-plain` ile beyaz arka plan kullanir; placeholder yuzeyi de beyaz tutulur. | active | flexible | team | 2026-03-25 |
 
 ## Degisim Is Akisi
 

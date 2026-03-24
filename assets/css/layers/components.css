@@ -180,6 +180,12 @@ header.sticky-top .navbar {
   margin: 0 auto;
 }
 
+.content-placeholder-surface {
+  background: #fff;
+  border: 1px solid #edf1f6;
+  border-radius: 1rem;
+}
+
 @media (min-width: 992px) {
   .main-content {
     padding-left: 5% !important;
