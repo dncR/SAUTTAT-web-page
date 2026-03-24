@@ -1,0 +1,145 @@
+/* SAUTTAT page: program-social */
+.program-social-page {
+  background:
+    radial-gradient(circle at 12% 8%, rgba(39, 119, 199, 0.16), transparent 38%),
+    radial-gradient(circle at 88% 12%, rgba(41, 178, 137, 0.14), transparent 34%),
+    linear-gradient(180deg, #f3f9ff 0%, #ffffff 56%);
+}
+
+.program-social-page .social-kicker {
+  display: inline-block;
+  font-size: 0.82rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.2);
+  margin-bottom: 0.75rem;
+}
+
+.program-social-page .social-title {
+  font-size: clamp(2rem, 5.2vw, 3.1rem);
+  font-weight: 800;
+  line-height: 1.06;
+}
+
+.program-social-page .social-lead {
+  max-width: 60ch;
+  color: rgba(255, 255, 255, 0.93);
+  font-size: 1.06rem;
+}
+
+.program-social-page .social-highlight-card {
+  border-radius: 1rem;
+  padding: 1.25rem;
+  background: rgba(255, 255, 255, 0.16);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(2px);
+}
+
+.program-social-page .social-highlight-label {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.8rem;
+  opacity: 0.85;
+}
+
+.program-social-page .social-highlight-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.program-social-page .social-highlight-text {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.program-social-page .social-card {
+  border: 1px solid #e4edf8;
+  border-radius: 1.2rem;
+  background: #fff;
+  padding: 1.4rem;
+  box-shadow: 0 16px 36px rgba(11, 42, 88, 0.08);
+}
+
+.program-social-page .social-card p {
+  color: #304463;
+  line-height: 1.72;
+}
+
+.program-social-page .social-meta-card {
+  background: linear-gradient(180deg, #ffffff 0%, #f6fbff 100%);
+}
+
+.program-social-page .social-meta-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 0.88rem 0;
+  border-bottom: 1px dashed #dce6f5;
+}
+
+.program-social-page .social-meta-list li:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+.program-social-page .social-meta-list i {
+  width: 1.6rem;
+  text-align: center;
+  color: #1b61ba;
+  font-size: 1rem;
+  margin-top: 0.1rem;
+}
+
+.program-social-page .social-meta-label {
+  display: block;
+  font-size: 0.82rem;
+  color: #66758f;
+  margin-bottom: 0.08rem;
+}
+
+.program-social-page .social-meta-list strong {
+  color: #163963;
+  font-weight: 700;
+}
+
+.program-social-page .social-carousel {
+  border-radius: 1rem;
+  overflow: hidden;
+  border: 1px solid #dce8f7;
+  box-shadow: 0 14px 34px rgba(15, 57, 116, 0.1);
+}
+
+.program-social-page .social-carousel .carousel-indicators {
+  margin-bottom: 0.7rem;
+}
+
+.program-social-page .social-carousel .carousel-indicators [data-bs-target] {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  border-top: 0;
+  border-bottom: 0;
+}
+
+.program-social-page .social-carousel-image {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  object-position: center;
+}
+
+.program-social-page .social-carousel .carousel-control-prev-icon,
+.program-social-page .social-carousel .carousel-control-next-icon {
+  background-size: 78% 78%;
+}
+
+@media (max-width: 767.98px) {
+  .program-social-page .social-card {
+    padding: 1.1rem;
+  }
+
+  .program-social-page .social-carousel-image {
+    aspect-ratio: 4 / 3;
+  }
+}
