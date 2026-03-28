@@ -31,11 +31,16 @@
 }
 
 .speakers-page .speakers-card-image {
-  width: 100%;
-  aspect-ratio: 4 / 3;
+  width: 180px;
+  height: 180px;
+  aspect-ratio: 1 / 1;
   object-fit: cover;
   object-position: center;
-  border-bottom: 1px solid #e8eef8;
+  display: block;
+  margin: 1rem auto 0;
+  border-radius: 50%;
+  border: 4px solid #fff;
+  box-shadow: 0 10px 24px rgba(21, 62, 134, 0.2);
 }
 
 .speakers-page .speakers-card-body {
@@ -82,30 +87,44 @@
   border: 1px solid #dce9f7;
   border-radius: 1.2rem;
   background: #fff;
-  overflow: hidden;
+  overflow: visible;
   box-shadow: 0 16px 36px rgba(12, 55, 125, 0.12);
 }
 
-.speakers-page .speakers-detail-media,
-.speakers-page .speakers-detail-content {
-  padding-left: 0;
-  padding-right: 0;
+.speakers-page .speakers-detail-media-wrap {
+  display: flex;
+  justify-content: center;
 }
 
-.speakers-page .speakers-detail-image {
-  width: 100%;
-  height: 100%;
+.speakers-page .speakers-detail-row {
+  --bs-gutter-x: 2rem;
+}
+
+.speakers-page .speakers-detail-avatar {
+  width: 350px;
+  height: 350px;
+  max-width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
   object-fit: cover;
-  min-height: 320px;
+  object-position: center;
+  border: 5px solid #fff;
+  box-shadow: 0 12px 28px rgba(17, 63, 136, 0.22);
 }
 
-.speakers-page .speakers-detail-content {
+.speakers-page .speakers-detail-kunye,
+.speakers-page .speakers-detail-description-card {
   padding: 1.5rem;
 }
 
 .speakers-page .speakers-detail-title {
   font-size: clamp(1.35rem, 3vw, 2rem);
   line-height: 1.25;
+  color: #162a57;
+}
+
+.speakers-page .speakers-detail-section-title {
+  color: #162a57;
 }
 
 .speakers-page .speakers-detail-speaker {
@@ -118,7 +137,7 @@
   font-size: 0.93rem;
 }
 
-.speakers-page .speakers-detail-list li + li {
+.speakers-page .speakers-detail-list li+li {
   margin-top: 0.35rem;
 }
 
@@ -128,16 +147,26 @@
 }
 
 @media (max-width: 991.98px) {
+  .speakers-page .speakers-card-image {
+    width: 136px;
+    height: 136px;
+  }
+
   .speakers-page .speakers-card-title {
     min-height: auto;
   }
 
-  .speakers-page .speakers-detail-content {
+  .speakers-page .speakers-detail-kunye,
+  .speakers-page .speakers-detail-description-card {
     padding: 1.15rem;
   }
 
-  .speakers-page .speakers-detail-image {
-    min-height: 260px;
-    max-height: 340px;
+  .speakers-page .speakers-detail-row {
+    --bs-gutter-x: 1.25rem;
+  }
+
+  .speakers-page .speakers-detail-avatar {
+    width: min(300px, 78vw);
+    height: auto;
   }
 }

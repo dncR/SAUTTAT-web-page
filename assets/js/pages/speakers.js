@@ -92,9 +92,9 @@
       .map((record) => {
         const datePart = record.session.dateLabel ? escapeHtml(record.session.dateLabel) : '';
         const timePart = record.session.timeLabel ? escapeHtml(record.session.timeLabel) : '';
-        const institution = record.speaker.institution || 'Kurum belirtilmemiş';
+        const institution = record.speaker.institution;
         const sessionMeta = `
-          <div class="speakers-card-session d-flex align-items-center gap-2 flex-wrap mb-4">
+          <div class="speakers-card-session d-flex align-items-center gap-2 flex-wrap mb-3">
             ${datePart ? `<span class="speakers-card-badge"><i class="fa-regular fa-calendar-days" aria-hidden="true"></i><span>${datePart}</span></span>` : ''}
             ${timePart ? `<span class="speakers-card-badge"><i class="fa-regular fa-clock" aria-hidden="true"></i><span>${timePart}</span></span>` : ''}
           </div>
@@ -133,7 +133,7 @@
       record.speaker.institution ? `<li><strong>Kurum:</strong> ${escapeHtml(record.speaker.institution)}</li>` : '',
       record.session.dateLabel ? `<li><strong>Tarih:</strong> ${escapeHtml(record.session.dateLabel)}</li>` : '',
       record.session.timeLabel ? `<li><strong>Saat:</strong> ${escapeHtml(record.session.timeLabel)}</li>` : '',
-      record.session.venue ? `<li><strong>Mekan:</strong> ${escapeHtml(record.session.venue)}</li>` : '',
+      record.session.venue ? `<li><strong>Yer:</strong> ${escapeHtml(record.session.venue)}</li>` : '',
     ]
       .filter(Boolean)
       .join('');
@@ -143,21 +143,29 @@
       : '<p>Açıklama bilgisi henüz eklenmedi.</p>';
 
     container.innerHTML = `
-      <article class="speakers-detail-card">
-        <div class="row align-items-stretch g-0">
-          <div class="col-lg-5 speakers-detail-media">
-            <img class="speakers-detail-image" src="${escapeHtml(record.speaker.image)}" alt="${escapeHtml(record.speaker.displayName)}">
-          </div>
-          <div class="col-lg-7 speakers-detail-content">
-            <span class="speakers-kicker">Konuşmacı Detayı</span>
-            <h1 class="speakers-detail-title fw-bold mb-2">${escapeHtml(record.talk.title)}</h1>
-            <p class="speakers-detail-speaker fw-semibold mb-3">${escapeHtml(record.speaker.displayName)}</p>
-            <ul class="speakers-detail-list list-unstyled mb-4">${metaItems}</ul>
-            <div class="speakers-detail-description mb-4">${description}</div>
-            <a class="btn btn-outline-primary" href="pages/speakers.html">Tüm Konuşmacılar</a>
+      <div class="row g-4 align-items-center mb-4 speakers-detail-row">
+        <div class="col-xl-4 col-lg-5">
+          <div class="speakers-detail-media-wrap">
+            <img class="speakers-detail-avatar" src="${escapeHtml(record.speaker.image)}" alt="${escapeHtml(record.speaker.displayName)}">
           </div>
         </div>
-      </article>
+        <div class="col-xl-8 col-lg-7">
+          <article class="speakers-detail-card speakers-detail-kunye">
+            <h1 class="speakers-detail-title fw-bold mb-2">${escapeHtml(record.talk.title)}</h1>
+            <p class="speakers-detail-speaker fw-semibold mb-3">${escapeHtml(record.speaker.displayName)}</p>
+            <ul class="speakers-detail-list list-unstyled mb-0">${metaItems}</ul>
+          </article>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <article class="speakers-detail-card speakers-detail-description-card">
+            <h2 class="h4 fw-bold mb-3 speakers-detail-section-title">Hakkında</h2>
+            <div class="speakers-detail-description mb-4">${description}</div>
+            <a class="btn btn-outline-primary" href="pages/speakers.html">Tüm Konuşmacılar</a>
+          </article>
+        </div>
+      </div>
     `;
 
     document.title = `${record.speaker.displayName} | Konuşmacı Detayı | SAUTTAT 2026`;

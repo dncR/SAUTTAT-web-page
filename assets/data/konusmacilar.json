@@ -91,7 +91,7 @@
       "speaker": {
         "fullName": "Pınar Ayhan",
         "academicTitle": "",
-        "institution": "Belirtilmemiş",
+        "institution": null,
         "image": "assets/img/speakers/pinar-ayhan.jpg"
       },
       "session": {
