@@ -1,0 +1,143 @@
+/* SAUTTAT page: speakers */
+.speakers-page {
+  background: var(--page-bg-standard);
+}
+
+.speakers-page .speakers-kicker {
+  display: inline-block;
+  font-size: 0.82rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.24);
+  margin-bottom: 0.85rem;
+}
+
+.speakers-page .speakers-card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #e0e9f5;
+  border-radius: 1rem;
+  background: #fff;
+  overflow: hidden;
+  box-shadow: 0 12px 28px rgba(15, 60, 138, 0.1);
+  transition: transform 0.24s ease, box-shadow 0.24s ease;
+}
+
+.speakers-page .speakers-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 34px rgba(15, 60, 138, 0.16);
+}
+
+.speakers-page .speakers-card-image {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  object-position: center;
+  border-bottom: 1px solid #e8eef8;
+}
+
+.speakers-page .speakers-card-body {
+  padding: 1rem;
+  flex: 1;
+}
+
+.speakers-page .speakers-card-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.75rem;
+  border: 1px solid #c9daff;
+  background: #eef4ff;
+  color: #2a4f99;
+  border-radius: 999px;
+  padding: 0.28rem 0.62rem;
+}
+
+.speakers-page .speakers-card-badge i {
+  font-size: 0.82rem;
+}
+
+.speakers-page .speakers-card-title {
+  font-size: 1.05rem;
+  line-height: 1.4;
+  min-height: 2.95rem;
+  color: #162a57;
+}
+
+.speakers-page .speakers-card-speaker {
+  color: #1f3158;
+  font-weight: 700;
+  margin-bottom: 0.32rem;
+}
+
+.speakers-page .speakers-card-meta {
+  color: #636e86;
+  font-size: 0.9rem;
+  margin-bottom: 0.3rem;
+}
+
+.speakers-page .speakers-detail-card {
+  border: 1px solid #dce9f7;
+  border-radius: 1.2rem;
+  background: #fff;
+  overflow: hidden;
+  box-shadow: 0 16px 36px rgba(12, 55, 125, 0.12);
+}
+
+.speakers-page .speakers-detail-media,
+.speakers-page .speakers-detail-content {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.speakers-page .speakers-detail-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  min-height: 320px;
+}
+
+.speakers-page .speakers-detail-content {
+  padding: 1.5rem;
+}
+
+.speakers-page .speakers-detail-title {
+  font-size: clamp(1.35rem, 3vw, 2rem);
+  line-height: 1.25;
+}
+
+.speakers-page .speakers-detail-speaker {
+  font-size: 1.05rem;
+  color: #20325b;
+}
+
+.speakers-page .speakers-detail-list {
+  color: #525f7a;
+  font-size: 0.93rem;
+}
+
+.speakers-page .speakers-detail-list li + li {
+  margin-top: 0.35rem;
+}
+
+.speakers-page .speakers-detail-description p {
+  color: #3d4254;
+  line-height: 1.72;
+}
+
+@media (max-width: 991.98px) {
+  .speakers-page .speakers-card-title {
+    min-height: auto;
+  }
+
+  .speakers-page .speakers-detail-content {
+    padding: 1.15rem;
+  }
+
+  .speakers-page .speakers-detail-image {
+    min-height: 260px;
+    max-height: 340px;
+  }
+}
