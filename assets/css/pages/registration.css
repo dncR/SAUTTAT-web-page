@@ -47,9 +47,55 @@
   font-weight: 600;
 }
 
+.registration-page .early-registration-alert {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.7rem;
+  border: 1px solid #f2b8b8;
+  border-left: 5px solid #b61f1f;
+  border-radius: 0.85rem;
+  padding: 0.72rem 0.85rem;
+  background: linear-gradient(180deg, #fff7f7 0%, #ffecec 100%);
+  box-shadow: 0 8px 18px rgba(157, 24, 24, 0.12);
+}
+
+.registration-page .early-registration-alert i {
+  color: #c52424;
+  font-size: 2rem;
+  margin-top: 0.1rem;
+  animation: early-registration-alert-pulse 1.6s ease-in-out infinite;
+}
+
+.registration-page .early-registration-alert-label {
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: #9b1f1f;
+  line-height: 1.2;
+}
+
+.registration-page .early-registration-alert-date {
+  font-size: 1.02rem;
+  font-weight: 800;
+  color: #5f0e0e;
+  line-height: 1.2;
+}
+
+@keyframes early-registration-alert-pulse {
+
+  0%,
+  100% {
+    color: #e06d6d;
+  }
+
+  50% {
+    color: #8b0000;
+  }
+}
+
 @media (max-width: 991.98px) {
   .registration-page {
     padding: 0.85rem;
   }
 }
-

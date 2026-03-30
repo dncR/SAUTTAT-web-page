@@ -49,3 +49,33 @@
 .important-date-item-highlight::before {
   background: var(--orange);
 }
+
+.important-date-item.early-reg-alert-icon::before {
+  content: "\f071";
+  position: absolute;
+  top: 0.2rem;
+  left: -0.65rem;
+  width: auto;
+  height: auto;
+  border-radius: 0;
+  background: none;
+  box-shadow: none;
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  font-size: 1.2rem;
+  line-height: 1;
+  color: #ff8a8a;
+  animation: early-reg-alert-color-loop 1.6s ease-in-out infinite;
+}
+
+@keyframes early-reg-alert-color-loop {
+
+  0%,
+  100% {
+    color: #ff8a8a;
+  }
+
+  50% {
+    color: #8b0000;
+  }
+}
