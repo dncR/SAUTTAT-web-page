@@ -7,6 +7,13 @@
     "url": "https://sakarya.edu.tr"
   },
   {
+    "id": "sakarya_belediyesi",
+    "sponsorName": "sakarya_belediyesi",
+    "logoFilePath": "assets/img/sponsors/sakarya_belediyesi.png",
+    "sponsorshipType": "Platin",
+    "url": null
+  },
+  {
     "id": "acibadem",
     "sponsorName": "acibadem",
     "logoFilePath": "assets/img/sponsors/acibadem.png",
@@ -75,5 +82,75 @@
     "logoFilePath": "assets/img/sponsors/yildirim_beyazit.png",
     "sponsorshipType": "Platin",
     "url": "https://aybu.edu.tr/aybu/tr"
+  },
+  {
+    "id": "abdi_ibrahim",
+    "sponsorName": "abdi_ibrahim",
+    "logoFilePath": "assets/img/sponsors/abdi_ibrahim.png",
+    "sponsorshipType": "Platin",
+    "url": null
+  },
+  {
+    "id": "ada_tip",
+    "sponsorName": "ada_tip",
+    "logoFilePath": "assets/img/sponsors/ada_tip.png",
+    "sponsorshipType": "Platin",
+    "url": null
+  },
+  {
+    "id": "deva",
+    "sponsorName": "deva",
+    "logoFilePath": "assets/img/sponsors/deva.png",
+    "sponsorshipType": "Platin",
+    "url": null
+  },
+  {
+    "id": "emsey",
+    "sponsorName": "emsey",
+    "logoFilePath": "assets/img/sponsors/emsey.png",
+    "sponsorshipType": "Platin",
+    "url": null
+  },
+  {
+    "id": "menarini",
+    "sponsorName": "menarini",
+    "logoFilePath": "assets/img/sponsors/menarini.png",
+    "sponsorshipType": "Platin",
+    "url": null
+  },
+  {
+    "id": "musiad",
+    "sponsorName": "musiad",
+    "logoFilePath": "assets/img/sponsors/musiad.png",
+    "sponsorshipType": "Platin",
+    "url": null
+  },
+  {
+    "id": "onko",
+    "sponsorName": "onko",
+    "logoFilePath": "assets/img/sponsors/onko.png",
+    "sponsorshipType": "Platin",
+    "url": null
+  },
+  {
+    "id": "radyomed",
+    "sponsorName": "radyomed",
+    "logoFilePath": "assets/img/sponsors/radyomed.png",
+    "sponsorshipType": "Platin",
+    "url": null
+  },
+  {
+    "id": "rotakim",
+    "sponsorName": "rotakim",
+    "logoFilePath": "assets/img/sponsors/rotakim.png",
+    "sponsorshipType": "Platin",
+    "url": null
+  },
+  {
+    "id": "satso",
+    "sponsorName": "satso",
+    "logoFilePath": "assets/img/sponsors/satso.png",
+    "sponsorshipType": "Platin",
+    "url": null
   }
 ]
