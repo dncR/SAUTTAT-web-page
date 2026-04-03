@@ -50,14 +50,14 @@ Sponsor logolari ana sayfada (`index.html`) dinamik olarak `assets/js/pages/home
 
 ### `assets/data/sponsors.json` dosyasinin islevi
 
-Bu dosya sponsor carousel'inde gosterilecek tum kayitlarin metadata kaynagidir. `home.js` icindeki `loadSponsors()` fonksiyonu bu JSON'u okur, kayitlari `sponsorshipType` sirasina gore dizer ve logolari `components/sponsors.html` icindeki alana basar.
+Bu dosya sponsor carousel'inde gosterilecek tum kayitlarin metadata kaynagidir. `home.js` icindeki `loadSponsors()` fonksiyonu bu JSON'u okur, kayitlari case-insensitive olarak `sponsorshipType` sirasina gore dizer (`platin > gold > silver > bronze`) ve logolari `components/sponsors.html` icindeki alana basar. `sponsorshipType: null` olan kayitlar bu tier'lar render edildikten sonra, JSON'daki kendi siralari korunarak eklenir.
 
 Her sponsor kaydinda asagidaki alanlar kullanilir:
 
 - `id`: benzersiz kayit anahtari (kisa, slug formatinda)
 - `sponsorName`: logo `alt` metninde kullanilan gorunen ad
 - `logoFilePath`: logo dosyasinin yolu (or. `assets/img/sponsors/ornek.png`)
-- `sponsorshipType`: siralama seviyesi (`Platin`, `Gold`, `Silver`, `Bronze`)
+- `sponsorshipType`: siralama seviyesi (`platin`, `gold`, `silver`, `bronze`) veya `null`
 - `url`: opsiyonel dis baglanti (`null` veya `https://...`)
 
 ### Sponsor ekleme adimlari

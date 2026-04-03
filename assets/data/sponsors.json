@@ -3,154 +3,154 @@
     "id": "sau",
     "sponsorName": "sau",
     "logoFilePath": "assets/img/sponsors/sau.png",
-    "sponsorshipType": "Platin",
+    "sponsorshipType": null,
     "url": "https://sakarya.edu.tr"
   },
   {
     "id": "sakarya_belediyesi",
     "sponsorName": "sakarya_belediyesi",
     "logoFilePath": "assets/img/sponsors/sakarya_belediyesi.png",
-    "sponsorshipType": "Platin",
+    "sponsorshipType": "platin",
     "url": null
   },
   {
     "id": "acibadem",
     "sponsorName": "acibadem",
     "logoFilePath": "assets/img/sponsors/acibadem.png",
-    "sponsorshipType": "Platin",
+    "sponsorshipType": null,
     "url": "https://www.acibadem.edu.tr"
   },
   {
     "id": "bahcesehir",
     "sponsorName": "bahcesehir",
     "logoFilePath": "assets/img/sponsors/bahcesehir.png",
-    "sponsorshipType": "Platin",
+    "sponsorshipType": null,
     "url": "https://bau.edu.tr"
   },
   {
     "id": "biruni",
     "sponsorName": "biruni",
     "logoFilePath": "assets/img/sponsors/biruni.png",
-    "sponsorshipType": "Platin",
+    "sponsorshipType": null,
     "url": "https://www.biruni.edu.tr/"
   },
   {
     "id": "bogazici",
     "sponsorName": "bogazici",
     "logoFilePath": "assets/img/sponsors/bogazici.png",
-    "sponsorshipType": "Platin",
+    "sponsorshipType": null,
     "url": "https://bogazici.edu.tr"
   },
   {
     "id": "gebze_teknik",
     "sponsorName": "gebze_teknik",
     "logoFilePath": "assets/img/sponsors/gebze_teknik.png",
-    "sponsorshipType": "Platin",
+    "sponsorshipType": null,
     "url": "https://www.gtu.edu.tr"
   },
   {
     "id": "istinye",
     "sponsorName": "istinye",
     "logoFilePath": "assets/img/sponsors/istinye.png",
-    "sponsorshipType": "Platin",
+    "sponsorshipType": null,
     "url": "https://www.istinye.edu.tr/tr"
   },
   {
     "id": "koc",
     "sponsorName": "koc",
     "logoFilePath": "assets/img/sponsors/koc.png",
-    "sponsorshipType": "Platin",
+    "sponsorshipType": null,
     "url": "https://www.ku.edu.tr"
   },
   {
     "id": "portsmouth",
     "sponsorName": "portsmouth",
     "logoFilePath": "assets/img/sponsors/portsmouth.png",
-    "sponsorshipType": "Platin",
+    "sponsorshipType": null,
     "url": "https://www.port.ac.uk"
   },
   {
     "id": "uludag",
     "sponsorName": "uludag",
     "logoFilePath": "assets/img/sponsors/uludag.png",
-    "sponsorshipType": "Platin",
+    "sponsorshipType": null,
     "url": "https://www.uludag.edu.tr"
   },
   {
     "id": "yildirim_beyazit",
     "sponsorName": "yildirim_beyazit",
     "logoFilePath": "assets/img/sponsors/yildirim_beyazit.png",
-    "sponsorshipType": "Platin",
+    "sponsorshipType": null,
     "url": "https://aybu.edu.tr/aybu/tr"
   },
   {
     "id": "abdi_ibrahim",
     "sponsorName": "abdi_ibrahim",
     "logoFilePath": "assets/img/sponsors/abdi_ibrahim.png",
-    "sponsorshipType": "Platin",
+    "sponsorshipType": null,
     "url": null
   },
   {
     "id": "ada_tip",
     "sponsorName": "ada_tip",
     "logoFilePath": "assets/img/sponsors/ada_tip.png",
-    "sponsorshipType": "Platin",
+    "sponsorshipType": "bronze",
     "url": null
   },
   {
     "id": "deva",
     "sponsorName": "deva",
     "logoFilePath": "assets/img/sponsors/deva.png",
-    "sponsorshipType": "Platin",
+    "sponsorshipType": "silver",
     "url": null
   },
   {
     "id": "emsey",
     "sponsorName": "emsey",
     "logoFilePath": "assets/img/sponsors/emsey.png",
-    "sponsorshipType": "Platin",
+    "sponsorshipType": "silver",
     "url": null
   },
   {
     "id": "menarini",
     "sponsorName": "menarini",
     "logoFilePath": "assets/img/sponsors/menarini.png",
-    "sponsorshipType": "Platin",
+    "sponsorshipType": "silver",
     "url": null
   },
   {
     "id": "musiad",
     "sponsorName": "musiad",
     "logoFilePath": "assets/img/sponsors/musiad.png",
-    "sponsorshipType": "Platin",
+    "sponsorshipType": "silver",
     "url": null
   },
   {
     "id": "onko",
     "sponsorName": "onko",
     "logoFilePath": "assets/img/sponsors/onko.png",
-    "sponsorshipType": "Platin",
+    "sponsorshipType": "silver",
     "url": null
   },
   {
     "id": "radyomed",
     "sponsorName": "radyomed",
     "logoFilePath": "assets/img/sponsors/radyomed.png",
-    "sponsorshipType": "Platin",
+    "sponsorshipType": "gold",
     "url": null
   },
   {
     "id": "rotakim",
     "sponsorName": "rotakim",
     "logoFilePath": "assets/img/sponsors/rotakim.png",
-    "sponsorshipType": "Platin",
+    "sponsorshipType": "gold",
     "url": null
   },
   {
     "id": "satso",
     "sponsorName": "satso",
     "logoFilePath": "assets/img/sponsors/satso.png",
-    "sponsorshipType": "Platin",
+    "sponsorshipType": "gold",
     "url": null
   }
 ]

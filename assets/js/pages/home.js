@@ -121,10 +121,27 @@
     countdownState.timerId = window.setInterval(tick, SECOND_MS);
   };
 
-  const tierRank = (tierValue) => {
-    const normalizedTier = normalizeText(tierValue).toLocaleLowerCase('tr-TR');
-    const rank = SPONSOR_TIER_ORDER.indexOf(normalizedTier);
-    return rank === -1 ? SPONSOR_TIER_ORDER.length : rank;
+  const normalizeSponsorTier = (tierValue) => {
+    const normalizedTier = normalizeText(tierValue, '').toLocaleLowerCase('tr-TR');
+    return normalizedTier || null;
+  };
+
+  const resolveSponsorTierMeta = (tierValue) => {
+    if (tierValue === null || tierValue === undefined) {
+      return { group: 2, rank: SPONSOR_TIER_ORDER.length, normalizedTier: null };
+    }
+
+    const normalizedTier = normalizeSponsorTier(tierValue);
+    if (!normalizedTier) {
+      return { group: 2, rank: SPONSOR_TIER_ORDER.length, normalizedTier: null };
+    }
+
+    const knownRank = SPONSOR_TIER_ORDER.indexOf(normalizedTier);
+    if (knownRank !== -1) {
+      return { group: 0, rank: knownRank, normalizedTier };
+    }
+
+    return { group: 1, rank: SPONSOR_TIER_ORDER.length, normalizedTier };
   };
 
   const getSponsorsPerSlide = () => {
@@ -138,10 +155,18 @@
 
   const sortSponsorsByTierThenSourceOrder = (sponsors) =>
     sponsors
-      .map((sponsor, originalIndex) => ({ sponsor, originalIndex }))
+      .map((sponsor, originalIndex) => ({
+        sponsor,
+        originalIndex,
+        tierMeta: resolveSponsorTierMeta(sponsor?.sponsorshipType)
+      }))
       .sort((left, right) => {
-        const tierDifference = tierRank(left.sponsor.sponsorshipType) - tierRank(right.sponsor.sponsorshipType);
-        if (tierDifference !== 0) return tierDifference;
+        if (left.tierMeta.group !== right.tierMeta.group) {
+          return left.tierMeta.group - right.tierMeta.group;
+        }
+        if (left.tierMeta.rank !== right.tierMeta.rank) {
+          return left.tierMeta.rank - right.tierMeta.rank;
+        }
         return left.originalIndex - right.originalIndex;
       })
       .map((entry) => entry.sponsor);
@@ -157,7 +182,7 @@
     const sponsorName = normalizeText(sponsor?.sponsorName, 'Sponsor');
     const logoFilePath = normalizeText(sponsor?.logoFilePath);
     const sponsorUrl = normalizeText(sponsor?.url, '');
-    const sponsorshipType = normalizeText(sponsor?.sponsorshipType, 'Platin');
+    const sponsorshipType = normalizeSponsorTier(sponsor?.sponsorshipType) || 'unspecified';
 
     if (!logoFilePath) return null;
 
