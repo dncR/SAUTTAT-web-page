@@ -13,6 +13,13 @@ Bu dosyada anlamli kural degisiklikleri izlenir.
 - `rules/session_handoff.md`
 - `docs/workplans/*` (`Status: active` + `Scope` eslesmesi oldugunda)
 
+## 2026-04-03
+
+- Eklendi: `README.md` icine "Sponsor Ekleme ve Render Akisi" bolumu eklenerek sponsor ekleme adimlari ve `assets/data/sponsors.json` dosyasinin rolu dokumante edildi.
+- Eklendi: operasyonel kural `OP-016` (sponsor metadata alani, logo konumu, `index.html` include yapisi, `home.js` render akisi ve script sirasi standardi).
+- Degisti: `rules/current/operational_rules.md` "Last updated" alani 2026-04-03 olarak guncellendi.
+- Degisti: `rules/current/rule_registry.md` kaydina `OP-016` eklendi ve "Last updated" alani 2026-04-03 olarak guncellendi.
+
 ## 2026-03-25
 
 - Degisti: tum sayfalarda ortak arka plan gradyani standardi token tabanli modele cekildi (`--page-bg-standard`).
