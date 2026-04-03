@@ -1,5 +1,12 @@
 [
   {
+    "id": "sau",
+    "sponsorName": "sau",
+    "logoFilePath": "assets/img/sponsors/sau.png",
+    "sponsorshipType": "Platin",
+    "url": null
+  },
+  {
     "id": "acibadem",
     "sponsorName": "acibadem",
     "logoFilePath": "assets/img/sponsors/acibadem.png",
@@ -52,13 +59,6 @@
     "id": "portsmouth",
     "sponsorName": "portsmouth",
     "logoFilePath": "assets/img/sponsors/portsmouth.png",
-    "sponsorshipType": "Platin",
-    "url": null
-  },
-  {
-    "id": "sau",
-    "sponsorName": "sau",
-    "logoFilePath": "assets/img/sponsors/sau.png",
     "sponsorshipType": "Platin",
     "url": null
   },
