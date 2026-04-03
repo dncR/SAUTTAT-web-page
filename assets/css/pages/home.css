@@ -79,3 +79,101 @@
     color: #8b0000;
   }
 }
+
+/* Home: Sponsors carousel */
+.sponsors-carousel-viewport {
+  overflow: hidden;
+}
+
+.sponsors-carousel-track {
+  min-height: 170px;
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 1rem;
+  will-change: transform;
+}
+
+.sponsors-carousel-status {
+  width: 100%;
+  min-height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sponsor-logo-item {
+  flex: 0 0 auto;
+  height: 150px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #d9e5f7;
+  border-radius: 0.85rem;
+  background: #fff;
+  padding: 0.75rem 0.9rem;
+  text-decoration: none;
+  transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+}
+
+a.sponsor-logo-item:hover,
+a.sponsor-logo-item:focus-visible {
+  border-color: #9bb9e9;
+  box-shadow: 0 0.4rem 1.1rem rgba(22, 52, 104, 0.12);
+  transform: translateY(-2px);
+}
+
+.sponsors-carousel .sponsor-logo {
+  max-width: 100%;
+  max-height: 128px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+@media (max-width: 991.98px) {
+  .sponsors-carousel-track {
+    min-height: 158px;
+  }
+
+  .sponsor-logo-item {
+    height: 124px;
+    padding: 0.65rem 0.8rem;
+  }
+
+  .sponsors-carousel .sponsor-logo {
+    max-height: 104px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .sponsors-carousel-track {
+    min-height: 144px;
+    gap: 0.8rem;
+  }
+
+  .sponsor-logo-item {
+    height: 108px;
+    padding: 0.6rem 0.75rem;
+  }
+
+  .sponsors-carousel .sponsor-logo {
+    max-height: 88px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .sponsors-carousel-track {
+    min-height: 132px;
+    gap: 0.6rem;
+  }
+
+  .sponsor-logo-item {
+    height: 96px;
+    padding: 0.5rem 0.65rem;
+  }
+
+  .sponsors-carousel .sponsor-logo {
+    max-height: 72px;
+  }
+}
