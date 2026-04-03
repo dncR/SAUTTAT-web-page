@@ -43,3 +43,33 @@ python3 scripts/update-base.py
 * `site.config.json` içindeki `rootPath` değerini hedef ortama göre değiştirin.
 * Sonrasında `python3 scripts/update-base.py` çalıştırın.
 * Üretilen HTML dosyalarını sunucuya yükleyin.
+
+## Sponsor Ekleme ve Render Akışı
+
+Sponsor logolari ana sayfada (`index.html`) dinamik olarak `assets/js/pages/home.js` tarafinda render edilir. Veri kaynagi tek dosyadir: `assets/data/sponsors.json`.
+
+### `assets/data/sponsors.json` dosyasinin islevi
+
+Bu dosya sponsor carousel'inde gosterilecek tum kayitlarin metadata kaynagidir. `home.js` icindeki `loadSponsors()` fonksiyonu bu JSON'u okur, kayitlari `sponsorshipType` sirasina gore dizer ve logolari `components/sponsors.html` icindeki alana basar.
+
+Her sponsor kaydinda asagidaki alanlar kullanilir:
+
+- `id`: benzersiz kayit anahtari (kisa, slug formatinda)
+- `sponsorName`: logo `alt` metninde kullanilan gorunen ad
+- `logoFilePath`: logo dosyasinin yolu (or. `assets/img/sponsors/ornek.png`)
+- `sponsorshipType`: siralama seviyesi (`Platin`, `Gold`, `Silver`, `Bronze`)
+- `url`: opsiyonel dis baglanti (`null` veya `https://...`)
+
+### Sponsor ekleme adimlari
+
+1. Logo dosyasini `assets/img/sponsors/` klasorune ekleyin.
+2. `assets/data/sponsors.json` dosyasina yeni sponsor nesnesini ekleyin.
+3. `id` degerinin benzersiz oldugunu ve `logoFilePath` yolunun dogru dosyayi gosterdigini kontrol edin.
+4. Dis yonlendirme isteniyorsa `url` alanina tam adres yazin, yoksa `null` birakin.
+5. Yerelde `python3 -m http.server 9000` ile acip ana sayfada carousel'i kontrol edin.
+
+### Hizli dogrulama checklist'i
+
+- `index.html` icinde `components/sponsors.html` include'u duruyor.
+- `index.html` icinde `assets/js/pages/home.js`, `assets/js/global_scripts.js` sonrasinda yukleniyor.
+- Tarayici konsolunda sponsor fetch/render hatasi yok.
