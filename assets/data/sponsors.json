@@ -4,76 +4,76 @@
     "sponsorName": "sau",
     "logoFilePath": "assets/img/sponsors/sau.png",
     "sponsorshipType": "Platin",
-    "url": null
+    "url": "https://sakarya.edu.tr"
   },
   {
     "id": "acibadem",
     "sponsorName": "acibadem",
     "logoFilePath": "assets/img/sponsors/acibadem.png",
     "sponsorshipType": "Platin",
-    "url": null
+    "url": "https://www.acibadem.edu.tr"
   },
   {
     "id": "bahcesehir",
     "sponsorName": "bahcesehir",
     "logoFilePath": "assets/img/sponsors/bahcesehir.png",
     "sponsorshipType": "Platin",
-    "url": null
+    "url": "https://bau.edu.tr"
   },
   {
     "id": "biruni",
     "sponsorName": "biruni",
     "logoFilePath": "assets/img/sponsors/biruni.png",
     "sponsorshipType": "Platin",
-    "url": null
+    "url": "https://www.biruni.edu.tr/"
   },
   {
     "id": "bogazici",
     "sponsorName": "bogazici",
     "logoFilePath": "assets/img/sponsors/bogazici.png",
     "sponsorshipType": "Platin",
-    "url": null
+    "url": "https://bogazici.edu.tr"
   },
   {
     "id": "gebze_teknik",
     "sponsorName": "gebze_teknik",
     "logoFilePath": "assets/img/sponsors/gebze_teknik.png",
     "sponsorshipType": "Platin",
-    "url": null
+    "url": "https://www.gtu.edu.tr"
   },
   {
     "id": "istinye",
     "sponsorName": "istinye",
     "logoFilePath": "assets/img/sponsors/istinye.png",
     "sponsorshipType": "Platin",
-    "url": null
+    "url": "https://www.istinye.edu.tr/tr"
   },
   {
     "id": "koc",
     "sponsorName": "koc",
     "logoFilePath": "assets/img/sponsors/koc.png",
     "sponsorshipType": "Platin",
-    "url": null
+    "url": "https://www.ku.edu.tr"
   },
   {
     "id": "portsmouth",
     "sponsorName": "portsmouth",
     "logoFilePath": "assets/img/sponsors/portsmouth.png",
     "sponsorshipType": "Platin",
-    "url": null
+    "url": "https://www.port.ac.uk"
   },
   {
     "id": "uludag",
     "sponsorName": "uludag",
     "logoFilePath": "assets/img/sponsors/uludag.png",
     "sponsorshipType": "Platin",
-    "url": null
+    "url": "https://www.uludag.edu.tr"
   },
   {
     "id": "yildirim_beyazit",
     "sponsorName": "yildirim_beyazit",
     "logoFilePath": "assets/img/sponsors/yildirim_beyazit.png",
     "sponsorshipType": "Platin",
-    "url": null
+    "url": "https://aybu.edu.tr/aybu/tr"
   }
 ]
