@@ -1,0 +1,79 @@
+[
+  {
+    "id": "acibadem",
+    "sponsorName": "acibadem",
+    "logoFilePath": "assets/img/sponsors/acibadem.png",
+    "sponsorshipType": "Platin",
+    "url": null
+  },
+  {
+    "id": "bahcesehir",
+    "sponsorName": "bahcesehir",
+    "logoFilePath": "assets/img/sponsors/bahcesehir.png",
+    "sponsorshipType": "Platin",
+    "url": null
+  },
+  {
+    "id": "biruni",
+    "sponsorName": "biruni",
+    "logoFilePath": "assets/img/sponsors/biruni.png",
+    "sponsorshipType": "Platin",
+    "url": null
+  },
+  {
+    "id": "bogazici",
+    "sponsorName": "bogazici",
+    "logoFilePath": "assets/img/sponsors/bogazici.png",
+    "sponsorshipType": "Platin",
+    "url": null
+  },
+  {
+    "id": "gebze_teknik",
+    "sponsorName": "gebze_teknik",
+    "logoFilePath": "assets/img/sponsors/gebze_teknik.png",
+    "sponsorshipType": "Platin",
+    "url": null
+  },
+  {
+    "id": "istinye",
+    "sponsorName": "istinye",
+    "logoFilePath": "assets/img/sponsors/istinye.png",
+    "sponsorshipType": "Platin",
+    "url": null
+  },
+  {
+    "id": "koc",
+    "sponsorName": "koc",
+    "logoFilePath": "assets/img/sponsors/koc.png",
+    "sponsorshipType": "Platin",
+    "url": null
+  },
+  {
+    "id": "portsmouth",
+    "sponsorName": "portsmouth",
+    "logoFilePath": "assets/img/sponsors/portsmouth.png",
+    "sponsorshipType": "Platin",
+    "url": null
+  },
+  {
+    "id": "sau",
+    "sponsorName": "sau",
+    "logoFilePath": "assets/img/sponsors/sau.png",
+    "sponsorshipType": "Platin",
+    "url": null
+  },
+  {
+    "id": "uludag",
+    "sponsorName": "uludag",
+    "logoFilePath": "assets/img/sponsors/uludag.png",
+    "sponsorshipType": "Platin",
+    "url": null
+  },
+  {
+    "id": "yildirim_beyazit",
+    "sponsorName": "yildirim_beyazit",
+    "logoFilePath": "assets/img/sponsors/yildirim_beyazit.png",
+    "sponsorshipType": "Platin",
+    "url": null
+  }
+]
