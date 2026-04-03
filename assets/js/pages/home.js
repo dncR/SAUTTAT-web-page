@@ -2,6 +2,11 @@
   const SPONSOR_TIER_ORDER = ['platin', 'gold', 'silver', 'bronze'];
   const AUTO_SCROLL_INTERVAL_MS = 3000;
   const AUTO_SCROLL_ANIMATION_MS = 520;
+  const CONGRESS_START_AT = '2026-05-08T09:00:00+03:00';
+  const SECOND_MS = 1000;
+  const MINUTE_MS = 60 * SECOND_MS;
+  const HOUR_MS = 60 * MINUTE_MS;
+  const DAY_MS = 24 * HOUR_MS;
 
   const sponsorsState = {
     items: [],
@@ -18,11 +23,102 @@
     nextAdvanceAt: 0,
     remainingDelayMs: AUTO_SCROLL_INTERVAL_MS
   };
+  const countdownState = {
+    timerId: null,
+    refs: null
+  };
 
   const normalizeText = (value, fallback = '') => {
     if (typeof value !== 'string') return fallback;
     const normalized = value.trim();
     return normalized || fallback;
+  };
+
+  const padCounter = (value) => String(Math.max(0, value)).padStart(2, '0');
+
+  const resolveCountdownParts = (remainingMs) => {
+    const safeMs = Math.max(0, remainingMs);
+    const days = Math.floor(safeMs / DAY_MS);
+    const hours = Math.floor((safeMs % DAY_MS) / HOUR_MS);
+    const minutes = Math.floor((safeMs % HOUR_MS) / MINUTE_MS);
+    const seconds = Math.floor((safeMs % MINUTE_MS) / SECOND_MS);
+    return { days, hours, minutes, seconds };
+  };
+
+  const createCountdownMarkup = (rootEl) => {
+    rootEl.innerHTML = `
+      <div class="countdown-strip">
+        <div class="countdown-segment">
+          <span class="countdown-number" data-countdown-days>00</span>
+          <span class="countdown-segment-label">Gün</span>
+        </div>
+        <span class="countdown-separator" aria-hidden="true">:</span>
+        <div class="countdown-segment">
+          <span class="countdown-number" data-countdown-hours>00</span>
+          <span class="countdown-segment-label">Saat</span>
+        </div>
+        <span class="countdown-separator" aria-hidden="true">:</span>
+        <div class="countdown-segment">
+          <span class="countdown-number" data-countdown-minutes>00</span>
+          <span class="countdown-segment-label">Dakika</span>
+        </div>
+        <span class="countdown-separator" aria-hidden="true">:</span>
+        <div class="countdown-segment">
+          <span class="countdown-number" data-countdown-seconds>00</span>
+          <span class="countdown-segment-label">Saniye</span>
+        </div>
+      </div>
+    `;
+
+    return {
+      days: rootEl.querySelector('[data-countdown-days]'),
+      hours: rootEl.querySelector('[data-countdown-hours]'),
+      minutes: rootEl.querySelector('[data-countdown-minutes]'),
+      seconds: rootEl.querySelector('[data-countdown-seconds]')
+    };
+  };
+
+  const renderCountdown = (remainingMs) => {
+    if (!countdownState.refs) return;
+    const { days, hours, minutes, seconds } = resolveCountdownParts(remainingMs);
+    countdownState.refs.days.textContent = padCounter(days);
+    countdownState.refs.hours.textContent = padCounter(hours);
+    countdownState.refs.minutes.textContent = padCounter(minutes);
+    countdownState.refs.seconds.textContent = padCounter(seconds);
+  };
+
+  const initCountdown = () => {
+    const countdownEl = document.querySelector('[data-congress-countdown]');
+    const rootEl = countdownEl?.querySelector('[data-countdown-root]');
+    if (!countdownEl || !rootEl) return;
+
+    const targetRaw = normalizeText(countdownEl.dataset.targetDate, CONGRESS_START_AT);
+    const targetTimestamp = Date.parse(targetRaw);
+    if (!Number.isFinite(targetTimestamp)) {
+      console.error(`Invalid countdown target date: "${targetRaw}"`);
+      return;
+    }
+
+    countdownState.refs = createCountdownMarkup(rootEl);
+    if (!countdownState.refs.days || !countdownState.refs.hours || !countdownState.refs.minutes || !countdownState.refs.seconds) {
+      console.error('Countdown render refs are missing.');
+      return;
+    }
+
+    const tick = () => {
+      const remainingMs = targetTimestamp - Date.now();
+      renderCountdown(remainingMs);
+      if (remainingMs <= 0 && countdownState.timerId) {
+        window.clearInterval(countdownState.timerId);
+        countdownState.timerId = null;
+      }
+    };
+
+    tick();
+    if (countdownState.timerId) {
+      window.clearInterval(countdownState.timerId);
+    }
+    countdownState.timerId = window.setInterval(tick, SECOND_MS);
   };
 
   const tierRank = (tierValue) => {
@@ -314,6 +410,7 @@
         return;
       }
       await waitForSharedUI();
+      initCountdown();
       await initSponsorsCarousel();
       showAnnouncementModal();
     } catch (err) {

@@ -1,17 +1,38 @@
 /* SAUTTAT page: home */
 /* Home: Important dates */
+.important-dates-card {
+  position: relative;
+  border-radius: 1.2rem;
+  border: 1px solid rgba(35, 59, 119, 0.14);
+  background:
+    radial-gradient(circle at 94% 6%, rgba(51, 102, 255, 0.1), transparent 34%),
+    linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+  box-shadow: 0 0.9rem 2.2rem rgba(16, 42, 88, 0.1);
+  overflow: hidden;
+}
+
 .important-dates-card .card-header {
-  border-bottom: 1px solid rgba(35, 59, 119, 0.16);
+  position: relative;
+  background: transparent;
+  border-bottom: 1px solid rgba(35, 59, 119, 0.1);
+  color: var(--logo-blue);
+  font-size: 1.08rem;
+  letter-spacing: 0.01em;
+  padding: 1.35rem 1.15rem 0.9rem;
+}
+
+.important-dates-card .card-header.bg-accent {
+  background: transparent;
 }
 
 .important-dates-card .card-body {
-  padding: 1rem 1rem 0.75rem;
+  padding: 1.05rem 1.15rem 0.95rem;
 }
 
 .important-date-item {
   position: relative;
-  padding: 0 0 1rem 1.4rem;
-  border-left: 2px solid #d9e7fb;
+  padding: 0 0 1rem 1.5rem;
+  border-left: 2px solid #d5e3fa;
   margin-left: 0.45rem;
 }
 
@@ -38,8 +59,9 @@
 }
 
 .important-date-text {
-  font-size: 0.9rem;
-  color: var(--emr-muted);
+  font-size: 0.91rem;
+  line-height: 1.5;
+  color: #5d6a7f;
 }
 
 .important-date-item-highlight .important-date-label {
@@ -78,6 +100,171 @@
   50% {
     color: #8b0000;
   }
+}
+
+/* Home: Countdown panel */
+.countdown-panel {
+  position: relative;
+  border-radius: 1.2rem;
+  border: 1px solid rgba(35, 59, 119, 0.14);
+  background:
+    radial-gradient(circle at 8% 12%, rgba(51, 102, 255, 0.13), transparent 34%),
+    linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+  box-shadow: 0 0.9rem 2.2rem rgba(16, 42, 88, 0.1);
+  overflow: hidden;
+}
+
+.countdown-title {
+  font-size: clamp(1.2rem, 2.1vw, 1.5rem);
+  font-weight: 800;
+  color: var(--logo-blue);
+  text-align: center;
+}
+
+.countdown-panel-body {
+  padding: 1rem 1.35rem 1.15rem;
+}
+
+.countdown-widget-shell {
+  border: 1px solid #d4e2fb;
+  border-radius: 1rem;
+  background: linear-gradient(180deg, #f5f9ff 0%, #eef4ff 100%);
+  padding: 0.72rem 0.8rem;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.7);
+  width: 100%;
+  max-width: 720px;
+  min-height: 96px;
+  margin-inline: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.countdown-strip {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 0.88rem;
+}
+
+.countdown-segment {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  min-width: 86px;
+}
+
+.countdown-number {
+  display: block;
+  font-size: clamp(1.45rem, 2.8vw, 2.15rem);
+  font-weight: 800;
+  line-height: 1;
+  color: #1d376f;
+  font-variant-numeric: tabular-nums;
+}
+
+.countdown-segment-label {
+  display: block;
+  margin-top: 0.16rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #5d6a7f;
+}
+
+.countdown-separator {
+  display: block;
+  align-self: flex-start;
+  color: #7c96c8;
+  font-weight: 700;
+  font-size: clamp(1.35rem, 2.5vw, 1.95rem);
+  line-height: 1;
+  margin-top: 0.02em;
+}
+
+.countdown-note {
+  margin-top: 0.82rem;
+  font-size: 0.86rem;
+  text-align: center;
+  color: #5d6a7f;
+}
+
+/* Home: Welcome panel */
+.welcome-panel {
+  position: relative;
+  border-radius: 1.2rem;
+  border: 1px solid rgba(35, 59, 119, 0.14);
+  background:
+    radial-gradient(circle at 92% 8%, rgba(51, 102, 255, 0.1), transparent 32%),
+    linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+  box-shadow: 0 0.9rem 2.2rem rgba(16, 42, 88, 0.1);
+  overflow: hidden;
+}
+
+.welcome-panel-head {
+  padding: 1.6rem 1.8rem 1rem;
+  border-bottom: 1px solid rgba(35, 59, 119, 0.1);
+}
+
+.welcome-panel-kicker {
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #5f75a7;
+}
+
+.welcome-panel-title {
+  font-size: clamp(1.45rem, 2.3vw, 1.95rem);
+  font-weight: 800;
+  color: var(--logo-blue);
+}
+
+.welcome-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+}
+
+.welcome-meta-item {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #1d376f;
+  background: #edf3ff;
+  border: 1px solid #d0dfff;
+  border-radius: 999px;
+  padding: 0.32rem 0.75rem;
+}
+
+.welcome-panel-body {
+  padding: 1.25rem 1.8rem 1.65rem;
+}
+
+.welcome-greeting {
+  margin-bottom: 0.72rem;
+  font-weight: 700;
+  color: #2d436d;
+}
+
+.welcome-text {
+  margin-bottom: 0.95rem;
+  line-height: 1.75;
+  color: #5d6a7f;
+  text-align: justify;
+}
+
+.welcome-signoff {
+  color: #5d6a7f;
+}
+
+.welcome-signature {
+  margin-bottom: 0.2rem;
+  font-weight: 700;
+  color: var(--logo-blue);
 }
 
 /* Home: Sponsors carousel */
@@ -132,6 +319,30 @@ a.sponsor-logo-item:focus-visible {
 }
 
 @media (max-width: 991.98px) {
+  .countdown-panel-body {
+    padding: 0.85rem 1rem 0.95rem;
+  }
+
+  .countdown-widget-shell {
+    padding: 0.62rem 0.7rem;
+  }
+
+  .important-dates-card .card-header {
+    padding: 1.2rem 1rem 0.75rem;
+  }
+
+  .important-dates-card .card-body {
+    padding: 0.9rem 1rem 0.85rem;
+  }
+
+  .welcome-panel-head {
+    padding: 1.35rem 1.35rem 0.9rem;
+  }
+
+  .welcome-panel-body {
+    padding: 1.05rem 1.35rem 1.35rem;
+  }
+
   .sponsors-carousel-track {
     min-height: 158px;
   }
@@ -147,6 +358,26 @@ a.sponsor-logo-item:focus-visible {
 }
 
 @media (max-width: 767.98px) {
+  .countdown-strip {
+    gap: 0.62rem;
+  }
+
+  .countdown-number {
+    font-size: 1.58rem;
+  }
+
+  .countdown-segment-label {
+    font-size: 0.68rem;
+  }
+
+  .countdown-segment {
+    min-width: 72px;
+  }
+
+  .welcome-text {
+    text-align: left;
+  }
+
   .sponsors-carousel-track {
     min-height: 144px;
     gap: 0.8rem;
@@ -163,6 +394,81 @@ a.sponsor-logo-item:focus-visible {
 }
 
 @media (max-width: 575.98px) {
+  .countdown-panel-body {
+    padding: 0.75rem 0.9rem 0.9rem;
+  }
+
+  .countdown-title {
+    font-size: 1.08rem;
+  }
+
+  .countdown-widget-shell {
+    padding: 0.5rem 0.55rem;
+    min-height: 84px;
+  }
+
+  .countdown-strip {
+    gap: 0.45rem;
+  }
+
+  .countdown-number {
+    font-size: 1.22rem;
+  }
+
+  .countdown-segment-label {
+    font-size: 0.62rem;
+  }
+
+  .countdown-separator {
+    font-size: 1.08rem;
+  }
+
+  .countdown-segment {
+    min-width: 54px;
+  }
+
+  .countdown-note {
+    font-size: 0.8rem;
+  }
+
+  .important-dates-card .card-header {
+    font-size: 1rem;
+    padding: 1.05rem 0.9rem 0.65rem;
+  }
+
+  .important-dates-card .card-body {
+    padding: 0.82rem 0.9rem 0.75rem;
+  }
+
+  .important-date-item {
+    padding: 0 0 0.9rem 1.35rem;
+    margin-left: 0.35rem;
+  }
+
+  .important-date-label {
+    font-size: 0.94rem;
+  }
+
+  .important-date-text {
+    font-size: 0.86rem;
+  }
+
+  .welcome-panel-head {
+    padding: 1.2rem 1.05rem 0.75rem;
+  }
+
+  .welcome-panel-body {
+    padding: 0.9rem 1.05rem 1.1rem;
+  }
+
+  .welcome-panel-kicker {
+    font-size: 0.68rem;
+  }
+
+  .welcome-meta-item {
+    font-size: 0.75rem;
+  }
+
   .sponsors-carousel-track {
     min-height: 132px;
     gap: 0.6rem;
