@@ -270,6 +270,7 @@
 /* Home: Sponsors carousel */
 .sponsors-carousel-viewport {
   overflow: hidden;
+  width: 100%;
 }
 
 .sponsors-carousel-track {
@@ -290,6 +291,7 @@
 }
 
 .sponsor-logo-item {
+  box-sizing: border-box;
   flex: 0 0 auto;
   height: 150px;
   display: inline-flex;
@@ -417,7 +419,7 @@ a.sponsor-logo-item:focus-visible {
   white-space: nowrap;
 }
 
-.sponsors-carousel--tier .sponsors-carousel-track {
+.sponsors-carousel--tier .sponsors-carousel-track.is-static {
   justify-content: center;
 }
 

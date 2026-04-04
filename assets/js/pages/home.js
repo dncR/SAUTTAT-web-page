@@ -340,10 +340,12 @@
       return;
     }
 
-    const slotsPerView = controller.fillWhenFew
+    const shouldShrinkSlots = controller.fillWhenFew;
+    const slotsPerView = shouldShrinkSlots
       ? Math.max(1, Math.min(perSlide, validSponsors.length))
       : Math.max(1, perSlide);
     const shouldAutoScroll = validSponsors.length > slotsPerView;
+    trackEl.classList.toggle('is-static', !shouldAutoScroll);
     const renderList = shouldAutoScroll
       ? validSponsors.concat(validSponsors.slice(0, slotsPerView))
       : validSponsors;
