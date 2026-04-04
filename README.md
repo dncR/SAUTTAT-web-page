@@ -14,16 +14,20 @@ Projede `<base href="...">` etiketi kullanılır. Bu etiket, tüm `href` ve `src
 
 ### Konfigürasyon
 
-`site.config.json` dosyasında tek bir alan yönetilir:
+`site.config.json` dosyasında ortam ve davranis ayarlari yonetilir:
 
 ```
 {
-  "rootPath": "/gelecegintibbikongresi2026/"
+  "rootPath": "/gelecegintibbikongresi2026/",
+  "splitSponsorsCarousel": false
 }
 ```
 
 * Uzak sunucu için `rootPath` örneği: `/gelecegintibbikongresi2026/`
 * Local geliştirme için `rootPath` değeri: `/`
+* Ana sayfa sponsor layout secimi:
+  * `splitSponsorsCarousel: true` -> `components/sponsors.html` icindeki split section (`[data-sponsors-by-tier]`)
+  * `splitSponsorsCarousel: false` -> `components/sponsors.html` icindeki combined section (`.sponsors-section`)
 
 ### Base Güncelleme Scripti
 
@@ -47,10 +51,18 @@ python3 scripts/update-base.py
 ## Sponsor Ekleme ve Render Akışı
 
 Sponsor logolari ana sayfada (`index.html`) dinamik olarak `assets/js/pages/home.js` tarafinda render edilir. Veri kaynagi tek dosyadir: `assets/data/sponsors.json`.
+Render layout'u `site.config.json` icindeki `splitSponsorsCarousel` bayragina gore secilir.
 
 ### `assets/data/sponsors.json` dosyasinin islevi
 
-Bu dosya sponsor carousel'inde gosterilecek tum kayitlarin metadata kaynagidir. `home.js` icindeki `loadSponsors()` fonksiyonu bu JSON'u okur, kayitlari case-insensitive olarak `sponsorshipType` sirasina gore dizer (`platin > gold > silver > bronze`) ve logolari `components/sponsors.html` icindeki alana basar. `sponsorshipType: null` olan kayitlar bu tier'lar render edildikten sonra, JSON'daki kendi siralari korunarak eklenir.
+Bu dosya sponsor carousel'lerinde gosterilecek tum kayitlarin metadata kaynagidir. `home.js` icindeki `loadSponsors()` fonksiyonu bu JSON'u okur.
+
+* Combined layout (`splitSponsorsCarousel: false`):
+  * Kayitlar case-insensitive olarak `sponsorshipType` sirasina gore dizilir (`platin > gold > silver > bronze`).
+  * `sponsorshipType: null` olan kayitlar tier'lar sonrasinda, JSON'daki kaynak sira korunarak eklenir.
+* Split layout (`splitSponsorsCarousel: true`):
+  * Kayitlar sponsorluk tipine gore gruplandirilarak ayri carousel bloklarinda render edilir.
+  * Her tier bagimsiz carousel akisi ile calisir.
 
 Her sponsor kaydinda asagidaki alanlar kullanilir:
 
@@ -71,5 +83,6 @@ Her sponsor kaydinda asagidaki alanlar kullanilir:
 ### Hizli dogrulama checklist'i
 
 - `index.html` icinde `components/sponsors.html` include'u duruyor.
+- `site.config.json` icinde `splitSponsorsCarousel` degeri hedeflenen layout ile uyumlu.
 - `index.html` icinde `assets/js/pages/home.js`, `assets/js/global_scripts.js` sonrasinda yukleniyor.
 - Tarayici konsolunda sponsor fetch/render hatasi yok.

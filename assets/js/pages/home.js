@@ -1,5 +1,8 @@
 (() => {
   const SPONSOR_TIER_ORDER = ['platin', 'gold', 'silver', 'bronze'];
+  const SPONSOR_FALLBACK_TIER = 'unspecified';
+  const SITE_CONFIG_PATH = 'site.config.json';
+  const DEFAULT_SPLIT_SPONSORS_CAROUSEL = false;
   const AUTO_SCROLL_INTERVAL_MS = 3000;
   const AUTO_SCROLL_ANIMATION_MS = 520;
   const CONGRESS_START_AT = '2026-05-08T09:00:00+03:00';
@@ -11,17 +14,11 @@
   const sponsorsState = {
     items: [],
     perSlide: 0,
-    currentIndex: 0,
+    splitMode: DEFAULT_SPLIT_SPONSORS_CAROUSEL,
     resizeTimerId: null,
-    autoTimerId: null,
-    trackEl: null,
-    transitionEndHandler: null,
-    hoverTargetEl: null,
-    hoverEnterHandler: null,
-    hoverLeaveHandler: null,
-    isHovered: false,
-    nextAdvanceAt: 0,
-    remainingDelayMs: AUTO_SCROLL_INTERVAL_MS
+    isResizeBound: false,
+    combinedController: null,
+    tierControllers: []
   };
   const countdownState = {
     timerId: null,
@@ -144,6 +141,27 @@
     return { group: 1, rank: SPONSOR_TIER_ORDER.length, normalizedTier };
   };
 
+  const resolveSponsorTierKey = (tierValue) => normalizeSponsorTier(tierValue) || SPONSOR_FALLBACK_TIER;
+
+  const formatSponsorTierLabel = (tierKey) => {
+    if (tierKey === 'platin') return 'PLATİN';
+    if (tierKey === 'gold') return 'ALTIN';
+    if (tierKey === 'silver') return 'GÜMÜŞ';
+    if (tierKey === 'bronze') return 'BRONZ';
+    if (tierKey === SPONSOR_FALLBACK_TIER) return 'DESTEK SPONSORLARI';
+
+    const normalizedKey = normalizeText(tierKey, '').replace(/[_-]+/g, ' ');
+    if (!normalizedKey) return 'DİĞER SPONSORLAR';
+    return normalizedKey
+      .split(/\s+/)
+      .map((word) => {
+        if (!word) return '';
+        const firstChar = word.charAt(0).toLocaleUpperCase('tr-TR');
+        return `${firstChar}${word.slice(1)}`;
+      })
+      .join(' ');
+  };
+
   const getSponsorsPerSlide = () => {
     const viewportWidth = window.innerWidth || document.documentElement.clientWidth || 1200;
     if (viewportWidth < 576) return 1;
@@ -171,6 +189,28 @@
       })
       .map((entry) => entry.sponsor);
 
+  const collectSponsorsByTier = (sponsors) => {
+    const tierMap = new Map();
+    (Array.isArray(sponsors) ? sponsors : []).forEach((sponsor) => {
+      if (!normalizeText(sponsor?.logoFilePath)) return;
+      const tierKey = resolveSponsorTierKey(sponsor?.sponsorshipType);
+      if (!tierMap.has(tierKey)) {
+        tierMap.set(tierKey, []);
+      }
+      tierMap.get(tierKey).push(sponsor);
+    });
+    return tierMap;
+  };
+
+  const resolveTierRenderOrder = (tierMap) => {
+    const knownOrder = SPONSOR_TIER_ORDER.filter((tierKey) => tierMap.has(tierKey));
+    const unknownOrder = Array.from(tierMap.keys())
+      .filter((tierKey) => !SPONSOR_TIER_ORDER.includes(tierKey) && tierKey !== SPONSOR_FALLBACK_TIER)
+      .sort((left, right) => left.localeCompare(right, 'tr'));
+    const fallbackOrder = tierMap.has(SPONSOR_FALLBACK_TIER) ? [SPONSOR_FALLBACK_TIER] : [];
+    return knownOrder.concat(unknownOrder, fallbackOrder);
+  };
+
   const createStatusSlide = (message) => {
     const statusEl = document.createElement('div');
     statusEl.className = 'sponsors-carousel-status text-center text-muted py-4';
@@ -182,8 +222,7 @@
     const sponsorName = normalizeText(sponsor?.sponsorName, 'Sponsor');
     const logoFilePath = normalizeText(sponsor?.logoFilePath);
     const sponsorUrl = normalizeText(sponsor?.url, '');
-    const sponsorshipType = normalizeSponsorTier(sponsor?.sponsorshipType) || 'unspecified';
-
+    const sponsorshipType = resolveSponsorTierKey(sponsor?.sponsorshipType);
     if (!logoFilePath) return null;
 
     const itemTag = sponsorUrl ? 'a' : 'div';
@@ -209,25 +248,49 @@
     return itemEl;
   };
 
-  const clearSponsorsAutoScroll = () => {
-    if (sponsorsState.autoTimerId) {
-      window.clearTimeout(sponsorsState.autoTimerId);
-      sponsorsState.autoTimerId = null;
+  const createCarouselRuntimeState = () => ({
+    currentIndex: 0,
+    autoTimerId: null,
+    trackEl: null,
+    transitionEndHandler: null,
+    hoverTargetEl: null,
+    hoverEnterHandler: null,
+    hoverLeaveHandler: null,
+    isHovered: false,
+    nextAdvanceAt: 0,
+    remainingDelayMs: AUTO_SCROLL_INTERVAL_MS
+  });
+
+  const createCarouselController = ({ carouselEl, viewportEl, trackEl, fillWhenFew }) => ({
+    carouselEl,
+    viewportEl,
+    trackEl,
+    fillWhenFew: Boolean(fillWhenFew),
+    state: createCarouselRuntimeState()
+  });
+
+  const clearCarouselAutoScroll = (runtimeState) => {
+    if (!runtimeState) return;
+
+    if (runtimeState.autoTimerId) {
+      window.clearTimeout(runtimeState.autoTimerId);
+      runtimeState.autoTimerId = null;
     }
-    if (sponsorsState.trackEl && sponsorsState.transitionEndHandler) {
-      sponsorsState.trackEl.removeEventListener('transitionend', sponsorsState.transitionEndHandler);
-      sponsorsState.transitionEndHandler = null;
+    if (runtimeState.trackEl && runtimeState.transitionEndHandler) {
+      runtimeState.trackEl.removeEventListener('transitionend', runtimeState.transitionEndHandler);
+      runtimeState.transitionEndHandler = null;
     }
-    if (sponsorsState.hoverTargetEl && sponsorsState.hoverEnterHandler && sponsorsState.hoverLeaveHandler) {
-      sponsorsState.hoverTargetEl.removeEventListener('mouseenter', sponsorsState.hoverEnterHandler);
-      sponsorsState.hoverTargetEl.removeEventListener('mouseleave', sponsorsState.hoverLeaveHandler);
+    if (runtimeState.hoverTargetEl && runtimeState.hoverEnterHandler && runtimeState.hoverLeaveHandler) {
+      runtimeState.hoverTargetEl.removeEventListener('mouseenter', runtimeState.hoverEnterHandler);
+      runtimeState.hoverTargetEl.removeEventListener('mouseleave', runtimeState.hoverLeaveHandler);
     }
-    sponsorsState.hoverTargetEl = null;
-    sponsorsState.hoverEnterHandler = null;
-    sponsorsState.hoverLeaveHandler = null;
-    sponsorsState.isHovered = false;
-    sponsorsState.nextAdvanceAt = 0;
-    sponsorsState.remainingDelayMs = AUTO_SCROLL_INTERVAL_MS;
+
+    runtimeState.hoverTargetEl = null;
+    runtimeState.hoverEnterHandler = null;
+    runtimeState.hoverLeaveHandler = null;
+    runtimeState.isHovered = false;
+    runtimeState.nextAdvanceAt = 0;
+    runtimeState.remainingDelayMs = AUTO_SCROLL_INTERVAL_MS;
   };
 
   const resolveTrackGap = (trackEl) => {
@@ -237,12 +300,12 @@
     return Number.isFinite(gapValue) ? gapValue : 16;
   };
 
-  const applySponsorItemWidths = (trackEl, viewportEl, perSlide) => {
-    const safePerSlide = Math.max(1, perSlide);
+  const applySponsorItemWidths = (trackEl, viewportEl, slotsPerView) => {
+    const safeSlots = Math.max(1, slotsPerView);
     const gap = resolveTrackGap(trackEl);
     const viewportWidth = viewportEl.clientWidth || trackEl.clientWidth || 0;
-    const usableWidth = Math.max(1, viewportWidth - gap * (safePerSlide - 1));
-    const itemWidth = usableWidth / safePerSlide;
+    const usableWidth = Math.max(1, viewportWidth - gap * (safeSlots - 1));
+    const itemWidth = usableWidth / safeSlots;
 
     Array.from(trackEl.querySelectorAll('.sponsor-logo-item')).forEach((itemEl) => {
       itemEl.style.flex = `0 0 ${itemWidth}px`;
@@ -252,41 +315,46 @@
     return itemWidth + gap;
   };
 
-  const renderSponsorsCarousel = (sponsors, perSlide = getSponsorsPerSlide()) => {
-    const carouselEl = document.getElementById('sponsorsCarousel');
-    const viewportEl = carouselEl?.querySelector('[data-sponsors-carousel-viewport]');
-    const trackEl = carouselEl?.querySelector('[data-sponsors-carousel-track]');
-    if (!carouselEl || !viewportEl || !trackEl) return;
+  const renderCarouselStatus = (controller, message) => {
+    if (!controller?.trackEl) return;
+    clearCarouselAutoScroll(controller.state);
+    controller.trackEl.innerHTML = '';
+    controller.trackEl.appendChild(createStatusSlide(message));
+  };
 
-    clearSponsorsAutoScroll();
-    sponsorsState.trackEl = trackEl;
+  const renderCarousel = (controller, sponsors, perSlide = getSponsorsPerSlide()) => {
+    const carouselEl = controller?.carouselEl;
+    const viewportEl = controller?.viewportEl;
+    const trackEl = controller?.trackEl;
+    const runtimeState = controller?.state;
+    if (!carouselEl || !viewportEl || !trackEl || !runtimeState) return;
 
-    const sortedSponsors = sortSponsorsByTierThenSourceOrder(Array.isArray(sponsors) ? sponsors : []).filter(
-      (sponsor) => Boolean(normalizeText(sponsor?.logoFilePath))
-    );
+    clearCarouselAutoScroll(runtimeState);
+    runtimeState.trackEl = trackEl;
 
+    const validSponsors = (Array.isArray(sponsors) ? sponsors : []).filter((sponsor) => Boolean(normalizeText(sponsor?.logoFilePath)));
     trackEl.innerHTML = '';
 
-    if (!sortedSponsors.length) {
+    if (!validSponsors.length) {
       trackEl.appendChild(createStatusSlide('Gosterilecek sponsor bulunamadi.'));
       return;
     }
 
-    const visibleCount = Math.max(1, Math.min(perSlide, sortedSponsors.length));
-    sponsorsState.perSlide = visibleCount;
-
-    const shouldAutoScroll = sortedSponsors.length > visibleCount;
+    const slotsPerView = controller.fillWhenFew
+      ? Math.max(1, Math.min(perSlide, validSponsors.length))
+      : Math.max(1, perSlide);
+    const shouldAutoScroll = validSponsors.length > slotsPerView;
     const renderList = shouldAutoScroll
-      ? sortedSponsors.concat(sortedSponsors.slice(0, visibleCount))
-      : sortedSponsors;
+      ? validSponsors.concat(validSponsors.slice(0, slotsPerView))
+      : validSponsors;
 
     renderList.forEach((sponsor) => {
       const sponsorEl = createSponsorLogoNode(sponsor);
       if (sponsorEl) trackEl.appendChild(sponsorEl);
     });
 
-    const stepPx = applySponsorItemWidths(trackEl, viewportEl, visibleCount);
-    sponsorsState.currentIndex = 0;
+    const stepPx = applySponsorItemWidths(trackEl, viewportEl, slotsPerView);
+    runtimeState.currentIndex = 0;
     trackEl.style.transition = 'none';
     trackEl.style.transform = 'translateX(0px)';
 
@@ -297,32 +365,32 @@
     let isAnimating = false;
     const intervalMs = Number.parseInt(carouselEl.dataset.sponsorInterval || '', 10);
     const delayMs = Number.isFinite(intervalMs) && intervalMs > 0 ? intervalMs : AUTO_SCROLL_INTERVAL_MS;
-    sponsorsState.remainingDelayMs = delayMs;
+    runtimeState.remainingDelayMs = delayMs;
 
     const onTransitionEnd = () => {
-      if (sponsorsState.currentIndex >= sortedSponsors.length) {
+      if (runtimeState.currentIndex >= validSponsors.length) {
         trackEl.style.transition = 'none';
-        sponsorsState.currentIndex = 0;
+        runtimeState.currentIndex = 0;
         trackEl.style.transform = 'translateX(0px)';
         void trackEl.offsetWidth;
       }
       isAnimating = false;
     };
 
-    sponsorsState.transitionEndHandler = onTransitionEnd;
+    runtimeState.transitionEndHandler = onTransitionEnd;
     trackEl.addEventListener('transitionend', onTransitionEnd);
 
     const scheduleNextAdvance = (delay) => {
       const safeDelay = Math.max(0, Number.isFinite(delay) ? delay : delayMs);
-      sponsorsState.nextAdvanceAt = Date.now() + safeDelay;
-      sponsorsState.autoTimerId = window.setTimeout(() => {
-        sponsorsState.autoTimerId = null;
-        if (sponsorsState.isHovered) return;
+      runtimeState.nextAdvanceAt = Date.now() + safeDelay;
+      runtimeState.autoTimerId = window.setTimeout(() => {
+        runtimeState.autoTimerId = null;
+        if (runtimeState.isHovered) return;
         if (isAnimating) {
           scheduleNextAdvance(120);
           return;
         }
-        sponsorsState.remainingDelayMs = delayMs;
+        runtimeState.remainingDelayMs = delayMs;
         stepForward();
       }, safeDelay);
     };
@@ -330,41 +398,237 @@
     const stepForward = () => {
       if (isAnimating) return;
       isAnimating = true;
-      sponsorsState.currentIndex += 1;
+      runtimeState.currentIndex += 1;
       trackEl.style.transition = `transform ${AUTO_SCROLL_ANIMATION_MS}ms ease`;
-      trackEl.style.transform = `translateX(-${sponsorsState.currentIndex * stepPx}px)`;
+      trackEl.style.transform = `translateX(-${runtimeState.currentIndex * stepPx}px)`;
       scheduleNextAdvance(delayMs);
     };
 
-    sponsorsState.hoverTargetEl = viewportEl;
-    sponsorsState.hoverEnterHandler = () => {
-      sponsorsState.isHovered = true;
-      if (sponsorsState.autoTimerId) {
-        sponsorsState.remainingDelayMs = Math.max(0, sponsorsState.nextAdvanceAt - Date.now());
-        window.clearTimeout(sponsorsState.autoTimerId);
-        sponsorsState.autoTimerId = null;
+    runtimeState.hoverTargetEl = viewportEl;
+    runtimeState.hoverEnterHandler = () => {
+      runtimeState.isHovered = true;
+      if (runtimeState.autoTimerId) {
+        runtimeState.remainingDelayMs = Math.max(0, runtimeState.nextAdvanceAt - Date.now());
+        window.clearTimeout(runtimeState.autoTimerId);
+        runtimeState.autoTimerId = null;
       }
     };
-    sponsorsState.hoverLeaveHandler = () => {
-      sponsorsState.isHovered = false;
-      if (!sponsorsState.autoTimerId) {
-        scheduleNextAdvance(sponsorsState.remainingDelayMs || delayMs);
+    runtimeState.hoverLeaveHandler = () => {
+      runtimeState.isHovered = false;
+      if (!runtimeState.autoTimerId) {
+        scheduleNextAdvance(runtimeState.remainingDelayMs || delayMs);
       }
     };
 
-    viewportEl.addEventListener('mouseenter', sponsorsState.hoverEnterHandler);
-    viewportEl.addEventListener('mouseleave', sponsorsState.hoverLeaveHandler);
-
+    viewportEl.addEventListener('mouseenter', runtimeState.hoverEnterHandler);
+    viewportEl.addEventListener('mouseleave', runtimeState.hoverLeaveHandler);
     scheduleNextAdvance(delayMs);
   };
 
-  const renderSponsorsError = (message) => {
+  const getCombinedCarouselRefs = () => {
     const carouselEl = document.getElementById('sponsorsCarousel');
+    const viewportEl = carouselEl?.querySelector('[data-sponsors-carousel-viewport]');
     const trackEl = carouselEl?.querySelector('[data-sponsors-carousel-track]');
-    if (!trackEl) return;
-    clearSponsorsAutoScroll();
-    trackEl.innerHTML = '';
-    trackEl.appendChild(createStatusSlide(message));
+    if (!carouselEl || !viewportEl || !trackEl) return null;
+    return { carouselEl, viewportEl, trackEl };
+  };
+
+  const ensureCombinedController = () => {
+    const refs = getCombinedCarouselRefs();
+    if (!refs) {
+      sponsorsState.combinedController = null;
+      return null;
+    }
+
+    const existing = sponsorsState.combinedController;
+    if (existing?.carouselEl === refs.carouselEl && existing?.trackEl === refs.trackEl && existing?.viewportEl === refs.viewportEl) {
+      return existing;
+    }
+
+    if (existing) {
+      clearCarouselAutoScroll(existing.state);
+    }
+
+    sponsorsState.combinedController = createCarouselController({
+      carouselEl: refs.carouselEl,
+      viewportEl: refs.viewportEl,
+      trackEl: refs.trackEl,
+      fillWhenFew: true
+    });
+    return sponsorsState.combinedController;
+  };
+
+  const clearTierCarousels = () => {
+    sponsorsState.tierControllers.forEach((controller) => {
+      clearCarouselAutoScroll(controller.state);
+    });
+    sponsorsState.tierControllers = [];
+  };
+
+  const getTierGroupsElement = () => document.querySelector('[data-sponsors-by-tier] [data-sponsor-tier-groups]');
+
+  const createTierGroupElement = (tierKey, sponsors) => {
+    const groupEl = document.createElement('article');
+    groupEl.className = 'sponsor-tier-group';
+    groupEl.setAttribute('data-sponsor-tier-group', tierKey);
+
+    const headEl = document.createElement('div');
+    headEl.className = 'sponsor-tier-group-head';
+
+    const titleEl = document.createElement('h3');
+    titleEl.className = 'sponsor-tier-group-title';
+    titleEl.textContent = formatSponsorTierLabel(tierKey);
+
+    const countEl = document.createElement('span');
+    countEl.className = 'sponsor-tier-group-count';
+    countEl.textContent = `${sponsors.length} sponsor`;
+
+    headEl.appendChild(titleEl);
+    headEl.appendChild(countEl);
+
+    const carouselEl = document.createElement('div');
+    carouselEl.className = 'sponsors-carousel sponsors-carousel--tier';
+    carouselEl.dataset.sponsorInterval = '3000';
+
+    const viewportEl = document.createElement('div');
+    viewportEl.className = 'sponsors-carousel-viewport';
+
+    const trackEl = document.createElement('div');
+    trackEl.className = 'sponsors-carousel-track';
+
+    viewportEl.appendChild(trackEl);
+    carouselEl.appendChild(viewportEl);
+
+    groupEl.appendChild(headEl);
+    groupEl.appendChild(carouselEl);
+
+    return { groupEl, carouselEl, viewportEl, trackEl };
+  };
+
+  const renderCombinedSponsors = (sponsors, perSlide = getSponsorsPerSlide()) => {
+    const controller = ensureCombinedController();
+    if (!controller) return;
+
+    const sortedSponsors = sortSponsorsByTierThenSourceOrder(Array.isArray(sponsors) ? sponsors : []);
+    renderCarousel(controller, sortedSponsors, perSlide);
+  };
+
+  const renderSponsorsByTier = (sponsors, perSlide = getSponsorsPerSlide()) => {
+    const groupsEl = getTierGroupsElement();
+    if (!groupsEl) return;
+
+    const canReuseTierControllers =
+      sponsorsState.tierControllers.length > 0 &&
+      sponsorsState.tierControllers.every(
+        (controller) => Boolean(controller?.trackEl) && document.body.contains(controller.trackEl)
+      );
+
+    if (canReuseTierControllers) {
+      sponsorsState.tierControllers.forEach((controller) => {
+        renderCarousel(controller, controller.items, perSlide);
+      });
+      return;
+    }
+
+    clearTierCarousels();
+    groupsEl.innerHTML = '';
+
+    const tierMap = collectSponsorsByTier(sponsors);
+    const renderOrder = resolveTierRenderOrder(tierMap);
+    if (!renderOrder.length) {
+      groupsEl.appendChild(createStatusSlide('Gosterilecek sponsor bulunamadi.'));
+      return;
+    }
+
+    renderOrder.forEach((tierKey) => {
+      const tierSponsors = tierMap.get(tierKey) || [];
+      const { groupEl, carouselEl, viewportEl, trackEl } = createTierGroupElement(tierKey, tierSponsors);
+      groupsEl.appendChild(groupEl);
+
+      const controller = createCarouselController({
+        carouselEl,
+        viewportEl,
+        trackEl,
+        fillWhenFew: false
+      });
+      controller.items = tierSponsors;
+      sponsorsState.tierControllers.push(controller);
+      renderCarousel(controller, tierSponsors, perSlide);
+    });
+  };
+
+  const renderSponsorsByTierError = (message) => {
+    const groupsEl = getTierGroupsElement();
+    if (!groupsEl) return;
+    clearTierCarousels();
+    groupsEl.innerHTML = '';
+    groupsEl.appendChild(createStatusSlide(message));
+  };
+
+  const renderCombinedSponsorsError = (message) => {
+    const controller = ensureCombinedController();
+    renderCarouselStatus(controller, message);
+  };
+
+  const setSectionVisibility = (sectionEl, isVisible) => {
+    if (!sectionEl) return;
+    sectionEl.classList.toggle('d-none', !isVisible);
+    if (isVisible) {
+      sectionEl.removeAttribute('hidden');
+      sectionEl.setAttribute('aria-hidden', 'false');
+      return;
+    }
+    sectionEl.setAttribute('hidden', 'hidden');
+    sectionEl.setAttribute('aria-hidden', 'true');
+  };
+
+  const applySponsorsLayoutVisibility = () => {
+    const combinedSectionEl = document.querySelector('.sponsors-section');
+    const splitSectionEl = document.querySelector('[data-sponsors-by-tier]');
+    setSectionVisibility(combinedSectionEl, !sponsorsState.splitMode);
+    setSectionVisibility(splitSectionEl, sponsorsState.splitMode);
+  };
+
+  const resolveEffectiveSplitMode = (requestedSplitMode) => {
+    const hasCombined = Boolean(getCombinedCarouselRefs());
+    const hasSplit = Boolean(getTierGroupsElement());
+
+    if (!hasCombined && !hasSplit) {
+      return false;
+    }
+    if (requestedSplitMode && hasSplit) {
+      return true;
+    }
+    if (!requestedSplitMode && hasCombined) {
+      return false;
+    }
+    if (hasSplit && !hasCombined) {
+      return true;
+    }
+    return false;
+  };
+
+  const normalizeSiteConfig = (payload) => ({
+    splitSponsorsCarousel: Boolean(payload?.splitSponsorsCarousel)
+  });
+
+  const loadSiteConfig = async () => {
+    try {
+      const response = await fetch(SITE_CONFIG_PATH, { cache: 'no-store' });
+      if (!response.ok) {
+        throw new Error(`Failed to load site config: HTTP ${response.status}`);
+      }
+      const payload = await response.json();
+      if (!payload || typeof payload !== 'object') {
+        throw new Error('site.config.json must be an object');
+      }
+      return normalizeSiteConfig(payload);
+    } catch (err) {
+      console.warn('Using default sponsor layout mode because site config could not be loaded.', err);
+      return {
+        splitSponsorsCarousel: DEFAULT_SPLIT_SPONSORS_CAROUSEL
+      };
+    }
   };
 
   const loadSponsors = async () => {
@@ -379,9 +643,34 @@
     return payload;
   };
 
-  const bindSponsorsResizeHandler = (carouselEl) => {
-    if (!carouselEl || carouselEl.dataset.sponsorsResizeBound === 'true') return;
-    carouselEl.dataset.sponsorsResizeBound = 'true';
+  const renderActiveSponsors = () => {
+    if (!sponsorsState.items.length) return;
+
+    if (sponsorsState.splitMode) {
+      const combinedController = sponsorsState.combinedController;
+      if (combinedController) {
+        clearCarouselAutoScroll(combinedController.state);
+      }
+      renderSponsorsByTier(sponsorsState.items, sponsorsState.perSlide);
+      return;
+    }
+
+    clearTierCarousels();
+    renderCombinedSponsors(sponsorsState.items, sponsorsState.perSlide);
+  };
+
+  const renderActiveSponsorsError = (message) => {
+    if (sponsorsState.splitMode) {
+      renderSponsorsByTierError(message);
+      return;
+    }
+    clearTierCarousels();
+    renderCombinedSponsorsError(message);
+  };
+
+  const bindSponsorsResizeHandler = () => {
+    if (sponsorsState.isResizeBound) return;
+    sponsorsState.isResizeBound = true;
 
     window.addEventListener(
       'resize',
@@ -392,31 +681,37 @@
         sponsorsState.resizeTimerId = window.setTimeout(() => {
           if (!sponsorsState.items.length) return;
           sponsorsState.perSlide = getSponsorsPerSlide();
-          renderSponsorsCarousel(sponsorsState.items, sponsorsState.perSlide);
+          renderActiveSponsors();
         }, 160);
       },
       { passive: true }
     );
   };
 
-  const initSponsorsCarousel = async () => {
-    const carouselEl = document.getElementById('sponsorsCarousel');
-    const trackEl = carouselEl?.querySelector('[data-sponsors-carousel-track]');
-    if (!carouselEl || !trackEl) return;
-    if (carouselEl.dataset.sponsorsInit === 'true') return;
+  const initSponsorsLayout = async () => {
+    const hasCombined = Boolean(getCombinedCarouselRefs());
+    const hasSplit = Boolean(getTierGroupsElement());
+    if (!hasCombined && !hasSplit) return;
 
-    carouselEl.dataset.sponsorsInit = 'true';
+    const rootEl = document.documentElement;
+    if (rootEl.dataset.sponsorsLayoutInit === 'true') return;
+    rootEl.dataset.sponsorsLayoutInit = 'true';
 
     try {
-      const sponsors = await loadSponsors();
+      const [siteConfig, sponsors] = await Promise.all([loadSiteConfig(), loadSponsors()]);
       sponsorsState.items = sponsors;
       sponsorsState.perSlide = getSponsorsPerSlide();
-      renderSponsorsCarousel(sponsorsState.items, sponsorsState.perSlide);
-      bindSponsorsResizeHandler(carouselEl);
+      sponsorsState.splitMode = resolveEffectiveSplitMode(siteConfig.splitSponsorsCarousel);
+
+      applySponsorsLayoutVisibility();
+      renderActiveSponsors();
+      bindSponsorsResizeHandler();
     } catch (err) {
       console.error(err);
       sponsorsState.items = [];
-      renderSponsorsError('Sponsorlar yuklenemedi.');
+      sponsorsState.splitMode = resolveEffectiveSplitMode(DEFAULT_SPLIT_SPONSORS_CAROUSEL);
+      applySponsorsLayoutVisibility();
+      renderActiveSponsorsError('Sponsorlar yuklenemedi.');
     }
   };
 
@@ -436,7 +731,7 @@
       }
       await waitForSharedUI();
       initCountdown();
-      await initSponsorsCarousel();
+      await initSponsorsLayout();
       showAnnouncementModal();
     } catch (err) {
       console.error(err);

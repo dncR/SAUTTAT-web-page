@@ -1,6 +1,6 @@
 # Operasyonel Kurallar (Flexible)
 
-Last updated: 2026-04-03
+Last updated: 2026-04-04
 Status: active
 
 Bu kurallar proje ihtiyacina gore guncellenebilir.
@@ -22,7 +22,8 @@ Bu kurallar proje ihtiyacina gore guncellenebilir.
 | OP-013 | CSS degisikligi yapilirken once ilgili katman belirlenir (`layers/*` veya `pages/*`); `global_styles.css` tek cikti dosyasi `./scripts/build-css.sh` ile yeniden uretilir ve sayfa-ozel css baglantilari korunur. | active | flexible | team | 2026-03-14 |
 | OP-014 | `assets/css/layers/*.css` altinda degisiklik varsa agent `./scripts/css-build-if-layers-changed.sh` calistirarak `global_styles.css` dosyasini otomatik rebuild eder. | active | flexible | team | 2026-03-14 |
 | OP-015 | Tum HTML sayfalarda standart arka plan gradyani tek kaynaktan kullanilir: `assets/css/layers/tokens.css` icindeki `--page-bg-standard`. Sayfa-ozel ust seviye wrapper arka planlari bu token ile ayni tutulur; farkli gradyan tanimlari kullanilmaz. Istisna: `pages/404.html`, `pages/500.html` ve `data-include=\"components/content-placeholder.html\"` kullanan sayfalar `body.page-bg-plain` ile beyaz arka plan kullanir; placeholder yuzeyi de beyaz tutulur. | active | flexible | team | 2026-03-25 |
-| OP-016 | Sponsor ekleme ve ana sayfa render akisinda tek veri kaynagi `assets/data/sponsors.json` dosyasidir; her kayitta `id`, `sponsorName`, `logoFilePath`, `sponsorshipType`, `url` alanlari korunur. Sponsor logolari `assets/img/sponsors/` altinda tutulur, ana sayfada `index.html` icindeki `data-include=\"components/sponsors.html\"` bloklari kaldirilmaz, render `assets/js/pages/home.js` icindeki `loadSponsors()` ve `initSponsorsCarousel()` akisiyla surdurulur; script sirasi `global_scripts.js` sonra `home.js` olacak sekilde korunur. | active | flexible | team | 2026-04-03 |
+| OP-016 | Sponsor ekleme ve ana sayfa render akisinda tek veri kaynagi `assets/data/sponsors.json` dosyasidir; her kayitta `id`, `sponsorName`, `logoFilePath`, `sponsorshipType`, `url` alanlari korunur. Sponsor logolari `assets/img/sponsors/` altinda tutulur ve render `assets/js/pages/home.js` icindeki `loadSponsors()` + `initSponsorsLayout()` akisiyla surdurulur. | active | flexible | team | 2026-04-04 |
+| OP-017 | Ana sayfada sponsor layout secimi `site.config.json` icindeki `splitSponsorsCarousel` boolean bayragi ile yapilir: `true` ise `components/sponsors.html` icindeki split section (`[data-sponsors-by-tier]`), `false` ise ayni dosyadaki combined section (`.sponsors-section`) aktif render edilir. `index.html` icinde yalniz `components/sponsors.html` include'u korunur, `home.js` sadece aktif layout'u render eder ve inaktif layout'u gizler; script sirasi `global_scripts.js` sonra `home.js` olacak sekilde korunur. | active | flexible | team | 2026-04-04 |
 
 ## Degisim Is Akisi
 

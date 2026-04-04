@@ -13,6 +13,17 @@ Bu dosyada anlamli kural degisiklikleri izlenir.
 - `rules/session_handoff.md`
 - `docs/workplans/*` (`Status: active` + `Scope` eslesmesi oldugunda)
 
+## 2026-04-04
+
+- Degisti: `assets/js/pages/home.js` sponsor render akisi refactor edildi; combined ve split carousel icin ortak render motoru kullanilacak sekilde sadelelestirildi.
+- Eklendi: `home.js` icine `site.config.json` okuma adimi ve `splitSponsorsCarousel` bayragina gore aktif sponsor layout secimi.
+- Degisti: sponsor layout secimi ve inaktif layout'un `home.js` tarafinda gizlenmesi standardize edildi.
+- Degisti: `rules/current/operational_rules.md` icinde `OP-016` revize edildi ve yeni `OP-017` eklendi.
+- Degisti: `rules/current/operational_rules.md` "Last updated" alani 2026-04-04 olarak guncellendi.
+- Degisti: `rules/current/rule_registry.md` kaydina `OP-017` eklendi, `OP-016` notu guncellendi ve "Last updated" alani 2026-04-04 olarak guncellendi.
+- Degisti: `README.md` icinde `site.config.json` ve sponsor render davranisi (`splitSponsorsCarousel`) dokumante edildi.
+- Degisti: sponsor include yapisi sadelelestirildi; `components/sponsors-by-tier.html` kaldirildi, split/combined section'lar `components/sponsors.html` icinde birlestirildi ve `index.html` tek sponsor include'u kullanacak sekilde guncellendi.
+
 ## 2026-04-03
 
 - Eklendi: `README.md` icine "Sponsor Ekleme ve Render Akisi" bolumu eklenerek sponsor ekleme adimlari ve `assets/data/sponsors.json` dosyasinin rolu dokumante edildi.
