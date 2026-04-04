@@ -6,6 +6,7 @@
   const SINGLE_CARD_WIDTH_REFERENCE_SLOTS = 2;
   const AUTO_SCROLL_INTERVAL_MS = 3000;
   const AUTO_SCROLL_ANIMATION_MS = 520;
+  const ANNOUNCEMENT_MODAL_SESSION_KEY = 'sauttat.home.announcementModalShown';
   const CONGRESS_START_AT = '2026-05-08T09:00:00+03:00';
   const SECOND_MS = 1000;
   const MINUTE_MS = 60 * SECOND_MS;
@@ -734,11 +735,29 @@
     }
   };
 
-  const showAnnouncementModal = () => {
+  const hasShownAnnouncementModal = () => {
+    try {
+      return window.sessionStorage.getItem(ANNOUNCEMENT_MODAL_SESSION_KEY) === '1';
+    } catch (err) {
+      return false;
+    }
+  };
+
+  const markAnnouncementModalAsShown = () => {
+    try {
+      window.sessionStorage.setItem(ANNOUNCEMENT_MODAL_SESSION_KEY, '1');
+    } catch (err) {
+      // noop: storage blocked, modal can show again on same session
+    }
+  };
+
+  const showAnnouncementModalOnFirstEntry = () => {
     const modalEl = document.getElementById('announcementModal');
     if (!modalEl || !window.bootstrap) return;
-    const modal = new bootstrap.Modal(modalEl);
+    if (hasShownAnnouncementModal()) return;
+    const modal = bootstrap.Modal.getOrCreateInstance(modalEl);
     modal.show();
+    markAnnouncementModalAsShown();
   };
 
   const runHomeScripts = async () => {
@@ -751,7 +770,7 @@
       await waitForSharedUI();
       initCountdown();
       await initSponsorsLayout();
-      showAnnouncementModal();
+      showAnnouncementModalOnFirstEntry();
     } catch (err) {
       console.error(err);
     }
