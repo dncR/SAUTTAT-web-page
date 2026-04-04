@@ -13,7 +13,7 @@
     "logoFilePath": "assets/img/sponsors/sakarya_belediyesi.png",
     "sponsorshipType": "platin",
     "url": null,
-    "hide": false
+    "hide": true
   },
   {
     "id": "acibadem",
@@ -109,7 +109,7 @@
     "logoFilePath": "assets/img/sponsors/ada_tip.png",
     "sponsorshipType": "bronze",
     "url": null,
-    "hide": false
+    "hide": true
   },
   {
     "id": "deva",
@@ -117,7 +117,7 @@
     "logoFilePath": "assets/img/sponsors/deva.png",
     "sponsorshipType": "silver",
     "url": null,
-    "hide": false
+    "hide": true
   },
   {
     "id": "emsey",
@@ -125,7 +125,7 @@
     "logoFilePath": "assets/img/sponsors/emsey.png",
     "sponsorshipType": "silver",
     "url": null,
-    "hide": false
+    "hide": true
   },
   {
     "id": "menarini",
@@ -141,7 +141,7 @@
     "logoFilePath": "assets/img/sponsors/musiad.png",
     "sponsorshipType": "silver",
     "url": null,
-    "hide": false
+    "hide": true
   },
   {
     "id": "onko",
@@ -149,7 +149,7 @@
     "logoFilePath": "assets/img/sponsors/onko.png",
     "sponsorshipType": "silver",
     "url": null,
-    "hide": false
+    "hide": true
   },
   {
     "id": "radyomed",
@@ -173,6 +173,6 @@
     "logoFilePath": "assets/img/sponsors/satso.png",
     "sponsorshipType": "gold",
     "url": null,
-    "hide": false
+    "hide": true
   }
 ]
