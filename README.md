@@ -63,6 +63,8 @@ Bu dosya sponsor carousel'lerinde gosterilecek tum kayitlarin metadata kaynagidi
 * Split layout (`splitSponsorsCarousel: true`):
   * Kayitlar sponsorluk tipine gore gruplandirilarak ayri carousel bloklarinda render edilir.
   * Her tier bagimsiz carousel akisi ile calisir.
+  * Slider yalnizca kategori sponsor sayisi gorunen kart sayisindan buyukse calisir (`count > visibleSlots`); esitlikte slider calismaz.
+  * Tek kart gorunumu gereken durumlarda kart genisligi iki-kart referansi ile hesaplanir; kart carousel alanini doldurmaz.
 
 Her sponsor kaydinda asagidaki alanlar kullanilir:
 
@@ -71,6 +73,7 @@ Her sponsor kaydinda asagidaki alanlar kullanilir:
 - `logoFilePath`: logo dosyasinin yolu (or. `assets/img/sponsors/ornek.png`)
 - `sponsorshipType`: siralama seviyesi (`platin`, `gold`, `silver`, `bronze`) veya `null`
 - `url`: opsiyonel dis baglanti (`null` veya `https://...`)
+- `hide`: opsiyonel gorunurluk bayragi (`true` ise sponsor karti render edilmez, varsayilan `false`)
 
 ### Sponsor ekleme adimlari
 
@@ -78,7 +81,8 @@ Her sponsor kaydinda asagidaki alanlar kullanilir:
 2. `assets/data/sponsors.json` dosyasina yeni sponsor nesnesini ekleyin.
 3. `id` degerinin benzersiz oldugunu ve `logoFilePath` yolunun dogru dosyayi gosterdigini kontrol edin.
 4. Dis yonlendirme isteniyorsa `url` alanina tam adres yazin, yoksa `null` birakin.
-5. Yerelde `python3 -m http.server 9000` ile acip ana sayfada carousel'i kontrol edin.
+5. Sponsor kartinin gecici olarak gizlenmesi isteniyorsa ilgili kayitta `hide: true` kullanin.
+6. Yerelde `python3 -m http.server 9000` ile acip ana sayfada carousel'i kontrol edin.
 
 ### Hizli dogrulama checklist'i
 

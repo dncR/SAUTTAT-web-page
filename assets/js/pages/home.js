@@ -3,6 +3,7 @@
   const SPONSOR_FALLBACK_TIER = 'unspecified';
   const SITE_CONFIG_PATH = 'site.config.json';
   const DEFAULT_SPLIT_SPONSORS_CAROUSEL = false;
+  const SINGLE_CARD_WIDTH_REFERENCE_SLOTS = 2;
   const AUTO_SCROLL_INTERVAL_MS = 3000;
   const AUTO_SCROLL_ANIMATION_MS = 520;
   const CONGRESS_START_AT = '2026-05-08T09:00:00+03:00';
@@ -30,6 +31,17 @@
     const normalized = value.trim();
     return normalized || fallback;
   };
+
+  const resolveHideValue = (value) => {
+    if (value === true || value === false) return value;
+    if (typeof value === 'string') return value.trim().toLowerCase() === 'true';
+    if (typeof value === 'number') return value === 1;
+    return false;
+  };
+
+  const isSponsorHidden = (sponsor) => resolveHideValue(sponsor?.hide);
+
+  const isSponsorRenderable = (sponsor) => !isSponsorHidden(sponsor) && Boolean(normalizeText(sponsor?.logoFilePath));
 
   const padCounter = (value) => String(Math.max(0, value)).padStart(2, '0');
 
@@ -173,6 +185,7 @@
 
   const sortSponsorsByTierThenSourceOrder = (sponsors) =>
     sponsors
+      .filter((sponsor) => isSponsorRenderable(sponsor))
       .map((sponsor, originalIndex) => ({
         sponsor,
         originalIndex,
@@ -192,7 +205,7 @@
   const collectSponsorsByTier = (sponsors) => {
     const tierMap = new Map();
     (Array.isArray(sponsors) ? sponsors : []).forEach((sponsor) => {
-      if (!normalizeText(sponsor?.logoFilePath)) return;
+      if (!isSponsorRenderable(sponsor)) return;
       const tierKey = resolveSponsorTierKey(sponsor?.sponsorshipType);
       if (!tierMap.has(tierKey)) {
         tierMap.set(tierKey, []);
@@ -223,7 +236,7 @@
     const logoFilePath = normalizeText(sponsor?.logoFilePath);
     const sponsorUrl = normalizeText(sponsor?.url, '');
     const sponsorshipType = resolveSponsorTierKey(sponsor?.sponsorshipType);
-    if (!logoFilePath) return null;
+    if (!logoFilePath || isSponsorHidden(sponsor)) return null;
 
     const itemTag = sponsorUrl ? 'a' : 'div';
     const itemEl = document.createElement(itemTag);
@@ -302,10 +315,11 @@
 
   const applySponsorItemWidths = (trackEl, viewportEl, slotsPerView) => {
     const safeSlots = Math.max(1, slotsPerView);
+    const widthSlots = safeSlots === 1 ? SINGLE_CARD_WIDTH_REFERENCE_SLOTS : safeSlots;
     const gap = resolveTrackGap(trackEl);
     const viewportWidth = viewportEl.clientWidth || trackEl.clientWidth || 0;
-    const usableWidth = Math.max(1, viewportWidth - gap * (safeSlots - 1));
-    const itemWidth = usableWidth / safeSlots;
+    const usableWidth = Math.max(1, viewportWidth - gap * (widthSlots - 1));
+    const itemWidth = usableWidth / widthSlots;
 
     Array.from(trackEl.querySelectorAll('.sponsor-logo-item')).forEach((itemEl) => {
       itemEl.style.flex = `0 0 ${itemWidth}px`;
@@ -332,7 +346,7 @@
     clearCarouselAutoScroll(runtimeState);
     runtimeState.trackEl = trackEl;
 
-    const validSponsors = (Array.isArray(sponsors) ? sponsors : []).filter((sponsor) => Boolean(normalizeText(sponsor?.logoFilePath)));
+    const validSponsors = (Array.isArray(sponsors) ? sponsors : []).filter((sponsor) => isSponsorRenderable(sponsor));
     trackEl.innerHTML = '';
 
     if (!validSponsors.length) {
@@ -642,7 +656,10 @@
     if (!Array.isArray(payload)) {
       throw new Error('Sponsors metadata must be an array');
     }
-    return payload;
+    return payload.map((sponsor) => ({
+      ...sponsor,
+      hide: resolveHideValue(sponsor?.hide)
+    }));
   };
 
   const renderActiveSponsors = () => {

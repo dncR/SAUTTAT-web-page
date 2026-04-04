@@ -4,153 +4,175 @@
     "sponsorName": "sau",
     "logoFilePath": "assets/img/sponsors/sau.png",
     "sponsorshipType": null,
-    "url": "https://sakarya.edu.tr"
+    "url": "https://sakarya.edu.tr",
+    "hide": false
   },
   {
     "id": "sakarya_belediyesi",
     "sponsorName": "sakarya_belediyesi",
     "logoFilePath": "assets/img/sponsors/sakarya_belediyesi.png",
     "sponsorshipType": "platin",
-    "url": null
+    "url": null,
+    "hide": false
   },
   {
     "id": "acibadem",
     "sponsorName": "acibadem",
     "logoFilePath": "assets/img/sponsors/acibadem.png",
     "sponsorshipType": null,
-    "url": "https://www.acibadem.edu.tr"
+    "url": "https://www.acibadem.edu.tr",
+    "hide": false
   },
   {
     "id": "bahcesehir",
     "sponsorName": "bahcesehir",
     "logoFilePath": "assets/img/sponsors/bahcesehir.png",
     "sponsorshipType": null,
-    "url": "https://bau.edu.tr"
+    "url": "https://bau.edu.tr",
+    "hide": false
   },
   {
     "id": "biruni",
     "sponsorName": "biruni",
     "logoFilePath": "assets/img/sponsors/biruni.png",
     "sponsorshipType": null,
-    "url": "https://www.biruni.edu.tr/"
+    "url": "https://www.biruni.edu.tr/",
+    "hide": false
   },
   {
     "id": "bogazici",
     "sponsorName": "bogazici",
     "logoFilePath": "assets/img/sponsors/bogazici.png",
     "sponsorshipType": null,
-    "url": "https://bogazici.edu.tr"
+    "url": "https://bogazici.edu.tr",
+    "hide": false
   },
   {
     "id": "gebze_teknik",
     "sponsorName": "gebze_teknik",
     "logoFilePath": "assets/img/sponsors/gebze_teknik.png",
     "sponsorshipType": null,
-    "url": "https://www.gtu.edu.tr"
+    "url": "https://www.gtu.edu.tr",
+    "hide": false
   },
   {
     "id": "istinye",
     "sponsorName": "istinye",
     "logoFilePath": "assets/img/sponsors/istinye.png",
     "sponsorshipType": null,
-    "url": "https://www.istinye.edu.tr/tr"
+    "url": "https://www.istinye.edu.tr/tr",
+    "hide": false
   },
   {
     "id": "koc",
     "sponsorName": "koc",
     "logoFilePath": "assets/img/sponsors/koc.png",
     "sponsorshipType": null,
-    "url": "https://www.ku.edu.tr"
+    "url": "https://www.ku.edu.tr",
+    "hide": false
   },
   {
     "id": "portsmouth",
     "sponsorName": "portsmouth",
     "logoFilePath": "assets/img/sponsors/portsmouth.png",
     "sponsorshipType": null,
-    "url": "https://www.port.ac.uk"
+    "url": "https://www.port.ac.uk",
+    "hide": false
   },
   {
     "id": "uludag",
     "sponsorName": "uludag",
     "logoFilePath": "assets/img/sponsors/uludag.png",
     "sponsorshipType": null,
-    "url": "https://www.uludag.edu.tr"
+    "url": "https://www.uludag.edu.tr",
+    "hide": false
   },
   {
     "id": "yildirim_beyazit",
     "sponsorName": "yildirim_beyazit",
     "logoFilePath": "assets/img/sponsors/yildirim_beyazit.png",
     "sponsorshipType": null,
-    "url": "https://aybu.edu.tr/aybu/tr"
+    "url": "https://aybu.edu.tr/aybu/tr",
+    "hide": false
   },
   {
     "id": "abdi_ibrahim",
     "sponsorName": "abdi_ibrahim",
     "logoFilePath": "assets/img/sponsors/abdi_ibrahim.png",
     "sponsorshipType": null,
-    "url": null
+    "url": null,
+    "hide": false
   },
   {
     "id": "ada_tip",
     "sponsorName": "ada_tip",
     "logoFilePath": "assets/img/sponsors/ada_tip.png",
     "sponsorshipType": "bronze",
-    "url": null
+    "url": null,
+    "hide": false
   },
   {
     "id": "deva",
     "sponsorName": "deva",
     "logoFilePath": "assets/img/sponsors/deva.png",
     "sponsorshipType": "silver",
-    "url": null
+    "url": null,
+    "hide": false
   },
   {
     "id": "emsey",
     "sponsorName": "emsey",
     "logoFilePath": "assets/img/sponsors/emsey.png",
     "sponsorshipType": "silver",
-    "url": null
+    "url": null,
+    "hide": false
   },
   {
     "id": "menarini",
     "sponsorName": "menarini",
     "logoFilePath": "assets/img/sponsors/menarini.png",
     "sponsorshipType": "silver",
-    "url": null
+    "url": null,
+    "hide": false
   },
   {
     "id": "musiad",
     "sponsorName": "musiad",
     "logoFilePath": "assets/img/sponsors/musiad.png",
     "sponsorshipType": "silver",
-    "url": null
+    "url": null,
+    "hide": false
   },
   {
     "id": "onko",
     "sponsorName": "onko",
     "logoFilePath": "assets/img/sponsors/onko.png",
     "sponsorshipType": "silver",
-    "url": null
+    "url": null,
+    "hide": false
   },
   {
     "id": "radyomed",
     "sponsorName": "radyomed",
     "logoFilePath": "assets/img/sponsors/radyomed.png",
     "sponsorshipType": "gold",
-    "url": null
+    "url": null,
+    "hide": false
   },
   {
     "id": "rotakim",
     "sponsorName": "rotakim",
     "logoFilePath": "assets/img/sponsors/rotakim.png",
     "sponsorshipType": "gold",
-    "url": null
+    "url": null,
+    "hide": false
   },
   {
     "id": "satso",
     "sponsorName": "satso",
     "logoFilePath": "assets/img/sponsors/satso.png",
     "sponsorshipType": "gold",
-    "url": null
+    "url": null,
+    "hide": false
   }
 ]

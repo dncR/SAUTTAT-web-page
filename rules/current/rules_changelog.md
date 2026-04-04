@@ -23,6 +23,10 @@ Bu dosyada anlamli kural degisiklikleri izlenir.
 - Degisti: `rules/current/rule_registry.md` kaydina `OP-017` eklendi, `OP-016` notu guncellendi ve "Last updated" alani 2026-04-04 olarak guncellendi.
 - Degisti: `README.md` icinde `site.config.json` ve sponsor render davranisi (`splitSponsorsCarousel`) dokumante edildi.
 - Degisti: sponsor include yapisi sadelelestirildi; `components/sponsors-by-tier.html` kaldirildi, split/combined section'lar `components/sponsors.html` icinde birlestirildi ve `index.html` tek sponsor include'u kullanacak sekilde guncellendi.
+- Degisti: sponsor metadata semasina `hide` gorunurluk bayragi eklendi; varsayilan davranis tum sponsorlarin gorunur kalmasi olacak sekilde netlestirildi.
+- Eklendi: operasyonel kural `OP-018` (sponsor carousel responsive slot/loop kosulu ve tek kartta iki-slot referans genisligi davranisi).
+- Degisti: `rule_registry.md` kaydinda `OP-016` notu `hide` alani ile guncellendi ve yeni `OP-018` kaydi eklendi.
+- Degisti: `README.md` sponsor kilavuzu split carousel yerlesim/loop kurallari ile guncellendi.
 
 ## 2026-04-03
 
