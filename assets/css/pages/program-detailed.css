@@ -1,0 +1,343 @@
+/* SAUTTAT page: program-detailed */
+.program-detailed-page {
+  background: var(--page-bg-standard);
+}
+
+.program-detailed-page .program-kicker {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  border: 1px solid rgba(255, 255, 255, 0.38);
+  border-radius: 999px;
+  padding: 0.32rem 0.7rem;
+  background: rgba(255, 255, 255, 0.14);
+  margin-bottom: 0.8rem;
+}
+
+.program-detailed-page .program-title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.08;
+  font-weight: 800;
+}
+
+.program-detailed-page .program-lead {
+  max-width: 58ch;
+  color: rgba(255, 255, 255, 0.92);
+  font-size: 1.03rem;
+}
+
+.program-detailed-page .program-hero-side .btn {
+  border-radius: 999px;
+  font-weight: 600;
+}
+
+.program-detailed-page .program-hero-side {
+  width: min(100%, 300px);
+}
+
+.program-detailed-page .program-side-title {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: rgba(255, 255, 255, 0.86);
+}
+
+.program-detailed-page .program-side-card {
+  border: 1px solid rgba(255, 255, 255, 0.32);
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.14);
+  padding: 0.9rem;
+  backdrop-filter: blur(2px);
+}
+
+.program-detailed-page .program-days-grid {
+  display: grid;
+  gap: 1.15rem;
+}
+
+.program-detailed-page .program-switcher-wrap {
+  position: relative;
+  z-index: 5;
+  margin-top: -2.25rem;
+  margin-bottom: 1.15rem;
+}
+
+.program-detailed-page .program-switcher {
+  width: fit-content;
+  border-radius: 999px;
+  border: 1px solid #d8e5f7;
+  background: #fff;
+  padding: 0.35rem;
+  box-shadow: 0 12px 24px rgba(16, 58, 122, 0.14);
+}
+
+.program-detailed-page .program-switch-btn {
+  border: 1px solid transparent;
+  border-radius: 999px;
+  color: #18458d;
+  font-weight: 700;
+  background: transparent;
+  text-decoration: none;
+}
+
+.program-detailed-page .program-switch-btn:hover {
+  border-color: #d1e2f9;
+  background: #f4f9ff;
+  color: #133f83;
+}
+
+.program-detailed-page .program-switch-btn.is-active,
+.program-detailed-page .program-switch-btn.is-active:hover {
+  border-color: #1d58b5;
+  background: linear-gradient(135deg, #1e4ea2 0%, #2f74df 100%);
+  color: #fff;
+}
+
+.program-detailed-page .program-day-card {
+  position: relative;
+  border: 1px solid #dce9fb;
+  border-radius: 1rem;
+  background: #fff;
+  box-shadow: 0 14px 34px rgba(11, 49, 106, 0.1);
+  padding: 1.25rem;
+  animation: program-fade-up 520ms ease both;
+}
+
+.program-detailed-page .program-day-card:nth-child(2) {
+  animation-delay: 120ms;
+}
+
+.program-detailed-page .program-day-panel {
+  display: none;
+}
+
+.program-detailed-page .program-day-panel.is-active {
+  display: block;
+  animation: program-panel-fade 220ms ease both;
+}
+
+.program-detailed-page .day-card-header {
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #e8f0fb;
+  padding-bottom: 0.9rem;
+}
+
+.program-detailed-page .day-chip {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  font-size: 0.76rem;
+  font-weight: 700;
+  padding: 0.3rem 0.65rem;
+  color: #124186;
+  background: #ebf2ff;
+  border: 1px solid #d3e1f8;
+}
+
+.program-detailed-page .day-title {
+  margin: 0;
+  font-size: 1.45rem;
+  color: #113b7a;
+  font-weight: 750;
+}
+
+.program-detailed-page .day-subtitle {
+  font-size: 0.93rem;
+  color: #5b6a84;
+}
+
+.program-detailed-page .schedule-list {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.program-detailed-page .schedule-item {
+  position: relative;
+  display: grid;
+  grid-template-columns: 118px minmax(0, 1fr);
+  gap: 2rem;
+  border-radius: 0.85rem;
+  border: 1px solid #e5edf9;
+  background: linear-gradient(180deg, #ffffff 0%, #fbfdff 100%);
+  padding: 0.7rem;
+}
+
+.program-detailed-page .schedule-item::before {
+  content: "";
+  position: absolute;
+  left: 118px;
+  top: 0.6rem;
+  bottom: 0.6rem;
+  width: 1px;
+  background: #e6eefb;
+}
+
+.program-detailed-page .schedule-time {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.83rem;
+  color: #1a4f9c;
+  border-radius: 0.65rem;
+  border: 1px solid #d3e2fa;
+  background: #eef4ff;
+  min-height: 2.1rem;
+  padding: 0.15rem 0.4rem;
+  text-align: center;
+}
+
+.program-detailed-page .schedule-content {
+  min-width: 0;
+}
+
+.program-detailed-page .session-title {
+  margin: 0 0 0.35rem;
+  color: #173e7d;
+  font-size: 1rem;
+  font-weight: 750;
+  line-height: 1.35;
+}
+
+.program-detailed-page .session-meta {
+  margin: 0;
+  color: #34496e;
+  font-size: 0.92rem;
+  line-height: 1.45;
+}
+
+.program-detailed-page .session-meta strong {
+  color: #1f4f99;
+}
+
+.program-detailed-page .session-chair {
+  color: #2a4c86;
+}
+
+.program-detailed-page .topic-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.72rem;
+}
+
+.program-detailed-page .topic-list li {
+  border-left: 3px solid #d5e4fa;
+  padding: 0.12rem 0 0.12rem 0.7rem;
+}
+
+.program-detailed-page .topic-title {
+  margin: 0 0 0.12rem;
+  font-weight: 650;
+  color: #214d92;
+  font-size: 0.93rem;
+  line-height: 1.35;
+}
+
+.program-detailed-page .schedule-item.is-break {
+  border-style: dashed;
+  background: #f8fbff;
+}
+
+.program-detailed-page .schedule-item.is-break .schedule-time {
+  background: #f1f7ff;
+  color: #2d6298;
+}
+
+.program-detailed-page .schedule-item.is-meal {
+  background: linear-gradient(90deg, #f2fbf9 0%, #ffffff 88%);
+  border-color: #d6efe9;
+}
+
+.program-detailed-page .schedule-item.is-meal .schedule-time {
+  background: #e4f7f2;
+  border-color: #b9e8dc;
+  color: #1b7a61;
+}
+
+.program-detailed-page .schedule-item.is-social {
+  background: linear-gradient(90deg, #fff9ee 0%, #ffffff 88%);
+  border-color: #f2dfbf;
+}
+
+.program-detailed-page .schedule-item.is-social .schedule-time {
+  background: #fff1d8;
+  border-color: #efd6a9;
+  color: #9f5f07;
+}
+
+@media (max-width: 991.98px) {
+  .program-detailed-page .program-day-card {
+    padding: 1rem;
+  }
+
+  .program-detailed-page .schedule-item {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .program-detailed-page .schedule-item::before {
+    display: none;
+  }
+
+  .program-detailed-page .schedule-time {
+    justify-content: flex-start;
+    width: fit-content;
+    padding-inline: 0.65rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .program-detailed-page .program-hero-side .btn {
+    width: 100%;
+  }
+
+  .program-detailed-page .program-switcher-wrap {
+    margin-top: -1.7rem;
+  }
+
+  .program-detailed-page .program-switcher {
+    width: 100%;
+    border-radius: 1rem;
+  }
+
+  .program-detailed-page .program-switch-btn {
+    width: 100%;
+  }
+
+  .program-detailed-page .session-title {
+    font-size: 0.96rem;
+  }
+
+  .program-detailed-page .session-meta,
+  .program-detailed-page .topic-title {
+    font-size: 0.89rem;
+  }
+}
+
+@keyframes program-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes program-panel-fade {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <base href="/gelecegintibbikongresi2026/">
+  <base href="/">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -20,40 +20,374 @@
   <meta name="twitter:description" content="SAUTTAT 2026 resmi internet sayfası ve iletişim kanalı.">
   <meta name="twitter:image" content="assets/img/logo.png">
 
-
   <link rel="icon" type="image/png" href="assets/img/favicon.ico">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
   <link rel="stylesheet" href="assets/css/global_styles.css">
+  <link rel="stylesheet" href="assets/css/pages/program-detailed.css">
 </head>
 
-<body class="page-bg-plain">
+<body>
   <div data-include="components/topbar.html"></div>
   <div data-include="components/header.html"></div>
 
-  <section class="py-5">
-    <div data-include="components/content-placeholder.html"></div>
+  <section class="program-detailed-page py-5">
+    <div class="container main-content">
+      <div class="program-detailed-hero hero-shell rounded-4 p-4 p-lg-5 mb-4">
+        <div class="program-detailed-hero-bg hero-shell-bg" aria-hidden="true"></div>
+        <div class="program-detailed-hero-content hero-shell-content">
+          <div class="d-flex flex-column flex-xl-row justify-content-between gap-4">
+            <div class="program-hero-copy">
+              <span class="program-kicker">SAUTTAT 2026</span>
+              <h1 class="program-title mb-3">Detaylı Bilimsel Program</h1>
+              <p class="program-lead mb-3">8 Mayıs Cuma ve 9 Mayıs Cumartesi günlerine ait oturumları saat bazlı olarak aşağıda bulabilirsiniz.</p>
+              <p class="program-lead mb-3"><strong>Not: </strong> 10 Mayıs Pazar günü sosyal program yer almaktadır. Detaylı bilgi için <a href="pages/program-social.html">tıklayınız</a>.</p>
+            </div>
 
-    <div class="container d-none">
-      <h1 class="fw-bold mb-4">Detailed Conference Programme</h1>
-      <p class="text-muted">The full day-by-day schedule is available for download.</p>
-      <a class="btn btn-primary mb-4" href="assets/files/Conference_Program.xlsx">Download Detailed Programme
-        (Excel)</a>
-
-      <div class="alert alert-info">Concurrent sessions take place in three rooms: <span
-          class="fw-bold text-primary">BALO SALONU</span>, <span class="fw-bold text-warning">NAMIK SEVIK</span>, and
-        <span class="fw-bold text-success">ACELYA</span>. Colors in the downloadable schedule indicate room assignments.
+            <aside class="program-hero-side">
+              <p class="program-side-title mb-2">Hızlı Erişim</p>
+              <div class="program-side-card">
+                <a class="btn btn-light w-100 mb-2" href="assets/detayli_program.jpeg" target="_blank" rel="noopener noreferrer">
+                  <i class="fa-regular fa-image me-2" aria-hidden="true"></i>Program Görselini Aç
+                </a>
+                <a class="btn btn-outline-light w-100 mb-2" href="pages/atolyeler.html">
+                  <i class="fa-solid fa-flask-vial me-2" aria-hidden="true"></i>Atölye Detayları
+                </a>
+                <a class="btn btn-outline-light w-100" href="pages/gala-dinner.html">
+                  <i class="fa-solid fa-champagne-glasses me-2" aria-hidden="true"></i>Gala Yemeği
+                </a>
+              </div>
+            </aside>
+          </div>
+        </div>
       </div>
 
-      <p class="text-muted">Please use the downloadable file for the most accurate timings and room allocations. Session
-        chairs and presenters are noted in bold within the schedule.</p>
+      <div class="program-switcher-wrap mt-4" aria-label="Program günü seçimi">
+        <div class="program-switcher d-flex flex-wrap gap-2" role="tablist" aria-label="Detaylı program günleri">
+          <a id="program-switch-8" class="btn btn-sm program-switch-btn is-active" href="#program-day-8" data-program-switch="program-day-8" role="tab" aria-controls="program-day-8" aria-selected="true">
+            <i class="fa-regular fa-calendar me-2" aria-hidden="true"></i>8 Mayıs Cuma
+          </a>
+          <a id="program-switch-9" class="btn btn-sm program-switch-btn" href="#program-day-9" data-program-switch="program-day-9" role="tab" aria-controls="program-day-9" aria-selected="false">
+            <i class="fa-regular fa-calendar me-2" aria-hidden="true"></i>9 Mayıs Cumartesi
+          </a>
+        </div>
+      </div>
+
+      <div class="program-days-grid">
+        <article id="program-day-8" class="program-day-card program-day-panel is-active" data-program-day="program-day-8" role="tabpanel" aria-labelledby="program-switch-8">
+          <header class="day-card-header">
+            <p class="day-chip mb-1">1. Gün</p>
+            <h2 class="day-title mb-1">8 Mayıs Cuma</h2>
+            <p class="day-subtitle mb-0">Bilimsel oturumlar, özel konuşmalar ve atölyeler</p>
+          </header>
+
+          <ol class="schedule-list list-unstyled mb-0">
+            <li class="schedule-item">
+              <span class="schedule-time">08.00 - 08.30</span>
+              <div class="schedule-content">
+                <h3 class="session-title">Giriş &amp; Kayıt</h3>
+              </div>
+            </li>
+
+            <li class="schedule-item">
+              <span class="schedule-time">09.00 - 09.45</span>
+              <div class="schedule-content">
+                <h3 class="session-title">Açılış ve Protokol</h3>
+              </div>
+            </li>
+
+            <li class="schedule-item">
+              <span class="schedule-time">09.45 - 10.45</span>
+              <div class="schedule-content">
+                <h3 class="session-title">Robotik Naklin Pioneri: 2015'te Açılan Yol ve Bugün</h3>
+                <p class="session-meta session-chair mb-2"><strong>Oturum Başkanı:</strong> Prof. Dr. Zülfu Bayhan / Doç. Dr. Barış Mantoğlu</p>
+                <p class="session-meta mb-1"><strong>Konuşmacı:</strong> Prof. Dr. Volkan Tuğcu</p>
+                <p class="session-meta mb-1">(İstinye Üniversitesi - Genel Cerrahi)</p>
+              </div>
+            </li>
+
+            <li class="schedule-item is-break">
+              <span class="schedule-time">10.45 - 11.00</span>
+              <div class="schedule-content">
+                <h3 class="session-title"><i class="fa-solid fa-mug-saucer me-2" aria-hidden="true"></i>Kahve Molası</h3>
+              </div>
+            </li>
+
+            <li class="schedule-item">
+              <span class="schedule-time">11.00 - 12.00</span>
+              <div class="schedule-content">
+                <h3 class="session-title">Genomu Konuşan Tıp: Hücreden Veriye, Veriden Hastaya</h3>
+                <p class="session-meta session-chair mb-2"><strong>Oturum Başkanı:</strong> Prof. Dr. Ecir Ali Çakmak / Doç. Dr. Dinçer Göksülük</p>
+                <ul class="topic-list mb-2">
+                  <li>
+                    <p class="topic-title">"Mikrobiyom: İkinci Genomdan Klinik Sonuçlara"</p>
+                    <p class="session-meta mb-0"><strong>Konuşmacı:</strong> Doç. Dr. Seçil Aksoy (Uludağ Üniversitesi - Tıbbi Biyoloji)</p>
+                  </li>
+                  <li>
+                    <p class="topic-title">"Genom Verisinden Sağlıklı Bireye Filogenetik Tabanlı Yaklaşımlar"</p>
+                    <p class="session-meta mb-0"><strong>Konuşmacı:</strong> Doç. Dr. Oğün Adebali (Sabancı Üniversitesi - Moleküler Biyoloji ve Genetik)</p>
+                  </li>
+                </ul>
+              </div>
+            </li>
+
+            <li class="schedule-item is-meal">
+              <span class="schedule-time">12.00 - 13.00</span>
+              <div class="schedule-content">
+                <h3 class="session-title">Öğle Yemeği</h3>
+              </div>
+            </li>
+
+            <li class="schedule-item">
+              <span class="schedule-time">13.00 - 14.00</span>
+              <div class="schedule-content">
+                <h3 class="session-title">Yarını İnanarak Okumak - Kadının Öncülük Yetisi</h3>
+                <p class="session-meta session-chair mb-2"><strong>Oturum Başkanı:</strong> Prof. Dr. Mehmet Sünha Bostancı / Doç. Dr. Sevil Arabacı Tamer</p>
+                <p class="session-meta mb-1"><strong>Konuşmacı:</strong> Doç. Dr. Gökçen Erdoğan</p>
+                <p class="session-meta mb-1">(Özel Muayenehane - Kadın Hastalıkları ve Doğum)</p>
+              </div>
+            </li>
+
+            <li class="schedule-item is-break">
+              <span class="schedule-time">14.00 - 14.15</span>
+              <div class="schedule-content">
+                <h3 class="session-title"><i class="fa-solid fa-mug-saucer me-2" aria-hidden="true"></i>Kahve Molası</h3>
+              </div>
+            </li>
+
+            <li class="schedule-item">
+              <span class="schedule-time">14.15 - 15.15</span>
+              <div class="schedule-content">
+                <h3 class="session-title">Tıbbın Gelecek Senaryosu: Kişiselleştirme, Teknoloji ve Cesur Fikirler</h3>
+                <p class="session-meta session-chair mb-2"><strong>Oturum Başkanı:</strong> Prof. Dr. Mustafa Altındiş / Prof. Dr. Selçuk Yaylacı</p>
+                <ul class="topic-list mb-2">
+                  <li>
+                    <p class="topic-title">"Sağlıkta İnovasyon Tıpta Dönüşüm"</p>
+                    <p class="session-meta mb-0"><strong>Konuşmacı:</strong> Prof. Dr. Melih Bulut (Sağlıkta İş Birliği Platformu - Sağlık Yöneticisi)</p>
+                  </li>
+                  <li>
+                    <p class="topic-title">"Girişimci Doktorun El Çantasında Neler Olmalı?"</p>
+                    <p class="session-meta mb-0"><strong>Konuşmacı:</strong> Dr. Oğuz Can Işık (Boğaziçi Üniversitesi - Biyomedikal Mühendisliği)</p>
+                  </li>
+                </ul>
+              </div>
+            </li>
+
+            <li class="schedule-item is-break">
+              <span class="schedule-time">15.15 - 15.30</span>
+              <div class="schedule-content">
+                <h3 class="session-title"><i class="fa-solid fa-mug-saucer me-2" aria-hidden="true"></i>Kahve Molası</h3>
+              </div>
+            </li>
+
+            <li class="schedule-item">
+              <span class="schedule-time">15.30 - 16.30</span>
+              <div class="schedule-content">
+                <h3 class="session-title">Bir Hekimin Triadı: Sanat, Bilim, Nöroşirurji</h3>
+                <p class="session-meta session-chair mb-2"><strong>Oturum Başkanı:</strong> Prof. Dr. Tibet Kaçıra / Prof. Dr. Türkan Acar</p>
+                <p class="session-meta mb-1"><strong>Konuşmacı:</strong> Prof. Dr. İhsan Solaroğlu</p>
+                <p class="session-meta mb-1">(Koç Üniversitesi - Beyin ve Sinir Cerrahisi)</p>
+              </div>
+            </li>
+
+            <li class="schedule-item is-break">
+              <span class="schedule-time">16.30 - 16.45</span>
+              <div class="schedule-content">
+                <h3 class="session-title"><i class="fa-solid fa-mug-saucer me-2" aria-hidden="true"></i>Kahve Molası</h3>
+              </div>
+            </li>
+
+            <li class="schedule-item">
+              <span class="schedule-time">16.45 - 17.45</span>
+              <div class="schedule-content">
+                <h3 class="session-title">Beni Hatırlayınız - Gençliğin Yolu</h3>
+                <p class="session-meta mb-0"><strong>Konuk:</strong> Pınar Ayhan</p>
+              </div>
+            </li>
+
+            <li class="schedule-item is-break">
+              <span class="schedule-time">17.45 - 18.00</span>
+              <div class="schedule-content">
+                <h3 class="session-title"><i class="fa-solid fa-mug-saucer me-2" aria-hidden="true"></i>Kahve Molası</h3>
+              </div>
+            </li>
+
+            <li class="schedule-item is-social">
+              <span class="schedule-time">18.00 - 19.30</span>
+              <div class="schedule-content">
+                <h3 class="session-title">Atölyeler</h3>
+                <p class="session-meta mb-0">Atölye detayları için <a href="pages/atolyeler.html">atölyeler sayfasını</a> ziyaret edebilirsiniz.</p>
+              </div>
+            </li>
+          </ol>
+        </article>
+
+        <article id="program-day-9" class="program-day-card program-day-panel" data-program-day="program-day-9" role="tabpanel" aria-labelledby="program-switch-9" aria-hidden="true">
+          <header class="day-card-header">
+            <p class="day-chip mb-1">2. Gün</p>
+            <h2 class="day-title mb-1">9 Mayıs Cumartesi</h2>
+            <p class="day-subtitle mb-0">Sunumlar, multidisipliner oturumlar ve kapanış programı</p>
+          </header>
+
+          <ol class="schedule-list list-unstyled mb-0">
+            <li class="schedule-item">
+              <span class="schedule-time">08.30 - 09.45</span>
+              <div class="schedule-content">
+                <h3 class="session-title">Sözlü Sunum &amp; Poster Sunumu</h3>
+              </div>
+            </li>
+
+            <li class="schedule-item is-break">
+              <span class="schedule-time">09.45 - 10.00</span>
+              <div class="schedule-content">
+                <h3 class="session-title"><i class="fa-solid fa-mug-saucer me-2" aria-hidden="true"></i>Kahve Molası</h3>
+              </div>
+            </li>
+
+            <li class="schedule-item">
+              <span class="schedule-time">10.00 - 11.00</span>
+              <div class="schedule-content">
+                <h3 class="session-title">Kişiselleştirilmiş Tıp</h3>
+                <p class="session-meta session-chair mb-2"><strong>Oturum Başkanı:</strong> Prof. Dr. Gamze Güney Eskiler / Prof. Dr. Tuba Hacıbekiroğlu</p>
+                <p class="session-meta mb-1"><strong>Konuşmacı:</strong> Prof. Dr. Elif Damla Arısan</p>
+                <p class="session-meta mb-1">(Gebze Teknik Üniversitesi - Biyomühendislik)</p>
+              </div>
+            </li>
+
+            <li class="schedule-item is-break">
+              <span class="schedule-time">11.00 - 11.15</span>
+              <div class="schedule-content">
+                <h3 class="session-title"><i class="fa-solid fa-mug-saucer me-2" aria-hidden="true"></i>Kahve Molası</h3>
+              </div>
+            </li>
+
+            <li class="schedule-item">
+              <span class="schedule-time">11.15 - 12.15</span>
+              <div class="schedule-content">
+                <h3 class="session-title">Surgery 4.0: The Right Patient, At the Right Time, With the Right Follow-Up</h3>
+                <p class="session-meta session-chair mb-2"><strong>Oturum Başkanı:</strong> Doç. Dr. Emrah Akın / Doç. Dr. Emre Bilgin</p>
+                <ul class="topic-list mb-2">
+                  <li>
+                    <p class="topic-title">"Shaping the Future: Training and Precision in Robotic Surgery"</p>
+                    <p class="session-meta mb-0"><strong>Konuşmacı:</strong> Prof. Dr. Jim Khan (Portsmouth University - Genel Cerrahi)</p>
+                  </li>
+                  <li>
+                    <p class="topic-title">"Non-Surgical Rectal Cancer"</p>
+                    <p class="session-meta mb-0"><strong>Konuşmacı:</strong> Prof. Dr. Oktar Asioğlu (Acıbadem Maslak Hastanesi - Genel Cerrahi)</p>
+                  </li>
+                </ul>
+              </div>
+            </li>
+
+            <li class="schedule-item is-meal">
+              <span class="schedule-time">12.15 - 13.30</span>
+              <div class="schedule-content">
+                <h3 class="session-title">Öğle Yemeği</h3>
+              </div>
+            </li>
+
+            <li class="schedule-item">
+              <span class="schedule-time">13.30 - 14.30</span>
+              <div class="schedule-content">
+                <h3 class="session-title">Kişiselleştirilmiş Rotada 3T Pusulası: Tanı - Tedavi - Takip</h3>
+                <p class="session-meta session-chair mb-2"><strong>Oturum Başkanı:</strong> Prof. Dr. Emel Gönüllü / Prof. Dr. Onur Taydaş</p>
+                <ul class="topic-list mb-2">
+                  <li>
+                    <p class="topic-title">"Genetik Faktörlere Bağlı İlaç Toksisitesi"</p>
+                    <p class="session-meta mb-0"><strong>Konuşmacı:</strong> Prof. Dr. Semra Sardaş (İstinye Üniversitesi - Eczacılık)</p>
+                  </li>
+                  <li>
+                    <p class="topic-title">"Yapay Zekâ ile Görüntü Analizinde Yeni Ufuklar: Erken Tanıda Bireyselleştirilmiş Takibe"</p>
+                    <p class="session-meta mb-0"><strong>Konuşmacı:</strong> Doç. Dr. Deniz Can Aliş (Acıbadem Üniversitesi - Radyoloji)</p>
+                  </li>
+                </ul>
+              </div>
+            </li>
+
+            <li class="schedule-item is-break">
+              <span class="schedule-time">14.30 - 14.45</span>
+              <div class="schedule-content">
+                <h3 class="session-title"><i class="fa-solid fa-mug-saucer me-2" aria-hidden="true"></i>Kahve Molası</h3>
+              </div>
+            </li>
+
+            <li class="schedule-item">
+              <span class="schedule-time">14.45 - 15.45</span>
+              <div class="schedule-content">
+                <h3 class="session-title">Küresel Kaosun Genetiği: Kişiselleştirilemeyen Küresel Sorunlar</h3>
+                <p class="session-meta session-chair mb-2"><strong>Oturum Başkanı:</strong> Prof. Dr. Esra Yazıcı / Doç. Dr. Elif Köse</p>
+                <ul class="topic-list mb-2">
+                  <li>
+                    <p class="topic-title">"Küresel Sağlık ve Geleceğin Hekimleri"</p>
+                    <p class="session-meta mb-0"><strong>Konuşmacı:</strong> Prof. Dr. Özge Karadağ (Bahçeşehir Üniversitesi - Halk Sağlığı)</p>
+                  </li>
+                  <li>
+                    <p class="topic-title">"İklim Değişikliği ve Sıcak Hava Dalgaları: Halk Sağlığı Üzerindeki Riskler ve Geleceğe Yönelik Uyum Stratejilerinin Belirlenmesi"</p>
+                    <p class="session-meta mb-0"><strong>Konuşmacı:</strong> Prof. Dr. Beyza Ustaoğlu (Sakarya Üniversitesi - Coğrafya)</p>
+                  </li>
+                </ul>
+              </div>
+            </li>
+
+            <li class="schedule-item is-break">
+              <span class="schedule-time">15.45 - 16.00</span>
+              <div class="schedule-content">
+                <h3 class="session-title"><i class="fa-solid fa-mug-saucer me-2" aria-hidden="true"></i>Kahve Molası</h3>
+              </div>
+            </li>
+
+            <li class="schedule-item">
+              <span class="schedule-time">16.00 - 17.00</span>
+              <div class="schedule-content">
+                <h3 class="session-title">Kanser 360°: Bütüncül ve Kişiye Özel Bakış</h3>
+                <p class="session-meta session-chair mb-2"><strong>Oturum Başkanı:</strong> Prof. Dr. Fatih Altıntoprak / Prof. Dr. Gamze Güney Eskiler</p>
+                <ul class="topic-list mb-2">
+                  <li>
+                    <p class="session-meta mb-0"><strong>Konuşmacı:</strong> Prof. Dr. İlhan Hacıbekiroğlu (Tıbbi Onkoloji)</p>
+                  </li>
+                  <li>
+                    <p class="session-meta mb-0"><strong>Konuşmacı:</strong> Prof. Dr. Onur Taydaş (Girişimsel Radyoloji)</p>
+                  </li>
+                  <li>
+                    <p class="session-meta mb-0"><strong>Konuşmacı:</strong> Doç. Dr. Seçil Aksoy (Tıbbi Biyoloji)</p>
+                  </li>
+                  <li>
+                    <p class="session-meta mb-0"><strong>Konuşmacı:</strong> Doç. Dr. Nazım Coşkun (Nükleer Tıp)</p>
+                  </li>
+                  <li>
+                    <p class="session-meta mb-0"><strong>Konuşmacı:</strong> Doç. Dr. Barış Mantoğlu (Genel Cerrahi)</p>
+                  </li>
+                  <li>
+                    <p class="session-meta mb-0"><strong>Konuşmacı:</strong> Dr. Öğr. Üyesi Gözde Çakırsoy Çakar (Tıbbi Patoloji)</p>
+                  </li>
+                </ul>
+              </div>
+            </li>
+
+            <li class="schedule-item">
+              <span class="schedule-time">17.00 - 18.00</span>
+              <div class="schedule-content">
+                <h3 class="session-title">Kapanış</h3>
+              </div>
+            </li>
+
+            <li class="schedule-item is-social">
+              <span class="schedule-time">19.30 - 23.30</span>
+              <div class="schedule-content">
+                <h3 class="session-title">Gala Yemeği</h3>
+                <p class="session-meta mb-0">Ayrıntılar için <a href="pages/gala-dinner.html">gala yemeği sayfasını</a> inceleyebilirsiniz.</p>
+              </div>
+            </li>
+          </ol>
+        </article>
+      </div>
     </div>
   </section>
 
   <div data-include="components/footer.html"></div>
 
   <script src="assets/js/global_scripts.js" defer></script>
+  <script src="assets/js/pages/program-detailed.js" defer></script>
 </body>
 
 </html>
