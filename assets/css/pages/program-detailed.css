@@ -194,11 +194,49 @@
 }
 
 .program-detailed-page .session-title {
-  margin: 0 0 0.35rem;
-  color: #173e7d;
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  max-width: 100%;
+  margin: 0 0 0.45rem;
+  padding: 0.28rem 0.72rem;
+  border-radius: 999px;
+  border: 1px solid #2b6ac7;
+  background: linear-gradient(135deg, #1e4ea2 0%, #2f74df 100%);
+  color: #fff;
   font-size: 1rem;
   font-weight: 750;
   line-height: 1.35;
+  box-shadow: 0 6px 16px rgba(18, 73, 154, 0.2);
+}
+
+.program-detailed-page .session-title i {
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.program-detailed-page .schedule-item.is-break .session-title {
+  border-color: #b7cde9;
+  background: #e9f2ff;
+  color: #1f548e;
+  box-shadow: none;
+}
+
+.program-detailed-page .schedule-item.is-break .session-title i {
+  color: #2d6298;
+}
+
+.program-detailed-page .schedule-item.is-meal .session-title {
+  border-color: #b7e2d8;
+  background: #e7f8f4;
+  color: #1e6e5a;
+  box-shadow: none;
+}
+
+.program-detailed-page .schedule-item.is-social .session-title {
+  border-color: #ebd4a8;
+  background: #fff3df;
+  color: #8b560d;
+  box-shadow: none;
 }
 
 .program-detailed-page .session-meta {
