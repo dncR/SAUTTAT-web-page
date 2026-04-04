@@ -1,0 +1,102 @@
+/* SAUTTAT page: sss */
+.sss-page {
+  background: var(--page-bg-standard);
+}
+
+.sss-page .sss-kicker {
+  display: inline-block;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  border-radius: 999px;
+  padding: 0.3rem 0.68rem;
+  background: rgba(255, 255, 255, 0.16);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  margin-bottom: 0.75rem;
+}
+
+.sss-page .sss-title {
+  font-size: clamp(1.95rem, 4.3vw, 2.9rem);
+  line-height: 1.1;
+  font-weight: 800;
+}
+
+.sss-page .sss-lead {
+  max-width: 70ch;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.sss-page .sss-lead a {
+  color: #fff;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.sss-page .sss-list {
+  display: grid;
+  gap: 0.95rem;
+}
+
+.sss-page .sss-item {
+  background: #fff;
+  border: 1px solid #dfeafc;
+  border-radius: 1rem;
+  padding: 1.1rem 1.2rem;
+  box-shadow: 0 10px 26px rgba(17, 63, 131, 0.08);
+}
+
+.sss-page .sss-item h2 {
+  margin: 0 0 0.6rem;
+  color: #153f82;
+  font-size: 1.07rem;
+  font-weight: 760;
+  line-height: 1.35;
+}
+
+.sss-page .sss-item p {
+  margin: 0;
+  color: #2f456b;
+  line-height: 1.58;
+}
+
+.sss-page .sss-item p + p {
+  margin-top: 0.6rem;
+}
+
+.sss-page .sss-item a {
+  font-weight: 600;
+}
+
+.sss-page .sss-note {
+  border: 1px solid #d9e7fb;
+  border-radius: 0.95rem;
+  background: #f7fbff;
+  padding: 1rem 1.15rem;
+}
+
+.sss-page .sss-note h2 {
+  color: #143f85;
+}
+
+.sss-page .sss-note p,
+.sss-page .sss-note li {
+  color: #30486f;
+}
+
+.sss-page .sss-note ul {
+  padding-left: 1.1rem;
+}
+
+.sss-page .sss-note li + li {
+  margin-top: 0.3rem;
+}
+
+@media (max-width: 767.98px) {
+  .sss-page .sss-item {
+    padding: 1rem;
+  }
+
+  .sss-page .sss-item h2 {
+    font-size: 1rem;
+  }
+}
