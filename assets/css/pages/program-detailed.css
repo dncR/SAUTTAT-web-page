@@ -215,6 +215,7 @@
 }
 
 .program-detailed-page .session-title.main-topic {
+  margin: 0 0 0.75rem;
   border-color: #2b6ac7;
   background: linear-gradient(135deg, #1e4ea2 0%, #2f74df 100%);
   color: #fff;
