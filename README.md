@@ -48,6 +48,20 @@ python3 scripts/update-base.py
 * Sonrasında `python3 scripts/update-base.py` çalıştırın.
 * Üretilen HTML dosyalarını sunucuya yükleyin.
 
+## SEO Yayın Akışı (Remote Host)
+
+Kongre sitesi alt klasörden yayınlandığı için (`/gelecegintibbikongresi2026/`) canonical URL ve sitemap bu yapıya göre üretilmelidir.
+
+Yayın öncesi önerilen sıra:
+
+1. `site.config.json` içinde `rootPath` değerini `/gelecegintibbikongresi2026/` yapın.
+2. `python3 scripts/update-base.py` çalıştırın.
+3. `./scripts/build-sitemap.sh` çalıştırın.
+4. Proje dosyalarını `/my-home-www/gelecegintibbikongresi2026/` altına yükleyin.
+5. `robots.txt` dosyasını ayrıca `/my-home-www/robots.txt` konumuna koyun.
+
+Not: `robots.txt` sadece domain kökünde (`https://sauttat.sakarya.edu.tr/robots.txt`) etkili olur. Alt klasördeki `robots.txt` Google tarafından ana robots dosyası olarak kullanılmaz.
+
 ## Sponsor Ekleme ve Render Akışı
 
 Sponsor logolari ana sayfada (`index.html`) dinamik olarak `assets/js/pages/home.js` tarafinda render edilir. Veri kaynagi tek dosyadir: `assets/data/sponsors.json`.
