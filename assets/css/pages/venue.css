@@ -1,0 +1,127 @@
+/* SAUTTAT page: venue */
+.venue-page {
+  background: var(--page-bg-standard);
+}
+
+.venue-page .venue-hero {
+  background: linear-gradient(125deg, rgba(9, 52, 117, 0.9), rgba(29, 100, 181, 0.72)), url("../../img/venue/turgut_ozal_kongre_merkezi.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.venue-page .venue-kicker {
+  display: inline-block;
+  font-size: 0.82rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-radius: 999px;
+  padding: 0.35rem 0.7rem;
+  background: rgba(255, 255, 255, 0.2);
+  margin-bottom: 0.75rem;
+}
+
+.venue-page .venue-title {
+  font-size: clamp(1.9rem, 4.9vw, 3rem);
+  line-height: 1.08;
+  font-weight: 800;
+}
+
+.venue-page .venue-lead {
+  color: rgba(255, 255, 255, 0.93);
+  max-width: 64ch;
+  font-size: 1.05rem;
+}
+
+.venue-page .venue-capacity-card {
+  border-radius: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  background: rgba(255, 255, 255, 0.16);
+  backdrop-filter: blur(2px);
+  padding: 1.2rem;
+  color: #fff;
+}
+
+.venue-page .venue-capacity-list li {
+  padding: 0.45rem 0;
+  color: rgba(255, 255, 255, 0.93);
+}
+
+.venue-page .venue-capacity-list strong {
+  display: inline-block;
+  min-width: 8.2ch;
+  color: #fff;
+}
+
+.venue-page .venue-card {
+  background: #fff;
+  border: 1px solid #e4edf9;
+  border-radius: 1.1rem;
+  padding: 1.35rem;
+  box-shadow: 0 14px 30px rgba(19, 63, 133, 0.1);
+}
+
+.venue-page .venue-card p {
+  color: #2b3d5d;
+  line-height: 1.72;
+}
+
+.venue-page .venue-image {
+  border: 1px solid #d5e4f8;
+  box-shadow: 0 12px 30px rgba(15, 58, 130, 0.14);
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+}
+
+.venue-page .venue-image-note {
+  color: #47608a;
+}
+
+.venue-page .venue-intro-card {
+  background: linear-gradient(180deg, #fff 0%, #f7fbff 100%);
+}
+
+.venue-page .venue-feature-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.8rem;
+  padding: 0.8rem 0;
+  border-bottom: 1px dashed #d8e4f5;
+}
+
+.venue-page .venue-feature-list li:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+.venue-page .venue-feature-list i {
+  width: 1.6rem;
+  text-align: center;
+  color: #1f69c8;
+  margin-top: 0.16rem;
+}
+
+.venue-page .venue-feature-list strong {
+  display: block;
+  margin-bottom: 0.15rem;
+  color: #13478d;
+}
+
+.venue-page .venue-feature-list p {
+  color: #324f79;
+}
+
+.venue-page .venue-tech-card {
+  background: linear-gradient(180deg, #ffffff 0%, #f5faff 100%);
+}
+
+@media (max-width: 767.98px) {
+  .venue-page .venue-card {
+    padding: 1.1rem;
+  }
+
+  .venue-page .venue-image {
+    aspect-ratio: 4 / 3;
+  }
+}
