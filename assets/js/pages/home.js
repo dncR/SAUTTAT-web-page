@@ -488,6 +488,11 @@
     const groupEl = document.createElement('article');
     groupEl.className = 'sponsor-tier-group';
     groupEl.setAttribute('data-sponsor-tier-group', tierKey);
+    if (tierKey === SPONSOR_FALLBACK_TIER) {
+      groupEl.classList.add('d-none');
+      groupEl.setAttribute('hidden', 'hidden');
+      groupEl.setAttribute('aria-hidden', 'true');
+    }
 
     const headEl = document.createElement('div');
     headEl.className = 'sponsor-tier-group-head';
