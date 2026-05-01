@@ -1,5 +1,6 @@
 (() => {
   const SPONSOR_TIER_ORDER = ['platin', 'gold', 'silver', 'bronze'];
+  const SPONSOR_SUPPORT_TIER = 'destek';
   const SPONSOR_FALLBACK_TIER = 'unspecified';
   const SITE_CONFIG_PATH = 'site.config.json';
   const DEFAULT_SPLIT_SPONSORS_CAROUSEL = false;
@@ -161,7 +162,8 @@
     if (tierKey === 'gold') return 'ALTIN';
     if (tierKey === 'silver') return 'GÜMÜŞ';
     if (tierKey === 'bronze') return 'BRONZ';
-    if (tierKey === SPONSOR_FALLBACK_TIER) return 'DESTEK SPONSORLARI';
+    if (tierKey === SPONSOR_SUPPORT_TIER) return 'DESTEK SPONSORLARI';
+    if (tierKey === SPONSOR_FALLBACK_TIER) return 'DİĞER SPONSORLAR';
 
     const normalizedKey = normalizeText(tierKey, '').replace(/[_-]+/g, ' ');
     if (!normalizedKey) return 'DİĞER SPONSORLAR';
@@ -488,7 +490,7 @@
     const groupEl = document.createElement('article');
     groupEl.className = 'sponsor-tier-group';
     groupEl.setAttribute('data-sponsor-tier-group', tierKey);
-    if (tierKey === SPONSOR_FALLBACK_TIER) {
+    if (tierKey === SPONSOR_SUPPORT_TIER) {
       groupEl.classList.add('d-none');
       groupEl.setAttribute('hidden', 'hidden');
       groupEl.setAttribute('aria-hidden', 'true');

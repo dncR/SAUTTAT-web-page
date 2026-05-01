@@ -3,7 +3,7 @@
     "id": "sau",
     "sponsorName": "sau",
     "logoFilePath": "assets/img/sponsors/sau.png",
-    "sponsorshipType": null,
+    "sponsorshipType": "destek",
     "url": "https://sakarya.edu.tr",
     "hide": false
   },
@@ -19,7 +19,7 @@
     "id": "acibadem",
     "sponsorName": "acibadem",
     "logoFilePath": "assets/img/sponsors/acibadem.png",
-    "sponsorshipType": null,
+    "sponsorshipType": "destek",
     "url": "https://www.acibadem.edu.tr",
     "hide": false
   },
@@ -27,7 +27,7 @@
     "id": "bahcesehir",
     "sponsorName": "bahcesehir",
     "logoFilePath": "assets/img/sponsors/bahcesehir.png",
-    "sponsorshipType": null,
+    "sponsorshipType": "destek",
     "url": "https://bau.edu.tr",
     "hide": false
   },
@@ -35,7 +35,7 @@
     "id": "biruni",
     "sponsorName": "biruni",
     "logoFilePath": "assets/img/sponsors/biruni.png",
-    "sponsorshipType": null,
+    "sponsorshipType": "destek",
     "url": "https://www.biruni.edu.tr/",
     "hide": false
   },
@@ -43,7 +43,7 @@
     "id": "bogazici",
     "sponsorName": "bogazici",
     "logoFilePath": "assets/img/sponsors/bogazici.png",
-    "sponsorshipType": null,
+    "sponsorshipType": "destek",
     "url": "https://bogazici.edu.tr",
     "hide": false
   },
@@ -51,7 +51,7 @@
     "id": "gebze_teknik",
     "sponsorName": "gebze_teknik",
     "logoFilePath": "assets/img/sponsors/gebze_teknik.png",
-    "sponsorshipType": null,
+    "sponsorshipType": "destek",
     "url": "https://www.gtu.edu.tr",
     "hide": false
   },
@@ -59,7 +59,7 @@
     "id": "istinye",
     "sponsorName": "istinye",
     "logoFilePath": "assets/img/sponsors/istinye.png",
-    "sponsorshipType": null,
+    "sponsorshipType": "destek",
     "url": "https://www.istinye.edu.tr/tr",
     "hide": false
   },
@@ -67,7 +67,7 @@
     "id": "koc",
     "sponsorName": "koc",
     "logoFilePath": "assets/img/sponsors/koc.png",
-    "sponsorshipType": null,
+    "sponsorshipType": "destek",
     "url": "https://www.ku.edu.tr",
     "hide": false
   },
@@ -75,7 +75,7 @@
     "id": "portsmouth",
     "sponsorName": "portsmouth",
     "logoFilePath": "assets/img/sponsors/portsmouth.png",
-    "sponsorshipType": null,
+    "sponsorshipType": "destek",
     "url": "https://www.port.ac.uk",
     "hide": false
   },
@@ -83,7 +83,7 @@
     "id": "uludag",
     "sponsorName": "uludag",
     "logoFilePath": "assets/img/sponsors/uludag.png",
-    "sponsorshipType": null,
+    "sponsorshipType": "destek",
     "url": "https://www.uludag.edu.tr",
     "hide": false
   },
@@ -91,7 +91,7 @@
     "id": "yildirim_beyazit",
     "sponsorName": "yildirim_beyazit",
     "logoFilePath": "assets/img/sponsors/yildirim_beyazit.png",
-    "sponsorshipType": null,
+    "sponsorshipType": "destek",
     "url": "https://aybu.edu.tr/aybu/tr",
     "hide": false
   },
@@ -99,7 +99,7 @@
     "id": "abdi_ibrahim",
     "sponsorName": "abdi_ibrahim",
     "logoFilePath": "assets/img/sponsors/abdi_ibrahim.png",
-    "sponsorshipType": null,
+    "sponsorshipType": "destek",
     "url": null,
     "hide": false
   },
