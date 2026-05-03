@@ -5,6 +5,7 @@
   "records": [
     {
       "id": "tugcu-volkan",
+      "hide": false,
       "talk": {
         "title": "ROBOTİK NAKLİN PİONERİ: 2015'TE AÇILAN YOL VE BUGÜN",
         "description": [
@@ -30,6 +31,7 @@
     },
     {
       "id": "solaroglu-ihsan",
+      "hide": false,
       "talk": {
         "title": "BİR HEKİMİN TRIADI: SANAT, BİLİM, NÖROŞİRÜRJİ",
         "description": [
@@ -55,6 +57,7 @@
     },
     {
       "id": "arisan-elif-damla",
+      "hide": false,
       "talk": {
         "title": "KİŞİSELLEŞTİRİLMİŞ TIP",
         "description": [
@@ -80,6 +83,7 @@
     },
     {
       "id": "ayhan-pinar",
+      "hide": true,
       "talk": {
         "title": "BENİ HATIRLAYINIZ: GENÇLİĞİN YOLU",
         "description": [
@@ -105,6 +109,7 @@
     },
     {
       "id": "onder-tamer-tevfik",
+      "hide": true,
       "talk": {
         "title": "PLURİPOTENT KÖK HÜCRELER İLE KİŞİSELLEŞTİRİLMİŞ TEDAVİLER",
         "description": [
@@ -130,6 +135,7 @@
     },
     {
       "id": "adebali-ogun",
+      "hide": false,
       "talk": {
         "title": "GENOM VERİSİNDEN SAĞLIKLI BİREYE FİLOGENETİK TABANLI YAKLAŞIMLAR",
         "description": [
@@ -155,6 +161,7 @@
     },
     {
       "id": "bulut-melih",
+      "hide": false,
       "talk": {
         "title": "SAĞLIKTA İNOVASYON TIPTA DÖNÜŞÜM",
         "description": [
@@ -180,6 +187,7 @@
     },
     {
       "id": "isik-oguz-can",
+      "hide": false,
       "talk": {
         "title": "GİRİŞİMCİ DOKTORUN EL ÇANTASINDA NELER OLMALI?",
         "description": [
@@ -205,6 +213,7 @@
     },
     {
       "id": "asoglu-oktar",
+      "hide": false,
       "talk": {
         "title": "NON-SURGICAL RECTAL CANCER",
         "description": [
@@ -230,6 +239,7 @@
     },
     {
       "id": "sardas-semra",
+      "hide": false,
       "talk": {
         "title": "GENETİK FAKTÖRLERE BAĞLI İLAÇ TOKSİSİTESİ",
         "description": [
@@ -255,6 +265,7 @@
     },
     {
       "id": "alis-deniz-can",
+      "hide": false,
       "talk": {
         "title": "YAPAY ZEKA İLE GÖRÜNTÜ ANALİZİNDE YENİ UFUKLAR: ERKEN TANIDAN BİREYSELLEŞTİRİLMİŞ TAKİBE",
         "description": [
@@ -280,6 +291,7 @@
     },
     {
       "id": "karadag-ozge",
+      "hide": false,
       "talk": {
         "title": "KÜRESEL SAĞLIK VE GELECEĞİN HEKİMLERİ",
         "description": [

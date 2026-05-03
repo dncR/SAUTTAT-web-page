@@ -15,6 +15,15 @@
 
   const normalizeText = (value) => String(value ?? '').trim();
 
+  const resolveHideValue = (value) => {
+    if (value === true || value === false) return value;
+    if (typeof value === 'string') return value.trim().toLowerCase() === 'true';
+    if (typeof value === 'number') return value === 1;
+    return false;
+  };
+
+  const isSpeakerHidden = (speaker) => resolveHideValue(speaker?.hide);
+
   const normalizeDescription = (value) => {
     if (Array.isArray(value)) {
       return value.map((item) => normalizeText(item)).filter(Boolean);
@@ -45,6 +54,7 @@
 
     return {
       id,
+      hide: isSpeakerHidden(raw),
       talk: {
         title: normalizeText(raw?.talk?.title),
         description: normalizeDescription(raw?.talk?.description),
@@ -72,7 +82,7 @@
     const records = Array.isArray(raw?.records) ? raw.records : [];
     return records
       .map((item) => normalizeRecord(item))
-      .filter((item) => item.id && item.speaker.fullName && item.talk.title);
+      .filter((item) => !item.hide && item.id && item.speaker.fullName && item.talk.title);
   };
 
   const sortRecords = (records) =>
