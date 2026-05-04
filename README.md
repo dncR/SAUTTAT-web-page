@@ -72,10 +72,11 @@ Render layout'u `site.config.json` icindeki `splitSponsorsCarousel` bayragina go
 Bu dosya sponsor carousel'lerinde gosterilecek tum kayitlarin metadata kaynagidir. `home.js` icindeki `loadSponsors()` fonksiyonu bu JSON'u okur.
 
 * Combined layout (`splitSponsorsCarousel: false`):
-  * Kayitlar case-insensitive olarak `sponsorshipType` sirasina gore dizilir (`platin > gold > silver > bronze`).
+  * Kayitlar case-insensitive olarak `sponsorshipType` sirasina gore dizilir (`platin > gold > silver > bronze > destek`).
   * `sponsorshipType: null` olan kayitlar tier'lar sonrasinda, JSON'daki kaynak sira korunarak eklenir.
 * Split layout (`splitSponsorsCarousel: true`):
   * Kayitlar sponsorluk tipine gore gruplandirilarak ayri carousel bloklarinda render edilir.
+  * Bir sponsorluk tipinde en az bir gorunur sponsor varsa o tier blogu render edilir; tanimli sponsor yoksa veya ilgili tipteki tum sponsorlar `hide: true` ise tier blogu gizli kalir.
   * Her tier bagimsiz carousel akisi ile calisir.
   * Slider yalnizca kategori sponsor sayisi gorunen kart sayisindan buyukse calisir (`count > visibleSlots`); esitlikte slider calismaz.
   * Tek kart gorunumu gereken durumlarda kart genisligi iki-kart referansi ile hesaplanir; kart carousel alanini doldurmaz.
@@ -85,7 +86,7 @@ Her sponsor kaydinda asagidaki alanlar kullanilir:
 - `id`: benzersiz kayit anahtari (kisa, slug formatinda)
 - `sponsorName`: logo `alt` metninde kullanilan gorunen ad
 - `logoFilePath`: logo dosyasinin yolu (or. `assets/img/sponsors/ornek.png`)
-- `sponsorshipType`: siralama seviyesi (`platin`, `gold`, `silver`, `bronze`) veya `null`
+- `sponsorshipType`: siralama seviyesi (`platin`, `gold`, `silver`, `bronze`, `destek`) veya `null`
 - `url`: opsiyonel dis baglanti (`null` veya `https://...`)
 - `hide`: opsiyonel gorunurluk bayragi (`true` ise sponsor karti render edilmez, varsayilan `false`)
 

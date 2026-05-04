@@ -1,6 +1,6 @@
 (() => {
-  const SPONSOR_TIER_ORDER = ['platin', 'gold', 'silver', 'bronze'];
   const SPONSOR_SUPPORT_TIER = 'destek';
+  const SPONSOR_TIER_ORDER = ['platin', 'gold', 'silver', 'bronze', SPONSOR_SUPPORT_TIER];
   const SPONSOR_FALLBACK_TIER = 'unspecified';
   const SITE_CONFIG_PATH = 'site.config.json';
   const DEFAULT_SPLIT_SPONSORS_CAROUSEL = false;
@@ -486,15 +486,24 @@
 
   const getTierGroupsElement = () => document.querySelector('[data-sponsors-by-tier] [data-sponsor-tier-groups]');
 
+  const setTierGroupVisibility = (groupEl, isVisible) => {
+    if (!groupEl) return;
+    groupEl.classList.toggle('d-none', !isVisible);
+    if (isVisible) {
+      groupEl.removeAttribute('hidden');
+      groupEl.setAttribute('aria-hidden', 'false');
+      return;
+    }
+    groupEl.setAttribute('hidden', 'hidden');
+    groupEl.setAttribute('aria-hidden', 'true');
+  };
+
   const createTierGroupElement = (tierKey, sponsors) => {
+    const visibleSponsors = (Array.isArray(sponsors) ? sponsors : []).filter((sponsor) => isSponsorRenderable(sponsor));
     const groupEl = document.createElement('article');
     groupEl.className = 'sponsor-tier-group';
     groupEl.setAttribute('data-sponsor-tier-group', tierKey);
-    if (tierKey === SPONSOR_SUPPORT_TIER) {
-      groupEl.classList.add('d-none');
-      groupEl.setAttribute('hidden', 'hidden');
-      groupEl.setAttribute('aria-hidden', 'true');
-    }
+    setTierGroupVisibility(groupEl, visibleSponsors.length > 0);
 
     const headEl = document.createElement('div');
     headEl.className = 'sponsor-tier-group-head';
@@ -505,7 +514,7 @@
 
     const countEl = document.createElement('span');
     countEl.className = 'sponsor-tier-group-count';
-    countEl.textContent = `${sponsors.length} sponsor`;
+    countEl.textContent = `${visibleSponsors.length} sponsor`;
 
     headEl.appendChild(titleEl);
     headEl.appendChild(countEl);

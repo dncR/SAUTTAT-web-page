@@ -387,6 +387,13 @@ a.sponsor-logo-item:focus-visible {
   --tier-header-pill-text: #7a4121;
 }
 
+.sponsor-tier-group[data-sponsor-tier-group="destek"] {
+  --tier-header-text: #1f5f68;
+  --tier-header-pill-bg: #d6eef1;
+  --tier-header-pill-border: #afd8df;
+  --tier-header-pill-text: #1f5b63;
+}
+
 .sponsor-tier-group[data-sponsor-tier-group="unspecified"] {
   --tier-header-text: #1e6353;
   --tier-header-pill-bg: #d1ebe3;
