@@ -1,5 +1,13 @@
 [
   {
+    "id": "tunatan",
+    "sponsorName": "tunatan",
+    "logoFilePath": "assets/img/sponsors/tunatan.png",
+    "sponsorshipType": "destek",
+    "url": null,
+    "hide": false
+  },
+  {
     "id": "kardelen_su",
     "sponsorName": "kardelen_su",
     "logoFilePath": "assets/img/sponsors/kardelen_su.png",
