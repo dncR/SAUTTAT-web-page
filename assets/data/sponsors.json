@@ -16,6 +16,38 @@
     "hide": false
   },
   {
+    "id": "colombia_coffee",
+    "sponsorName": "colombia_coffee",
+    "logoFilePath": "assets/img/sponsors/colombia_coffee.png",
+    "sponsorshipType": "destek",
+    "url": null,
+    "hide": false
+  },
+  {
+    "id": "tusdata",
+    "sponsorName": "tusdata",
+    "logoFilePath": "assets/img/sponsors/tusdata.png",
+    "sponsorshipType": "destek",
+    "url": null,
+    "hide": false
+  },
+  {
+    "id": "tustime",
+    "sponsorName": "tustime",
+    "logoFilePath": "assets/img/sponsors/tustime.png",
+    "sponsorshipType": "destek",
+    "url": null,
+    "hide": false
+  },
+  {
+    "id": "tunay_yapi",
+    "sponsorName": "tunay_yapi",
+    "logoFilePath": "assets/img/sponsors/tunay_yapi.png",
+    "sponsorshipType": "destek",
+    "url": null,
+    "hide": false
+  },
+  {
     "id": "sau",
     "sponsorName": "sau",
     "logoFilePath": "assets/img/sponsors/sau.png",
@@ -29,7 +61,7 @@
     "logoFilePath": "assets/img/sponsors/sakarya_belediyesi.png",
     "sponsorshipType": "platin",
     "url": null,
-    "hide": true
+    "hide": false
   },
   {
     "id": "acibadem",
@@ -112,33 +144,33 @@
     "hide": true
   },
   {
-    "id": "abdi_ibrahim",
-    "sponsorName": "abdi_ibrahim",
-    "logoFilePath": "assets/img/sponsors/abdi_ibrahim.png",
-    "sponsorshipType": "destek",
-    "url": null,
-    "hide": true
-  },
-  {
     "id": "ada_tip",
     "sponsorName": "ada_tip",
     "logoFilePath": "assets/img/sponsors/ada_tip.png",
     "sponsorshipType": "bronze",
     "url": null,
-    "hide": true
+    "hide": false
+  },
+  {
+    "id": "musiad",
+    "sponsorName": "musiad",
+    "logoFilePath": "assets/img/sponsors/musiad.png",
+    "sponsorshipType": "silver",
+    "url": null,
+    "hide": false
+  },
+  {
+    "id": "pharminal",
+    "sponsorName": "pharminal",
+    "logoFilePath": "assets/img/sponsors/pharminal.png",
+    "sponsorshipType": "silver",
+    "url": null,
+    "hide": false
   },
   {
     "id": "deva",
     "sponsorName": "deva",
     "logoFilePath": "assets/img/sponsors/deva.png",
-    "sponsorshipType": "silver",
-    "url": null,
-    "hide": true
-  },
-  {
-    "id": "ozpas",
-    "sponsorName": "ozpas",
-    "logoFilePath": "assets/img/sponsors/ozpas.png",
     "sponsorshipType": "silver",
     "url": null,
     "hide": false
@@ -149,7 +181,23 @@
     "logoFilePath": "assets/img/sponsors/emsey.png",
     "sponsorshipType": "silver",
     "url": null,
-    "hide": true
+    "hide": false
+  },
+  {
+    "id": "ozpas",
+    "sponsorName": "ozpas",
+    "logoFilePath": "assets/img/sponsors/ozpas.png",
+    "sponsorshipType": "silver",
+    "url": null,
+    "hide": false
+  },
+  {
+    "id": "abdi_ibrahim",
+    "sponsorName": "abdi_ibrahim",
+    "logoFilePath": "assets/img/sponsors/abdi_ibrahim.png",
+    "sponsorshipType": "silver",
+    "url": null,
+    "hide": false
   },
   {
     "id": "menarini",
@@ -160,20 +208,20 @@
     "hide": false
   },
   {
-    "id": "musiad",
-    "sponsorName": "musiad",
-    "logoFilePath": "assets/img/sponsors/musiad.png",
-    "sponsorshipType": "silver",
-    "url": null,
-    "hide": true
-  },
-  {
     "id": "onko",
     "sponsorName": "onko",
     "logoFilePath": "assets/img/sponsors/onko.png",
     "sponsorshipType": "silver",
     "url": null,
     "hide": true
+  },
+  {
+    "id": "byd_sandikci",
+    "sponsorName": "byd_sandikci",
+    "logoFilePath": "assets/img/sponsors/sandikci_byd.png",
+    "sponsorshipType": "silver",
+    "url": null,
+    "hide": false
   },
   {
     "id": "radyomed",
@@ -197,6 +245,6 @@
     "logoFilePath": "assets/img/sponsors/satso.png",
     "sponsorshipType": "gold",
     "url": null,
-    "hide": true
+    "hide": false
   }
 ]
