@@ -29,6 +29,23 @@
   color: #14735d;
 }
 
+.oral-presentations-page .oral-program-date-note {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  margin-bottom: 0.9rem;
+  border: 1px solid #d3e2fa;
+  border-radius: 0.85rem;
+  background: #eef4ff;
+  color: #1f548e;
+  padding: 0.75rem 0.9rem;
+}
+
+.oral-presentations-page .oral-program-date-note i,
+.oral-presentations-page .oral-program-date-note strong {
+  color: #113b7a;
+}
+
 .oral-presentations-page .oral-talk-card {
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
