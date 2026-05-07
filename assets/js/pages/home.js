@@ -7,7 +7,7 @@
   const SINGLE_CARD_WIDTH_REFERENCE_SLOTS = 2;
   const AUTO_SCROLL_INTERVAL_MS = 3000;
   const AUTO_SCROLL_ANIMATION_MS = 520;
-  const ANNOUNCEMENT_MODAL_SESSION_KEY = 'sauttat.home.announcementModalShown';
+  const ANNOUNCEMENT_MODAL_SESSION_KEY = 'sauttat.home.oralPresentationsAnnouncementShown';
   const CONGRESS_START_AT = '2026-05-08T09:00:00+03:00';
   const SECOND_MS = 1000;
   const MINUTE_MS = 60 * SECOND_MS;
