@@ -1,0 +1,305 @@
+/* SAUTTAT page: sozlu-sunumlar */
+.oral-presentations-page .program-switcher {
+  width: fit-content;
+}
+
+.oral-presentations-page .oral-schedule-list .schedule-item {
+  grid-template-columns: 128px minmax(0, 1fr);
+}
+
+.oral-presentations-page .oral-schedule-list .schedule-item::before {
+  left: 128px;
+}
+
+.oral-presentations-page .oral-parallel-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.85rem;
+}
+
+.oral-presentations-page .oral-room-highlight {
+  font-weight: 800;
+}
+
+.oral-presentations-page .oral-room-highlight-nevzat {
+  color: #113b7a;
+}
+
+.oral-presentations-page .oral-room-highlight-gultekin {
+  color: #14735d;
+}
+
+.oral-presentations-page .oral-talk-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: start;
+  column-gap: 0.75rem;
+  row-gap: 0.5rem;
+  min-width: 0;
+  border: 1px solid #dbe8fa;
+  border-radius: 0.85rem;
+  background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+  padding: 0.9rem;
+}
+
+.oral-presentations-page .oral-talk-card-gultekin {
+  border-color: rgba(41, 178, 137, 0.32);
+  background:
+    radial-gradient(circle at 92% 8%, rgba(41, 178, 137, 0.14), transparent 46%),
+    linear-gradient(180deg, #ffffff 0%, #f5fcf9 100%);
+}
+
+.oral-presentations-page .oral-room {
+  display: inline-flex;
+  grid-column: 1;
+  grid-row: 1;
+  width: fit-content;
+  max-width: 100%;
+  margin: 0 !important;
+  border-radius: 999px;
+  border: 1px solid #cfe0f7;
+  background: #edf4ff;
+  color: #1f548e;
+  font-size: 0.78rem;
+  font-weight: 750;
+  line-height: 1.25;
+  padding: 0.3rem 0.62rem;
+  white-space: nowrap;
+}
+
+.oral-presentations-page .oral-talk-card-gultekin .oral-room {
+  border-color: rgba(41, 178, 137, 0.42);
+  background: rgba(41, 178, 137, 0.14);
+  color: #14735d;
+}
+
+.oral-presentations-page .oral-abstract-id {
+  display: inline-flex;
+  grid-column: 2;
+  grid-row: 1;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  max-width: 100%;
+  justify-self: end;
+  margin: 0;
+  border-radius: 999px;
+  border: 1px solid #cfe0f7;
+  background: #edf4ff;
+  color: #1f548e;
+  font-size: 0.78rem;
+  font-weight: 750;
+  line-height: 1.25;
+  padding: 0.3rem 0.62rem;
+  white-space: nowrap;
+}
+
+.oral-presentations-page .oral-talk-card-gultekin .oral-abstract-id {
+  border-color: rgba(41, 178, 137, 0.42);
+  background: rgba(41, 178, 137, 0.14);
+  color: #14735d;
+}
+
+.oral-presentations-page .oral-talk-title {
+  grid-column: 1 / -1;
+  margin: 0;
+  color: #173866;
+  font-size: 0.95rem;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.35;
+}
+
+.oral-presentations-page .oral-presenter {
+  grid-column: 1 / -1;
+  color: #263d64;
+  font-size: 0.9rem;
+  font-weight: 400;
+  line-height: 1.35;
+}
+
+.oral-presentations-page .oral-presenter strong {
+  color: #1f548e;
+  font-weight: 800;
+}
+
+.oral-presentations-page .oral-talk-card-gultekin .oral-presenter strong {
+  color: #14735d;
+}
+
+.oral-presentations-page .jury-section {
+  border: 1px solid #dce9fb;
+  border-radius: 1rem;
+  background: #fff;
+  box-shadow: 0 14px 34px rgba(11, 49, 106, 0.1);
+  padding: 1.25rem;
+}
+
+.oral-presentations-page .jury-section-header {
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #e8f0fb;
+  padding-bottom: 0.9rem;
+}
+
+.oral-presentations-page .jury-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.oral-presentations-page .jury-card {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 0.85rem;
+  min-width: 0;
+  border: 1px solid #e0eaf8;
+  border-radius: 0.9rem;
+  background: linear-gradient(180deg, #ffffff 0%, #f9fbff 100%);
+  padding: 1rem;
+}
+
+.oral-presentations-page .jury-card-gultekin {
+  border-color: rgba(41, 178, 137, 0.32);
+  background:
+    radial-gradient(circle at 92% 8%, rgba(41, 178, 137, 0.14), transparent 46%),
+    linear-gradient(180deg, #ffffff 0%, #f5fcf9 100%);
+}
+
+.oral-presentations-page .jury-card-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.35rem;
+  height: 2.35rem;
+  border-radius: 0.75rem;
+  background: #e9f2ff;
+  color: #1f548e;
+  flex: 0 0 auto;
+}
+
+.oral-presentations-page .jury-card-gultekin .jury-card-icon {
+  background: rgba(41, 178, 137, 0.14);
+  color: #14735d;
+}
+
+.oral-presentations-page .jury-card-kicker {
+  margin: 0 0 0.2rem;
+  color: #496b9b;
+  font-size: 0.76rem;
+  font-weight: 750;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.oral-presentations-page .jury-card-gultekin .jury-card-kicker {
+  color: #4b927f;
+}
+
+.oral-presentations-page .jury-card-title {
+  margin: 0 0 0.65rem;
+  color: #113b7a;
+  font-size: 1.05rem;
+  font-weight: 800;
+}
+
+.oral-presentations-page .jury-card-gultekin .jury-card-title {
+  color: #14735d;
+}
+
+.oral-presentations-page .jury-card-text {
+  color: #34496e;
+  font-size: 0.94rem;
+  line-height: 1.45;
+}
+
+.oral-presentations-page .jury-list {
+  display: grid;
+  gap: 0.45rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.oral-presentations-page .jury-list li {
+  position: relative;
+  color: #34496e;
+  font-size: 0.94rem;
+  line-height: 1.35;
+  padding-left: 0.9rem;
+}
+
+.oral-presentations-page .jury-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.53em;
+  width: 0.38rem;
+  height: 0.38rem;
+  border-radius: 50%;
+  background: #2f74df;
+}
+
+.oral-presentations-page .award-note {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 1rem;
+  border: 1px solid #f0d9ad;
+  border-radius: 0.9rem;
+  background: #fff8ec;
+  color: #6d4b12;
+  padding: 0.9rem 1rem;
+}
+
+.oral-presentations-page .award-note-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 0.72rem;
+  background: #fff0d2;
+  color: #9f5f07;
+  flex: 0 0 auto;
+}
+
+.oral-presentations-page .award-note a {
+  color: #7d4e08;
+  font-weight: 800;
+}
+
+@media (max-width: 991.98px) {
+  .oral-presentations-page .oral-schedule-list .schedule-item {
+    grid-template-columns: 1fr;
+  }
+
+  .oral-presentations-page .oral-schedule-list .schedule-item::before {
+    display: none;
+  }
+
+  .oral-presentations-page .jury-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .oral-presentations-page .oral-parallel-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .oral-presentations-page .program-switcher {
+    width: 100%;
+  }
+
+  .oral-presentations-page .oral-talk-card,
+  .oral-presentations-page .jury-section,
+  .oral-presentations-page .jury-card {
+    padding: 0.9rem;
+  }
+
+  .oral-presentations-page .award-note {
+    align-items: flex-start;
+  }
+}
