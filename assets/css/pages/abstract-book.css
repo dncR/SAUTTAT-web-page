@@ -1,0 +1,159 @@
+/* SAUTTAT page: abstract book */
+.abstract-book-page {
+  background: var(--page-bg-standard);
+}
+
+.abstract-book-hero {
+  overflow: hidden;
+}
+
+.abstract-book-hero-copy {
+  max-width: 58rem;
+}
+
+.abstract-book-kicker {
+  display: inline-block;
+  margin-bottom: 0.65rem;
+  padding: 0.3rem 0.65rem;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.16);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.abstract-book-title {
+  font-size: clamp(1.65rem, 3.2vw, 2.25rem);
+  font-weight: 800;
+  line-height: 1.12;
+}
+
+.abstract-book-lead {
+  max-width: 62ch;
+  color: rgba(255, 255, 255, 0.92);
+  font-size: 0.98rem;
+  line-height: 1.6;
+}
+
+.abstract-book-action {
+  min-width: 12rem;
+  padding: 0.65rem 1rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.abstract-book-details {
+  border: 1px solid #e0e9f5;
+  background: #fff;
+  box-shadow: 0 18px 42px rgba(15, 48, 91, 0.08);
+}
+
+.abstract-book-eyebrow,
+.abstract-book-access-label {
+  color: #1f64be;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+.abstract-book-section-title {
+  max-width: 24ch;
+  color: #183b6b;
+  font-size: clamp(1.35rem, 2.4vw, 1.75rem);
+  font-weight: 800;
+}
+
+.abstract-book-copy {
+  max-width: 68ch;
+  color: #4b5f7d;
+  font-size: 0.94rem;
+  line-height: 1.65;
+}
+
+.abstract-book-feature-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+.abstract-book-feature-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.9rem;
+  border: 1px solid #e1eaf6;
+  border-radius: 0.85rem;
+  background: #f8fbff;
+  color: #29496f;
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.abstract-book-feature-list i {
+  color: #1f64be;
+}
+
+.abstract-book-access-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.4rem;
+  border: 1px solid #d9e7f7;
+  border-radius: 1rem;
+  background: linear-gradient(145deg, #f7fbff 0%, #eef6ff 100%);
+  color: #4b5f7d;
+  font-size: 0.9rem;
+}
+
+.abstract-book-access-title {
+  margin: 0;
+  color: #183b6b;
+  font-size: 1.15rem;
+  font-weight: 800;
+}
+
+.abstract-book-access-icon {
+  display: inline-flex;
+  width: 2.65rem;
+  height: 2.65rem;
+  flex: 0 0 2.65rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.85rem;
+  background: #fff;
+  box-shadow: 0 8px 20px rgba(22, 69, 125, 0.1);
+  color: #d4443e;
+  font-size: 1.15rem;
+}
+
+.abstract-book-text-link {
+  color: #1b5eae;
+  font-size: 0.88rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.abstract-book-text-link:hover,
+.abstract-book-text-link:focus {
+  color: #123f79;
+  text-decoration: underline;
+}
+
+@media (max-width: 767.98px) {
+  .abstract-book-feature-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .abstract-book-action {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .abstract-book-access-card {
+    flex-direction: column;
+  }
+}
